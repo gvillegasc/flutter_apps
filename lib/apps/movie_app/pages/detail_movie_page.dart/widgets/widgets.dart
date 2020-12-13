@@ -1,0 +1,14 @@
+export 'add_button.dart';
+export 'background_image.dart';
+export 'back.dart';
+export 'categories_movie.dart';
+export 'cast.dart';
+export 'description_movie.dart';
+export 'detail_movie.dart';
+export 'info_movie.dart';
+export 'list_cast.dart';
+export 'rate.dart';
+export 'score.dart';
+export 'stars.dart';
+export 'subtitle_detail.dart';
+export 'title_movie.dart';
