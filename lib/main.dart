@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:flutter_ui_app/apps/movie_app/pages/movies_page/movies_page.dart';
 import 'package:flutter_ui_app/global/responsive.dart';
-import 'package:flutter_ui_app/routes/routes.dart';
+import 'package:flutter_ui_app/apps/canvas/main_canvas.dart';
+import 'package:flutter_ui_app/apps/movie_app/pages/movies_page/movies_page.dart';
 
 void main() => runApp(MyApp());
 
@@ -13,13 +13,9 @@ class MyApp extends StatelessWidget {
       DeviceOrientation.portraitUp,
       DeviceOrientation.portraitDown,
     ]);
-    SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle(
-      statusBarColor: Colors.transparent,
-      statusBarIconBrightness: Brightness.dark,
-    ));
+
     return MaterialApp(
       title: 'Flutter UI',
-      routes: routesApp,
       debugShowCheckedModeBanner: false,
       home: Menu(),
     );
@@ -41,10 +37,20 @@ class Menu extends StatelessWidget {
           Container(width: responsive.width),
           RaisedButton(
             child: Text("Movie app"),
-            onPressed: () => Navigator.pushNamed(context, MoviesPage.routeName),
+            onPressed: () => _onPressed(context, MoviesPage()),
+          ),
+          RaisedButton(
+            child: Text("Canvas"),
+            onPressed: () => _onPressed(context, MainCanvas()),
           )
         ],
       ),
     );
   }
+}
+
+void _onPressed(BuildContext context, Widget child) {
+  Navigator.of(context).push(
+    MaterialPageRoute(builder: (_) => child),
+  );
 }

@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="13.773" height="16.227" viewBox="0 0 13.773 16.227">
+    <g id="Icon_feather-user-check" data-name="Icon feather-user-check" transform="translate(-0.75 -3.75)">
+        <path id="Trazado_129" data-name="Trazado 129"
+            d="M13.773,27.409V25.773A3.273,3.273,0,0,0,10.5,22.5H4.773A3.273,3.273,0,0,0,1.5,25.773v1.636"
+            transform="translate(0 -8.182)" fill="none" stroke="#bbc7db" stroke-linecap="round" stroke-linejoin="round"
+            stroke-width="1.5" />
+        <path id="Trazado_130" data-name="Trazado 130"
+            d="M13.3,7.773A3.273,3.273,0,1,1,10.023,4.5,3.273,3.273,0,0,1,13.3,7.773Z" transform="translate(-2.386)"
+            fill="none" stroke="#bbc7db" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" />
+    </g>
+</svg>

@@ -11,7 +11,7 @@ class Rate extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.start,
       children: <Widget>[
         SvgPicture.asset(
-          "assets/icons/ic_star_outline.svg",
+          "assets/movie_app/icons/ic_star_outline.svg",
           height: responsive.inchR(3.5),
         ),
         SizedBox(

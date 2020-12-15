@@ -16,13 +16,13 @@ class ToolsBar extends StatelessWidget {
           children: <Widget>[
             IconButton(
                 icon: SvgPicture.asset(
-                  "assets/icons/ic_menu.svg",
+                  "assets/movie_app/icons/ic_menu.svg",
                   height: responsive.inchR(2.7),
                 ),
                 onPressed: () {}),
             IconButton(
                 icon: SvgPicture.asset(
-                  "assets/icons/ic_search.svg",
+                  "assets/movie_app/icons/ic_search.svg",
                   height: responsive.inchR(2.7),
                 ),
                 onPressed: () {})

@@ -93,7 +93,7 @@ class Movie extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget>[
                 SvgPicture.asset(
-                  "assets/icons/ic_star.svg",
+                  "assets/movie_app/icons/ic_star.svg",
                   height: responsive.inchR(2),
                 ),
                 SizedBox(width: responsive.inchR(0.5)),

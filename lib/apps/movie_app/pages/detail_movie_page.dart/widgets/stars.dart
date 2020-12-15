@@ -11,7 +11,7 @@ class Stars extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.start,
       children: <Widget>[
         SvgPicture.asset(
-          "assets/icons/ic_star_yellow.svg",
+          "assets/movie_app/icons/ic_star_yellow.svg",
           height: responsive.inchR(3.5),
         ),
         SizedBox(

@@ -15,22 +15,22 @@ class ListCast extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: <Widget>[
           Cast(
-            asset: "assets/images/img_actor_1.png",
+            asset: "assets/movie_app/images/img_actor_1.png",
             name: "James Mangold",
             position: "Director",
           ),
           Cast(
-            asset: "assets/images/img_actor_2.png",
+            asset: "assets/movie_app/images/img_actor_2.png",
             name: "Matt \nDamon",
             position: "Carroll",
           ),
           Cast(
-            asset: "assets/images/img_actor_3.png",
+            asset: "assets/movie_app/images/img_actor_3.png",
             name: "Christian Bale",
             position: "Ken Miles",
           ),
           Cast(
-            asset: "assets/images/img_actor_4.png",
+            asset: "assets/movie_app/images/img_actor_4.png",
             name: "Caitriona Balfe",
             position: "Mollie",
           ),
