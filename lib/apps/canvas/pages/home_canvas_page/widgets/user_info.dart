@@ -9,8 +9,8 @@ class UserInfo extends StatelessWidget {
     return SliverToBoxAdapter(
       child: Container(
         width: double.infinity,
-        padding: EdgeInsets.only(top: responsive.inchR(3)),
-        height: responsive.inchR(15),
+        padding: EdgeInsets.only(top: responsive.inchR(8)),
+        height: responsive.inchR(16),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: <Widget>[UserPhoto(), UserName(), Search()],
@@ -65,7 +65,7 @@ class UserPhoto extends StatelessWidget {
       backgroundColor: Color(0xffADE6FE),
       child: CircleAvatar(
         radius: responsive.inchR(3.7),
-        backgroundColor: Colors.white,
+        backgroundColor: Color(0xffFFFFFF),
         child: ClipRRect(
           borderRadius: BorderRadius.circular(responsive.inchR(10)),
           child: CircleAvatar(

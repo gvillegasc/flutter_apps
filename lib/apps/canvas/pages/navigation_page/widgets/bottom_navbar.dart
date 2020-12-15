@@ -32,7 +32,7 @@ class BottomNavbar extends StatelessWidget {
         ),
         // clipBehavior: Clip.antiAlias,
         shape: CircularNotchedRectangle(),
-        color: Colors.white,
+        color: Color(0xffFFFFFF),
       ),
     );
   }

@@ -16,7 +16,7 @@ class ItemCategory extends StatelessWidget {
       padding: EdgeInsets.symmetric(horizontal: responsive.inchR(1.8)),
       alignment: Alignment.center,
       decoration: BoxDecoration(
-        color: Colors.white,
+        color: Color(0xffFFFFFF),
         border: Border.all(
             width: 1.5,
             color: Color(0xffE5E5E5) //                   <--- border width here

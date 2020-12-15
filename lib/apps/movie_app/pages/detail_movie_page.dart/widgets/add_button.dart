@@ -13,7 +13,7 @@ class AddButton extends StatelessWidget {
           borderRadius: BorderRadius.circular(responsive.inchR(1.5))),
       child: Icon(
         Icons.add,
-        color: Colors.white,
+        color: Color(0xffFFFFFF),
         size: responsive.inchR(3),
       ),
     );

@@ -28,7 +28,7 @@ class InfoMovie extends StatelessWidget {
                 bottomLeft: Radius.circular(responsive.inchR(6)),
                 topLeft: Radius.circular(responsive.inchR(6))),
             child: Container(
-              color: Colors.white,
+              color: Color(0xffFFFFFF),
               padding: EdgeInsets.only(
                   top: responsive.inchR(1.5),
                   left: responsive.inchR(4),

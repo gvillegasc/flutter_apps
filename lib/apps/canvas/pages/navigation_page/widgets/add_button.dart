@@ -9,7 +9,7 @@ class AddButton extends StatelessWidget {
     return Container(
         decoration: BoxDecoration(
           shape: BoxShape.circle,
-          color: Colors.white,
+          color: Color(0xffFFFFFF),
         ),
         height: responsive.inchR(8),
         width: responsive.inchR(8),
@@ -24,7 +24,7 @@ class AddButton extends StatelessWidget {
                   colors: [Color(0xff6EC8F9), Color(0xff3418DB)])),
           child: SvgPicture.asset(
             "assets/canvas/icons/ic_add.svg",
-            color: Colors.white,
+            color: Color(0xffFFFFFF),
           ),
         ));
   }

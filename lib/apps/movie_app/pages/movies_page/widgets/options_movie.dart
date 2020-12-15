@@ -63,7 +63,7 @@ class OptionSelected extends StatelessWidget {
             child: Container(
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(5),
-                color: (this.selected) ? Color(0xffFE6D8E) : Colors.white,
+                color: (this.selected) ? Color(0xffFE6D8E) : Color(0xffFFFFFF),
               ),
               alignment: Alignment.bottomLeft,
             ),

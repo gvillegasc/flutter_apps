@@ -6,14 +6,12 @@ class HomeCanvasPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final Responsive responsive = Responsive.of(context);
-    return SafeArea(
-      child: Scaffold(
-        body: Container(
-          width: responsive.width,
-          height: responsive.height,
-          child: CustomScrollView(
-            slivers: <Widget>[UserInfo()],
-          ),
+    return Scaffold(
+      body: Container(
+        width: responsive.width,
+        height: responsive.height,
+        child: CustomScrollView(
+          slivers: <Widget>[UserInfo(), WorkInfo(), Projects()],
         ),
       ),
     );

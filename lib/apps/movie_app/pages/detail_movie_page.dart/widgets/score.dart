@@ -22,7 +22,8 @@ class Score extends StatelessWidget {
               alignment: Alignment.center,
               child: Text("86",
                   style: GoogleFonts.openSans(
-                      color: Colors.white, fontSize: responsive.inchR(1.5))),
+                      color: Color(0xffFFFFFF),
+                      fontSize: responsive.inchR(1.5))),
             ),
           ),
         ),

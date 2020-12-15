@@ -8,7 +8,7 @@ class MoviesPage extends StatelessWidget {
   Widget build(BuildContext context) {
     final Responsive responsive = Responsive.of(context);
     return Scaffold(
-      backgroundColor: Colors.white,
+      backgroundColor: Color(0xffFFFFFF),
       body: Column(
         children: <Widget>[
           ToolsBar(),
