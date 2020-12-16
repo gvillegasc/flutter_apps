@@ -11,54 +11,57 @@ class Projects extends StatelessWidget {
       width: double.infinity,
       height: responsive.inchR(34),
       child: Column(
+        children: <Widget>[ProjectsTitle(), ProjectList()],
+      ),
+    ));
+  }
+}
+
+class ProjectsTitle extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    final Responsive responsive = Responsive.of(context);
+    return Container(
+      padding: EdgeInsets.symmetric(
+          horizontal: responsive.inchR(2.2), vertical: responsive.inchR(1.6)),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
         children: <Widget>[
           Container(
-            padding: EdgeInsets.symmetric(
-                horizontal: responsive.inchR(2.2),
-                vertical: responsive.inchR(1.6)),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
+            padding: EdgeInsets.symmetric(horizontal: responsive.inchR(0.3)),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: <Widget>[
-                Container(
-                  padding:
-                      EdgeInsets.symmetric(horizontal: responsive.inchR(0.3)),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: <Widget>[
-                      Text(
-                        "Proyectos",
-                        style: TextStyle(
-                            color: Color(0xff223E6D),
-                            fontWeight: FontWeight.w700,
-                            fontSize: responsive.inchR(2.5)),
-                      ),
-                      Text(
-                        "Ver todos",
-                        style: TextStyle(
-                            color: Color(0xff92A5C6),
-                            fontWeight: FontWeight.w400,
-                            fontSize: responsive.inchR(1.7)),
-                      ),
-                    ],
-                  ),
+                Text(
+                  "Proyectos",
+                  style: TextStyle(
+                      color: Color(0xff223E6D),
+                      fontWeight: FontWeight.w700,
+                      fontSize: responsive.inchR(2.5)),
                 ),
-                ClipRRect(
-                  borderRadius: BorderRadius.circular(50),
-                  child: SizedBox(
-                    height: responsive.inchR(1),
-                    width: responsive.inchR(1),
-                    child: Container(
-                      color: Color(0xff367BE2),
-                    ),
-                  ),
-                )
+                Text(
+                  "Ver todos",
+                  style: TextStyle(
+                      color: Color(0xff92A5C6),
+                      fontWeight: FontWeight.w400,
+                      fontSize: responsive.inchR(1.7)),
+                ),
               ],
             ),
           ),
-          ProjectList()
+          ClipRRect(
+            borderRadius: BorderRadius.circular(50),
+            child: SizedBox(
+              height: responsive.inchR(1),
+              width: responsive.inchR(1),
+              child: Container(
+                color: Color(0xff367BE2),
+              ),
+            ),
+          )
         ],
       ),
-    ));
+    );
   }
 }
 

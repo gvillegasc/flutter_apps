@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_ui_app/global/responsive.dart';
 
-class WorkInfo extends StatelessWidget {
+class TaskInfo extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final Responsive responsive = Responsive.of(context);

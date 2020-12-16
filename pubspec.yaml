@@ -29,6 +29,7 @@ dependencies:
   flutter_svg: ^0.19.1
   google_fonts: ^1.1.1
   provider: ^4.3.2+3
+  flutter_circular_chart: ^0.1.0
 
 dev_dependencies:
   flutter_test:
