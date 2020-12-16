@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_ui_app/apps/canvas/pages/home_canvas_page/models/user_project.dart';
+import 'package:flutter_ui_app/apps/canvas/models/user_project.dart';
 import 'package:flutter_ui_app/global/responsive.dart';
 
 class Projects extends StatelessWidget {

@@ -39,7 +39,7 @@ class UserName extends StatelessWidget {
                       fontSize: responsive.inchR(1.8),
                       fontWeight: FontWeight.w700),
                 ),
-                Text("Diana Lucia",
+                Text(" Diana Lucia",
                     style: TextStyle(
                         color: Color(0xff223E6D),
                         fontSize: responsive.inchR(1.8),
