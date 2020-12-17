@@ -29,7 +29,7 @@ class BoardList extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SliverPadding(
-        padding: EdgeInsets.only(top: 15, bottom: 40, left: 15, right: 15),
+        padding: EdgeInsets.only(top: 15, bottom: 15, left: 15, right: 15),
         sliver: SliverGrid(
             delegate: SliverChildBuilderDelegate((_, index) {
               return BoardCard(boardItem: boardList[index]);

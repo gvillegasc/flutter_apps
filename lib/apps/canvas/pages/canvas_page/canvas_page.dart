@@ -17,6 +17,8 @@ class CanvasPage extends StatelessWidget {
             UserInfo(),
             BoardTitle(),
             BoardList(),
+            GroupTitle(),
+            GroupList(),
             SpaceSeparation()
           ],
         ),
