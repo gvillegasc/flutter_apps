@@ -1,16 +1,55 @@
-# flutter_ui_app
+# FLUTTER UI APP
 
-A new Flutter project.
+## Movie App
 
-## Getting Started
+### [Design](https://dribbble.com/shots/10795979-Movie-App-Free)
+<img src="./readme-images/movie_app/movie_app.png" alt="Moavie App" width="400"/>
 
-This project is a starting point for a Flutter application.
+#### By Nickelfox
+- [Dribble](https://dribbble.com/NickelfoxStudio)
 
-A few resources to get you started if this is your first Flutter project:
+### App
+<table >
+    <tr>
+        <th>Movies</th>
+        <th>Movie Detail</th>
+    </tr>
+	<tr>
+		<td><img src="./readme-images/movie_app/page_1.jpg" alt="Movies" width="200"/></td> 
+        <td><img src="./readme-images/movie_app/page_2.jpg" alt="Detail Movie" width="200"/></td>
+	</tr>
+</table>
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+## CANVAS
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+### [Design](https://dribbble.com/shots/14703910-Task-App-Concept-Design)
+<img src="./readme-images/canvas/canvas.png" alt="Moavie App" width="400"/>
+
+#### By Mauricio Lopez
+- [Dribble](https://dribbble.com/m4st3rmiau)
+
+### App
+<table>
+    <tr>
+        <th>Home</th>
+        <th>Canvas</th>
+    </tr>
+	<tr>
+		<td><img src="./readme-images/canvas/page_1.jpg" alt="Home-Light" width="200"/></td> 
+        <td><img src="./readme-images/canvas/page_2.jpg" alt="Search-Light" width="200"/></td>
+	</tr>
+</table>
+<table>
+    <tr>
+        <th>Por Hacer</th>
+        <th>Haciendo</th>
+        <th>Realizadas</th>
+    </tr>
+	<tr>
+        <td><img src="./readme-images/canvas/page_3.jpg" alt="Home-Light" width="200"/></td>
+        <td><img src="./readme-images/canvas/page_4.jpg" alt="Home-Light" width="200"/></td>
+        <td><img src="./readme-images/canvas/page_5.jpg" alt="Home-Light" width="200"/></td> 
+	</tr>
+</table>
+
+
