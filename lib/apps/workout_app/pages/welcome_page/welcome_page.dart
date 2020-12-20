@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_ui_app/apps/workout_app/pages/about_page/about_page.dart';
 import 'package:flutter_ui_app/apps/workout_app/widgets/title_hard_element.dart';
 import 'package:flutter_ui_app/global/responsive.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -77,7 +78,8 @@ class Buttons extends StatelessWidget {
         child: Column(
           children: <Widget>[
             FlatButton(
-              onPressed: () {},
+              onPressed: () => Navigator.push(
+                  context, MaterialPageRoute(builder: (_) => AboutPage())),
               color: Color(0xff40D876),
               child: Text(
                 "Try Now",
