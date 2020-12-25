@@ -1,0 +1,14 @@
+<svg width="27.000000000000004" height="25" xmlns="http://www.w3.org/2000/svg">
+
+    <g>
+        <title>background</title>
+        <rect fill="none" id="canvas_background" height="30" width="30" y="-1" x="-1" />
+    </g>
+    <g>
+        <title>Layer 1</title>
+        <circle fill="#40d870" r="5" cy="5" cx="5" id="Elipse_40" />
+        <circle fill="#40d870" r="5" cy="5" cx="21" id="svg_1" />
+        <circle fill="#40d870" r="5" cy="20" cx="5" id="svg_2" />
+        <circle fill="#40d870" r="5" cy="20" cx="21" id="svg_3" />
+    </g>
+</svg>

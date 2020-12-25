@@ -149,15 +149,15 @@ class BoardCard extends StatelessWidget {
                           children: <Widget>[
                             SvgPicture.asset(
                               "assets/canvas/icons/ic_chat.svg",
-                              height: responsive.inchR(1.5),
+                              height: responsive.inchR(1.3),
                             ),
-                            SizedBox(height: responsive.inchR(0.2)),
+                            SizedBox(height: responsive.inchR(0.1)),
                             Text(
                               "Chat",
                               style: TextStyle(
                                   color: Color(0xff92A5C6),
                                   fontWeight: FontWeight.w300,
-                                  fontSize: responsive.inchR(1.25)),
+                                  fontSize: responsive.inchR(1.20)),
                             )
                           ],
                         ),
@@ -168,15 +168,15 @@ class BoardCard extends StatelessWidget {
                           children: <Widget>[
                             SvgPicture.asset(
                               "assets/canvas/icons/ic_file.svg",
-                              height: responsive.inchR(1.5),
+                              height: responsive.inchR(1.3),
                             ),
-                            SizedBox(height: responsive.inchR(0.2)),
+                            SizedBox(height: responsive.inchR(0.1)),
                             Text(
                               "Archivos",
                               style: TextStyle(
                                   color: Color(0xff92A5C6),
                                   fontWeight: FontWeight.w300,
-                                  fontSize: responsive.inchR(1.25)),
+                                  fontSize: responsive.inchR(1.20)),
                             )
                           ],
                         )

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:flutter_ui_app/apps/workout_app/pages/home_page/home_page.dart';
 import 'package:flutter_ui_app/apps/workout_app/widgets/title_hard_element.dart';
 import 'package:flutter_ui_app/global/responsive.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -191,7 +192,10 @@ class Actions extends StatelessWidget {
                   fontSize: responsive.inchR(1.8)),
             ),
             FlatButton(
-              onPressed: () {},
+              shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(responsive.inchR(0.5))),
+              onPressed: () => Navigator.push(
+                  context, MaterialPageRoute(builder: (_) => HomePage())),
               child: Text(
                 "Next",
                 style: TextStyle(
@@ -200,8 +204,8 @@ class Actions extends StatelessWidget {
                     fontSize: responsive.inchR(1.8)),
               ),
               color: Color(0xff40D876),
-              height: responsive.inchR(4),
-              minWidth: responsive.inchR(12),
+              height: responsive.inchR(4.5),
+              minWidth: responsive.inchR(15),
             )
           ],
         ),
