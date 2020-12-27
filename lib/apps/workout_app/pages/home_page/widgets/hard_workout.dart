@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_ui_app/apps/workout_app/pages/description_page/description_page.dart';
 import 'package:flutter_ui_app/global/responsive.dart';
 
 class HardSection extends StatelessWidget {
@@ -30,15 +31,11 @@ class HardSection extends StatelessWidget {
                 padding:
                     EdgeInsets.symmetric(horizontal: responsive.inchR(1.25)),
                 children: <Widget>[
+                  HardItem(image: "img_popular_1.png", name: "Yoga exercises"),
                   HardItem(
-                      image: "assets/workout_app/images/img_popular_1.png",
-                      name: "Yoga exercises"),
+                      image: "img_popular_2.png", name: "Example exercises"),
                   HardItem(
-                      image: "assets/workout_app/images/img_popular_2.png",
-                      name: "Example exercises"),
-                  HardItem(
-                      image: "assets/workout_app/images/img_popular_3.png",
-                      name: "Example exercises"),
+                      image: "img_popular_3.png", name: "Example exercises"),
                 ],
               ),
             )
@@ -62,15 +59,20 @@ class HardItem extends StatelessWidget {
       padding: EdgeInsets.symmetric(horizontal: responsive.inchR(0.75)),
       child: Column(
         children: <Widget>[
-          Container(
-            height: responsive.inchR(19),
-            width: responsive.inchR(16),
-            decoration: BoxDecoration(
-                image: DecorationImage(
-                  image: AssetImage(this.image),
-                  fit: BoxFit.cover,
-                ),
-                borderRadius: BorderRadius.circular(responsive.inchR(2))),
+          GestureDetector(
+            onTap: () => Navigator.push(
+                context, MaterialPageRoute(builder: (_) => DescriptionPage())),
+            child: Container(
+              height: responsive.inchR(19),
+              width: responsive.inchR(16),
+              decoration: BoxDecoration(
+                  image: DecorationImage(
+                    image:
+                        AssetImage("assets/workout_app/images/${this.image}"),
+                    fit: BoxFit.cover,
+                  ),
+                  borderRadius: BorderRadius.circular(responsive.inchR(2))),
+            ),
           ),
           Expanded(
               child: Container(
