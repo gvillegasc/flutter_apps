@@ -36,12 +36,17 @@ class ActionsNavigation extends StatelessWidget {
                 ],
               ),
             ),
-            CircleAvatar(
-              backgroundColor: Color(0xffFFFFFF),
-              radius: responsive.inchR(1.5),
-              child: SvgPicture.asset(
-                "assets/workout_app/icons/ic_close.svg",
-                height: responsive.inchR(1.5),
+            GestureDetector(
+              onTap: () {
+                Navigator.pop(context);
+              },
+              child: CircleAvatar(
+                backgroundColor: Color(0xffFFFFFF),
+                radius: responsive.inchR(1.5),
+                child: SvgPicture.asset(
+                  "assets/workout_app/icons/ic_close.svg",
+                  height: responsive.inchR(1.5),
+                ),
               ),
             )
           ],
