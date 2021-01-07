@@ -36,7 +36,7 @@
     </tr>
 	<tr>
 		<td><img src="./readme-images/canvas/page_1.jpg" alt="Home-Light" width="200"/></td> 
-        <td><img src="./readme-images/canvas/page_2.jpg" alt="Search-Light" width="200"/></td>
+        <td><img src="./readme-images/canvas/page_2.jpg" alt="Canvas-Light" width="200"/></td>
 	</tr>
 </table>
 <table>
@@ -46,9 +46,9 @@
         <th>Realizadas</th>
     </tr>
 	<tr>
-        <td><img src="./readme-images/canvas/page_3.jpg" alt="Home-Light" width="200"/></td>
-        <td><img src="./readme-images/canvas/page_4.jpg" alt="Home-Light" width="200"/></td>
-        <td><img src="./readme-images/canvas/page_5.jpg" alt="Home-Light" width="200"/></td> 
+        <td><img src="./readme-images/canvas/page_3.jpg" alt="Por-Hacer-Light" width="200"/></td>
+        <td><img src="./readme-images/canvas/page_4.jpg" alt="Haciendo-Light" width="200"/></td>
+        <td><img src="./readme-images/canvas/page_5.jpg" alt="Realizadas-Light" width="200"/></td> 
 	</tr>
 </table>
 
@@ -67,8 +67,8 @@
         <th>About</th>
     </tr>
 	<tr>
-		<td><img src="./readme-images/workout_app/page_1.png" alt="Home-Light" width="200"/></td> 
-        <td><img src="./readme-images/workout_app/page_2.png" alt="Search-Light" width="200"/></td>
+		<td><img src="./readme-images/workout_app/page_1.png" alt="Welcome Workout" width="200"/></td> 
+        <td><img src="./readme-images/workout_app/page_2.png" alt="About Workout" width="200"/></td>
 	</tr>
 </table>
 <table>
@@ -77,7 +77,20 @@
         <th>Detail</th>
     </tr>
 	<tr>
-		<td><img src="./readme-images/workout_app/page_3.png" alt="Home-Light" width="200"/></td> 
-        <td><img src="./readme-images/workout_app/page_4.png" alt="Search-Light" width="200"/></td>
+		<td><img src="./readme-images/workout_app/page_3.png" alt="Home Workout" width="200"/></td> 
+        <td><img src="./readme-images/workout_app/page_4.png" alt="Detail Workout" width="200"/></td>
+	</tr>
+</table>
+
+## DialogFlow in Flutter
+### App
+<table>
+    <tr>
+        <th>First Message</th>
+        <th>Second Message</th>
+    </tr>
+	<tr>
+		<td><img src="./readme-images/dialogflow/page_1.jpg" alt="Message 1" width="200"/></td> 
+        <td><img src="./readme-images/dialogflow/page_2.jpg" alt="Message 2" width="200"/></td>
 	</tr>
 </table>

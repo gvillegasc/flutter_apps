@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:flutter_ui_app/apps/dialog_flow/main_dialog_flow.dart';
 import 'package:flutter_ui_app/apps/movie_app/main_movie_app.dart';
 import 'package:flutter_ui_app/apps/workout_app/main_workout_app.dart';
 import 'package:flutter_ui_app/apps/canvas/main_canvas.dart';
@@ -47,6 +48,10 @@ class Menu extends StatelessWidget {
           RaisedButton(
             child: Text("Workout"),
             onPressed: () => _onPressed(context, MainWorkoutApp()),
+          ),
+          RaisedButton(
+            child: Text("Dialog Flow"),
+            onPressed: () => _onPressed(context, MainDialogFlow()),
           )
         ],
       ),
