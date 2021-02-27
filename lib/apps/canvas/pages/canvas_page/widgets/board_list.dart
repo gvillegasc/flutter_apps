@@ -63,7 +63,7 @@ class BoardCard extends StatelessWidget {
       child: Column(
         children: [
           Container(
-            height: responsive.inchR(11.5),
+            height: responsive.inchR(10.5),
             width: double.infinity,
             decoration: BoxDecoration(
                 color: this.boardItem.color,

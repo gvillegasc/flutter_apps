@@ -107,7 +107,6 @@ class ProjectList extends StatelessWidget {
 
     return ListView(
       scrollDirection: Axis.horizontal,
-      physics: BouncingScrollPhysics(),
       children: children,
     );
   }

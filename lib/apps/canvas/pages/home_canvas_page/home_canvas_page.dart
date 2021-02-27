@@ -12,7 +12,6 @@ class HomeCanvasPage extends StatelessWidget {
         width: responsive.width,
         height: responsive.height,
         child: CustomScrollView(
-          physics: BouncingScrollPhysics(),
           slivers: <Widget>[
             UserInfo(),
             TaskInfo(),

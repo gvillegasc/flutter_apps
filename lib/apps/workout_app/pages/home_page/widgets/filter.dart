@@ -21,7 +21,6 @@ class _FilterState extends State<Filter> {
         child: ListView(
           scrollDirection: Axis.horizontal,
           padding: EdgeInsets.symmetric(horizontal: responsive.inchR(2)),
-          physics: BouncingScrollPhysics(),
           children: <Widget>[
             FilterItem(
                 name: "Popular",

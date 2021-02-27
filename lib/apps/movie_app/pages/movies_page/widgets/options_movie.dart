@@ -10,7 +10,6 @@ class OptionMovie extends StatelessWidget {
       height: responsive.inchR(7),
       width: responsive.width,
       child: ListView(
-        physics: BouncingScrollPhysics(),
         scrollDirection: Axis.horizontal,
         children: [
           SizedBox(width: responsive.inchR(1.1)),

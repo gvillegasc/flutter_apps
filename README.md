@@ -3,7 +3,7 @@
 ## Movie App
 
 ### [Design](https://dribbble.com/shots/10795979-Movie-App-Free)
-<img src="./readme-images/movie_app/movie_app.png" alt="Moavie App" width="400"/>
+<img src="./readme-images/movie_app/movie_app.png" alt="Movie App" width="400"/>
 
 #### By Nickelfox
 - [Dribble](https://dribbble.com/NickelfoxStudio)
@@ -94,3 +94,37 @@
         <td><img src="./readme-images/dialogflow/page_2.jpg" alt="Message 2" width="200"/></td>
 	</tr>
 </table>
+
+
+## PAYPAL
+
+### [Design](https://dribbble.com/shots/14114443-PayPal-App-Redesign-Conept)
+<img src="./readme-images/paypal/paypal_app.png" alt="Paypal" width="400"/>
+
+#### By Vadim Demenko
+- [Dribble](https://dribbble.com/shots/14114443-PayPal-App-Redesign-Conept)
+
+### App
+<table>
+    <tr>
+        <th>Login</th>
+        <th>Home</th>
+        <th>Home Detail</th>
+    </tr>
+	<tr>
+		<td><img src="./readme-images/paypal/page_1.jpg" alt="Login Paypal" width="200"/></td> 
+        <td><img src="./readme-images/paypal/page_2.jpg" alt="Home Paypal" width="200"/></td>
+        <td><img src="./readme-images/paypal/page_2.jpg" alt="Home Detail Paypal" width="200"/></td>
+	</tr>
+</table>
+<table>
+    <tr>
+        <th>Contacts</th>
+        <th>Wallet</th>
+    </tr>
+	<tr>
+		<td><img src="./readme-images/paypal/page_4.jpg" alt="Contacts Paypal" width="200"/></td> 
+        <td><img src="./readme-images/paypal/page_5.jpg" alt="Wallet Paypal" width="200"/></td>
+	</tr>
+</table>
+

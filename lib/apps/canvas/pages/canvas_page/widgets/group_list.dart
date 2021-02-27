@@ -23,9 +23,9 @@ class GroupList extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SliverList(
-        delegate: SliverChildBuilderDelegate((_, index) {
-      return Group(group: groups[index]);
-    }, childCount: groups.length));
+        delegate: SliverChildBuilderDelegate(
+            (_, index) => Group(group: groups[index]),
+            childCount: groups.length));
   }
 }
 

@@ -7,6 +7,8 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final Responsive responsive = Responsive.of(context);
+    final double safeAreaBottom = MediaQuery.of(context).padding.bottom;
+
     return Scaffold(
       backgroundColor: Color(0xff131429),
       body: Container(
@@ -15,13 +17,12 @@ class HomePage extends StatelessWidget {
         child: Stack(
           children: [
             CustomScrollView(
-              physics: BouncingScrollPhysics(),
               slivers: <Widget>[
                 Introduction(),
                 Filter(),
                 PopularSection(),
                 HardSection(),
-                Separation(height: responsive.inchR(9))
+                Separation(height: responsive.inchR(9) + safeAreaBottom)
               ],
             ),
             BottomNavigation()

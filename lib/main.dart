@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_ui_app/apps/dialog_flow/main_dialog_flow.dart';
 import 'package:flutter_ui_app/apps/movie_app/main_movie_app.dart';
+import 'package:flutter_ui_app/apps/paypal/main_paypal_app.dart';
 import 'package:flutter_ui_app/apps/workout_app/main_workout_app.dart';
 import 'package:flutter_ui_app/apps/canvas/main_canvas.dart';
 import 'package:flutter_ui_app/global/responsive.dart';
@@ -19,12 +20,12 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter UI',
       debugShowCheckedModeBanner: false,
-      home: Menu(),
+      home: MenuApps(),
     );
   }
 }
 
-class Menu extends StatelessWidget {
+class MenuApps extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final Responsive responsive = Responsive.of(context);
@@ -52,6 +53,10 @@ class Menu extends StatelessWidget {
           RaisedButton(
             child: Text("Dialog Flow"),
             onPressed: () => _onPressed(context, MainDialogFlow()),
+          ),
+          RaisedButton(
+            child: Text("PayPal"),
+            onPressed: () => _onPressed(context, MainPayPalApp()),
           )
         ],
       ),
@@ -60,7 +65,7 @@ class Menu extends StatelessWidget {
 }
 
 void _onPressed(BuildContext context, Widget child) {
-  Navigator.of(context).push(
+  Navigator.of(context).pushReplacement(
     MaterialPageRoute(builder: (_) => child),
   );
 }

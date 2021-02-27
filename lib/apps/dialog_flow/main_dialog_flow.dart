@@ -6,6 +6,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_dialogflow/flutter_dialogflow.dart';
 import 'package:flutter_ui_app/apps/dialog_flow/models/Message.dart';
 import 'package:flutter_ui_app/global/responsive.dart';
+import 'package:flutter_ui_app/main.dart';
 
 class MainDialogFlow extends StatefulWidget {
   @override
@@ -22,6 +23,14 @@ class _MainDialogFlowState extends State<MainDialogFlow> {
   void initState() {
     super.initState();
     responseDialog("Hola");
+  }
+
+  @override
+  void dispose() {
+    _textController?.dispose();
+    _focusNode?.dispose();
+    _scrollController?.dispose();
+    super.dispose();
   }
 
   void responseDialog(String query) async {
@@ -45,10 +54,13 @@ class _MainDialogFlowState extends State<MainDialogFlow> {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Dialog Flow',
-      debugShowCheckedModeBanner: false,
-      home: Scaffold(
+    return WillPopScope(
+      onWillPop: () async {
+        Navigator.pushReplacement(
+            context, MaterialPageRoute(builder: (_) => MenuApps()));
+        return true;
+      },
+      child: Scaffold(
         appBar: AppBar(
           title: Text('Dialog Flow'),
         ),

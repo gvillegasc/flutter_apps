@@ -27,7 +27,6 @@ class PopularSection extends StatelessWidget {
             Expanded(
               child: ListView(
                 scrollDirection: Axis.horizontal,
-                physics: BouncingScrollPhysics(),
                 padding:
                     EdgeInsets.symmetric(horizontal: responsive.inchR(1.25)),
                 children: <Widget>[

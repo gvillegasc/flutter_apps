@@ -12,7 +12,6 @@ class ActivityList extends StatelessWidget {
     final Responsive responsive = Responsive.of(context);
     return Expanded(
         child: ListView.builder(
-      physics: BouncingScrollPhysics(),
       padding: EdgeInsets.symmetric(
           vertical: responsive.inchR(1), horizontal: responsive.widthR(5)),
       itemCount: activities.length,

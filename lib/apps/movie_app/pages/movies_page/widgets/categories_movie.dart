@@ -12,7 +12,6 @@ class CategoriesMovie extends StatelessWidget {
       padding: EdgeInsets.symmetric(vertical: responsive.inchR(1.7)),
       child: ListView(
         scrollDirection: Axis.horizontal,
-        physics: BouncingScrollPhysics(),
         children: <Widget>[
           SizedBox(width: responsive.inchR(2)),
           ItemCategory(name: "Action"),

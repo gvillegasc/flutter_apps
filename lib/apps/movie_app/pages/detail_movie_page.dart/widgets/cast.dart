@@ -19,7 +19,7 @@ class Cast extends StatelessWidget {
   Widget build(BuildContext context) {
     final Responsive responsive = Responsive.of(context);
     return Container(
-      width: responsive.inchR(10),
+      width: responsive.inchR(7.5),
       child: Column(
         children: <Widget>[
           SizedBox(
@@ -27,7 +27,7 @@ class Cast extends StatelessWidget {
           ),
           Image(
             image: AssetImage(this.asset),
-            height: responsive.heightR(9),
+            height: responsive.heightR(8),
           ),
           SizedBox(
             height: responsive.heightR(1),
@@ -36,7 +36,7 @@ class Cast extends StatelessWidget {
             this.name,
             textAlign: TextAlign.center,
             style: GoogleFonts.openSans(
-                fontSize: responsive.inchR(1.6),
+                fontSize: responsive.inchR(1.4),
                 color: Color(0xff12153D),
                 fontWeight: FontWeight.w600),
           ),
@@ -47,7 +47,7 @@ class Cast extends StatelessWidget {
             this.position,
             textAlign: TextAlign.center,
             style: GoogleFonts.openSans(
-                fontSize: responsive.inchR(1.6),
+                fontSize: responsive.inchR(1.4),
                 color: Color(0xff9A9BB2),
                 fontWeight: FontWeight.w600),
           ),

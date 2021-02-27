@@ -78,7 +78,6 @@ class About extends StatelessWidget {
                     vertical: responsive.inchR(2),
                     horizontal: responsive.inchR(2)),
                 scrollDirection: Axis.horizontal,
-                physics: BouncingScrollPhysics(),
                 children: <Widget>[
                   Option(
                     selected: true,
