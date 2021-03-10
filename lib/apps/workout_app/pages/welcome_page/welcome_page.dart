@@ -2,40 +2,32 @@ import 'package:flutter/material.dart';
 import 'package:flutter_ui_app/apps/workout_app/pages/about_page/about_page.dart';
 import 'package:flutter_ui_app/apps/workout_app/widgets/title_hard_element.dart';
 import 'package:flutter_ui_app/global/responsive.dart';
-import 'package:flutter_ui_app/main.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class WelcomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final Responsive responsive = Responsive.of(context);
-    return WillPopScope(
-      onWillPop: () async {
-        Navigator.pushReplacement(
-            context, MaterialPageRoute(builder: (_) => MenuApps()));
-        return true;
-      },
-      child: Scaffold(
-        body: Container(
-          height: responsive.height,
-          width: responsive.width,
-          decoration: BoxDecoration(
-              image: DecorationImage(
-            image: AssetImage("assets/workout_app/images/img_welcome_bg.png"),
-            fit: BoxFit.cover,
-          )),
-          child: Container(
-            color: Color(0xB40E1B3F),
-            child: Stack(
-              children: <Widget>[
-                Positioned(
-                  top: responsive.inchR(8),
-                  child: TitleHardElement(),
-                ),
-                Welcome(),
-                Buttons()
-              ],
-            ),
+    return Scaffold(
+      body: Container(
+        height: responsive.height,
+        width: responsive.width,
+        decoration: BoxDecoration(
+            image: DecorationImage(
+          image: AssetImage("assets/workout_app/images/img_welcome_bg.png"),
+          fit: BoxFit.cover,
+        )),
+        child: Container(
+          color: Color(0xB40E1B3F),
+          child: Stack(
+            children: <Widget>[
+              Positioned(
+                top: responsive.inchR(8),
+                child: TitleHardElement(),
+              ),
+              Welcome(),
+              Buttons()
+            ],
           ),
         ),
       ),

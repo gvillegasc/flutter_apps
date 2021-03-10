@@ -6,7 +6,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_dialogflow/flutter_dialogflow.dart';
 import 'package:flutter_ui_app/apps/dialog_flow/models/Message.dart';
 import 'package:flutter_ui_app/global/responsive.dart';
-import 'package:flutter_ui_app/main.dart';
 
 class MainDialogFlow extends StatefulWidget {
   @override
@@ -54,36 +53,29 @@ class _MainDialogFlowState extends State<MainDialogFlow> {
 
   @override
   Widget build(BuildContext context) {
-    return WillPopScope(
-      onWillPop: () async {
-        Navigator.pushReplacement(
-            context, MaterialPageRoute(builder: (_) => MenuApps()));
-        return true;
-      },
-      child: Scaffold(
-        appBar: AppBar(
-          title: Text('Dialog Flow'),
-        ),
-        body: Container(
-          color: Colors.white,
-          child: Column(
-            children: [
-              Flexible(
-                  child: ListView.builder(
-                      reverse: true,
-                      controller: _scrollController,
-                      padding: EdgeInsets.only(top: 10),
-                      itemCount: messageList.length,
-                      itemBuilder: (_, i) => messageList[i])),
-              Divider(
-                height: 1,
-              ),
-              Container(
-                color: Colors.white,
-                child: _inputChat(),
-              )
-            ],
-          ),
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('Dialog Flow'),
+      ),
+      body: Container(
+        color: Colors.white,
+        child: Column(
+          children: [
+            Flexible(
+                child: ListView.builder(
+                    reverse: true,
+                    controller: _scrollController,
+                    padding: EdgeInsets.only(top: 10),
+                    itemCount: messageList.length,
+                    itemBuilder: (_, i) => messageList[i])),
+            Divider(
+              height: 1,
+            ),
+            Container(
+              color: Colors.white,
+              child: _inputChat(),
+            )
+          ],
         ),
       ),
     );

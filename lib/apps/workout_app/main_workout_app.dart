@@ -4,10 +4,6 @@ import 'package:flutter_ui_app/apps/workout_app/pages/welcome_page/welcome_page.
 class MainWorkoutApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Worlouk App',
-      debugShowCheckedModeBanner: false,
-      home: WelcomePage(),
-    );
+    return WelcomePage();
   }
 }
