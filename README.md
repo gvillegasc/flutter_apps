@@ -128,3 +128,21 @@
 	</tr>
 </table>
 
+
+## NAVIGATION ANIMATION
+
+### [Design](https://dribbble.com/shots/14114443-PayPal-App-Redesign-Conept)
+<img src="./readme-images/button_options/animation.gif" alt="Paypal" width="400"/>
+
+#### By Anton Aheichanka
+- [Dribble](https://dribbble.com/shots/1928064-Secret-Project)
+
+### App
+<table>
+    <tr>
+        <th>Navigation Page</th>
+    </tr>
+	<tr>
+		<td><img src="./readme-images/button_options/animation_test.gif" alt="Paypal" width="300"/></td> 
+	</tr>
+</table>

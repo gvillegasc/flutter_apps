@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:flutter_ui_app/apps/button_options/main_button_options.dart';
 import 'package:flutter_ui_app/apps/dialog_flow/main_dialog_flow.dart';
 import 'package:flutter_ui_app/apps/movie_app/main_movie_app.dart';
 import 'package:flutter_ui_app/apps/paypal/main_paypal_app.dart';
@@ -33,9 +34,13 @@ class MenuApps extends StatelessWidget {
         name: "Workout", image: "workout_app.png", widget: MainWorkoutApp()),
     _AppItem(
         name: "Dialog Flow",
-        image: "dialog_flow_app.jpg",
+        image: "dialog_flow_app.png",
         widget: MainDialogFlow()),
     _AppItem(name: "PayPal", image: "paypal_app.png", widget: MainPayPalApp()),
+    _AppItem(
+        name: "Button Options",
+        image: "button_options_app.png",
+        widget: MainButtonOptions()),
   ];
   @override
   Widget build(BuildContext context) {
