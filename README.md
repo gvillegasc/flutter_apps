@@ -146,3 +146,22 @@
 		<td><img src="./readme-images/button_options/animation_test.gif" alt="Paypal" width="300"/></td> 
 	</tr>
 </table>
+
+
+## TOP MENU ANIMATION
+
+### [Design](https://dribbble.com/shots/14114443-PayPal-App-Redesign-Conept)
+<img src="./readme-images/top_menu/animation.gif" alt="Paypal" width="400"/>
+
+#### By Yalantis
+- [Dribble](https://dribbble.com/yalantis)
+
+### App
+<table>
+    <tr>
+        <th>Top Menu Page</th>
+    </tr>
+	<tr>
+		<td><img src="./readme-images/top_menu/top_menu.gif" alt="Paypal" width="300"/></td> 
+	</tr>
+</table>
