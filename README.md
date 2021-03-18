@@ -162,6 +162,26 @@
         <th>Top Menu Page</th>
     </tr>
 	<tr>
-		<td><img src="./readme-images/top_menu/top_menu.gif" alt="Paypal" width="300"/></td> 
+		<td><img src="./readme-images/top_menu/animation_test.gif" alt="Paypal" width="300"/></td> 
+	</tr>
+</table>
+
+
+## TOP MENU ANIMATION
+
+### [Design](https://dribbble.com/interfacemarket)
+<img src="./readme-images/menu_ui/animation.gif" alt="Paypal" width="400"/>
+
+#### By Interface Market
+
+- [Dribble](https://dribbble.com/interfacemarket)
+
+### App
+<table>
+    <tr>
+        <th>Menu UI Page</th>
+    </tr>
+	<tr>
+		<td><img src="./readme-images/menu_ui/animation_test.gif" alt="Paypal" width="300"/></td> 
 	</tr>
 </table>
