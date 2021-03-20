@@ -139,6 +139,13 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "0.1.0"
+  flutter_circular_text:
+    dependency: "direct main"
+    description:
+      name: flutter_circular_text
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "0.3.0"
   flutter_dialogflow:
     dependency: "direct main"
     description:
