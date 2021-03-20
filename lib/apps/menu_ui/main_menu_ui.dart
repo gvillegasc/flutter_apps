@@ -23,50 +23,50 @@ class _MenuUiState extends State<MenuUi> {
     super.initState();
   }
 
-  List<_MenuItemModel> _menuItems = [
+  final _menuItems = [
     _MenuItemModel(
         itemId: 1,
-        title: "HEALTHCARE",
-        options: ["Skincare", "Personal Care", "Health", "Eye Care"],
-        titleColor: Color(0xff0D3284),
-        color: Color(0xff8CD9E8)),
+        title: 'HEALTHCARE',
+        options: ['Skincare', 'Personal Care', 'Health', 'Eye Care'],
+        titleColor: const Color(0xff0D3284),
+        color: const Color(0xff8CD9E8)),
     _MenuItemModel(
         itemId: 2,
-        title: "FOOD & DRINK",
-        titleColor: Color(0xffFBB125),
+        title: 'FOOD & DRINK',
+        titleColor: const Color(0xffFBB125),
         options: [
-          "Fruits",
-          "Frozen Food",
-          "Bakery",
-          "Snacks & Desserts",
-          "Alcoholic Beverages",
-          "Noddles & Pasta",
-          "Rice & Cooking",
+          'Fruits',
+          'Frozen Food',
+          'Bakery',
+          'Snacks & Desserts',
+          'Alcoholic Beverages',
+          'Noddles & Pasta',
+          'Rice & Cooking',
         ],
-        color: Color(0xff14643D)),
+        color: const Color(0xff14643D)),
     _MenuItemModel(
         itemId: 3,
-        title: "BEAUTY",
-        titleColor: Color(0xFFF15D58),
-        options: ["Skincare", "Skincare", "Skincare"],
-        color: Color(0xffFCBEBF)),
+        title: 'BEAUTY',
+        titleColor: const Color(0xFFF15D58),
+        options: ['Skincare', 'Skincare', 'Skincare'],
+        color: const Color(0xffFCBEBF)),
     _MenuItemModel(
         itemId: 4,
-        title: "BABY & KIDS",
-        titleColor: Color(0xffFCBEBF),
-        options: ["Makeup", "Necklaces", "Bracelet", "Earring"],
-        color: Color(0xff0D3284)),
+        title: 'BABY & KIDS',
+        titleColor: const Color(0xffFCBEBF),
+        options: ['Makeup', 'Necklaces', 'Bracelet', 'Earring'],
+        color: const Color(0xff0D3284)),
     _MenuItemModel(
         itemId: 5,
-        title: "HOMEWARES",
-        titleColor: Color(0xffFFFFFF),
+        title: 'HOMEWARES',
+        titleColor: const Color(0xffFFFFFF),
         options: [
-          "Chair",
-          "Couch",
-          "Living room",
-          "Table",
+          'Chair',
+          'Couch',
+          'Living room',
+          'Table',
         ],
-        color: Color(0xffFBB125)),
+        color: const Color(0xffFBB125)),
   ];
 
   @override
@@ -74,7 +74,7 @@ class _MenuUiState extends State<MenuUi> {
     final responsive = Responsive.of(context);
 
     return Scaffold(
-      body: Container(
+      body: SizedBox(
         height: responsive.height,
         width: responsive.width,
         child: Column(
@@ -133,8 +133,8 @@ class __MenuItemState extends State<_MenuItem>
 
   @override
   void initState() {
-    controller =
-        AnimationController(duration: Duration(milliseconds: 600), vsync: this);
+    controller = AnimationController(
+        duration: const Duration(milliseconds: 600), vsync: this);
     animation = CurvedAnimation(curve: Curves.easeOut, parent: controller);
 
     super.initState();
@@ -169,7 +169,7 @@ class __MenuItemState extends State<_MenuItem>
         child: Align(
           alignment: Alignment.centerLeft,
           child: SingleChildScrollView(
-            physics: NeverScrollableScrollPhysics(),
+            physics: const NeverScrollableScrollPhysics(),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               mainAxisAlignment: MainAxisAlignment.center,
@@ -196,8 +196,8 @@ class __MenuItemState extends State<_MenuItem>
                                 children: List.generate(
                                     widget.options.length,
                                     (i) => Container(
-                                          margin:
-                                              EdgeInsets.symmetric(vertical: 5),
+                                          margin: const EdgeInsets.symmetric(
+                                              vertical: 5),
                                           child: Text(widget.options[i],
                                               style: TextStyle(
                                                   fontSize: 16,

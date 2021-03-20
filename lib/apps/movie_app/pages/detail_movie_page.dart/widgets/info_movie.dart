@@ -5,7 +5,7 @@ import 'widgets.dart';
 class InfoMovie extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    final Responsive responsive = Responsive.of(context);
+    final responsive = Responsive.of(context);
     return Positioned(
         top: responsive.heightR(27),
         right: 0,
@@ -16,7 +16,7 @@ class InfoMovie extends StatelessWidget {
                 color: Colors.grey.withOpacity(0.35),
                 spreadRadius: 1,
                 blurRadius: 40,
-                offset: Offset(0, 9), // changes position of shadow
+                offset: const Offset(0, 9), // changes position of shadow
               ),
             ],
             borderRadius: BorderRadius.only(
@@ -28,7 +28,7 @@ class InfoMovie extends StatelessWidget {
                 bottomLeft: Radius.circular(responsive.inchR(6)),
                 topLeft: Radius.circular(responsive.inchR(6))),
             child: Container(
-              color: Color(0xffFFFFFF),
+              color: const Color(0xffFFFFFF),
               padding: EdgeInsets.only(
                   top: responsive.inchR(1.5),
                   left: responsive.inchR(4),

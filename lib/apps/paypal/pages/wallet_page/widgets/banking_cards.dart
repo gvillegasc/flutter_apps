@@ -6,7 +6,7 @@ import 'package:google_fonts/google_fonts.dart';
 class BankingCards extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    final Responsive responsive = Responsive.of(context);
+    final responsive = Responsive.of(context);
     return SliverToBoxAdapter(
       child: Container(
         width: responsive.width,
@@ -17,21 +17,21 @@ class BankingCards extends StatelessWidget {
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: <Widget>[
-                Text("My banking cards",
+                Text('My banking cards',
                     style: GoogleFonts.manrope(
-                        color: Color(0xff243656).withOpacity(.5),
+                        color: const Color(0xff243656).withOpacity(.5),
                         fontWeight: FontWeight.w400,
                         fontSize: responsive.inchR(1.75))),
                 Row(
                   children: <Widget>[
-                    SvgPicture.asset("assets/paypal/icons/ic_add.svg",
+                    SvgPicture.asset('assets/paypal/icons/ic_add.svg',
                         height: responsive.inchR(1.5)),
-                    SizedBox(
+                    const SizedBox(
                       width: 2,
                     ),
-                    Text("Add",
+                    Text('Add',
                         style: GoogleFonts.manrope(
-                            color: Color(0xff243656).withOpacity(.5),
+                            color: const Color(0xff243656).withOpacity(.5),
                             fontWeight: FontWeight.w400,
                             fontSize: responsive.inchR(1.75))),
                   ],
@@ -41,25 +41,25 @@ class BankingCards extends StatelessWidget {
             SizedBox(
               height: responsive.heightR(2),
             ),
-            _CardTile(
-              icon: "ic_visa.svg",
-              cardName: "Visa",
-              cardNumber: "4*** **** ****2 4746",
+            const _CardTile(
+              icon: 'ic_visa.svg',
+              cardName: 'Visa',
+              cardNumber: '4*** **** ****2 4746',
             ),
-            _CardTile(
-              icon: "ic_master_card.svg",
-              cardName: "MasterCard",
-              cardNumber: "4*** **** ****3 2863",
+            const _CardTile(
+              icon: 'ic_master_card.svg',
+              cardName: 'MasterCard',
+              cardNumber: '4*** **** ****3 2863',
             ),
-            _CardTile(
-              icon: "ic_visa.svg",
-              cardName: "Visa",
-              cardNumber: "4*** **** ****2 5054",
+            const _CardTile(
+              icon: 'ic_visa.svg',
+              cardName: 'Visa',
+              cardNumber: '4*** **** ****2 5054',
             ),
-            _CardTile(
-              icon: "ic_master_card.svg",
-              cardName: "MasterCard",
-              cardNumber: "4*** **** ****6 2364",
+            const _CardTile(
+              icon: 'ic_master_card.svg',
+              cardName: 'MasterCard',
+              cardNumber: '4*** **** ****6 2364',
             ),
             SizedBox(
               height: responsive.inchR(9),
@@ -72,16 +72,16 @@ class BankingCards extends StatelessWidget {
 }
 
 class _CardTile extends StatelessWidget {
+  const _CardTile({Key key, this.icon, this.cardName, this.cardNumber})
+      : super(key: key);
+
   final String icon;
   final String cardName;
   final String cardNumber;
 
-  const _CardTile({Key key, this.icon, this.cardName, this.cardNumber})
-      : super(key: key);
   @override
   Widget build(BuildContext context) {
-    final Responsive responsive = Responsive.of(context);
-
+    final responsive = Responsive.of(context);
     return Container(
       margin: EdgeInsets.symmetric(vertical: responsive.inchR(.5)),
       width: double.infinity,
@@ -93,7 +93,7 @@ class _CardTile extends StatelessWidget {
               color: Colors.grey.withOpacity(0.07),
               spreadRadius: -10,
               blurRadius: 20,
-              offset: Offset(0, 20), // changes position of shadow
+              offset: const Offset(0, 20),
             )
           ],
           borderRadius: BorderRadius.circular(responsive.inchR(2))),
@@ -103,28 +103,26 @@ class _CardTile extends StatelessWidget {
             padding: EdgeInsets.all(responsive.inchR(1.75)),
             height: double.infinity,
             child: SvgPicture.asset(
-              "assets/paypal/icons/${this.icon}",
+              'assets/paypal/icons/$icon',
             )),
         Expanded(
-            child: Container(
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: <Widget>[
-              Text(this.cardName,
-                  style: GoogleFonts.manrope(
-                      color: Color(0xff243656),
-                      fontSize: responsive.inchR(2.1),
-                      fontWeight: FontWeight.w500)),
-              Text(
-                this.cardNumber,
+            child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: <Widget>[
+            Text(cardName,
                 style: GoogleFonts.manrope(
-                    color: Color(0xff919BAA),
-                    fontSize: responsive.inchR(1.6),
-                    fontWeight: FontWeight.w500),
-              ),
-            ],
-          ),
+                    color: const Color(0xff243656),
+                    fontSize: responsive.inchR(2.1),
+                    fontWeight: FontWeight.w500)),
+            Text(
+              cardNumber,
+              style: GoogleFonts.manrope(
+                  color: const Color(0xff919BAA),
+                  fontSize: responsive.inchR(1.6),
+                  fontWeight: FontWeight.w500),
+            ),
+          ],
         )),
       ]),
     );

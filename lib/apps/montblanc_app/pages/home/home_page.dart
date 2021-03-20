@@ -22,7 +22,7 @@ class HomePage extends StatelessWidget {
             children: <Widget>[
               SafeArea(
                 bottom: false,
-                child: Container(
+                child: SizedBox(
                   height: 420,
                   width: double.infinity,
                   child: Stack(
@@ -35,15 +35,15 @@ class HomePage extends StatelessWidget {
                               MaterialPageRoute(
                                 builder: (_) => DetailPage(),
                               )),
-                          child: Container(
+                          child: SizedBox(
                             height: 400,
                             width: responsive.width,
-                            child: SizedBox(
+                            child: const SizedBox(
                               width: double.infinity,
                               child: Image(
                                   fit: BoxFit.fitWidth,
                                   image: AssetImage(
-                                      "assets/montblanc_app/images/motorcycle.png")),
+                                      'assets/montblanc_app/images/motorcycle.png')),
                             ),
                           ),
                         ),
@@ -52,10 +52,10 @@ class HomePage extends StatelessWidget {
                         top: 0,
                         child: Container(
                           width: responsive.width,
-                          padding: EdgeInsets.only(top: 15),
+                          padding: const EdgeInsets.only(top: 15),
                           alignment: Alignment.center,
                           child: SvgPicture.asset(
-                            "assets/montblanc_app/images/logo.svg",
+                            'assets/montblanc_app/images/logo.svg',
                             height: 35,
                           ),
                         ),
@@ -69,10 +69,10 @@ class HomePage extends StatelessWidget {
                             children: [
                               TextItem(
                                 text: Text(
-                                  "MOTORCYCLE MONTBLANK",
+                                  'MOTORCYCLE MONTBLANK',
                                   style: GoogleFonts.montserrat(
                                     fontSize: 15,
-                                    color: Color(0xffFFFFFF),
+                                    color: const Color(0xffFFFFFF),
                                     fontWeight: FontWeight.w400,
                                   ),
                                 ),
@@ -92,8 +92,8 @@ class HomePage extends StatelessWidget {
                 ),
               ),
               Container(
-                  margin: EdgeInsets.only(top: 40, bottom: 20),
-                  padding: EdgeInsets.symmetric(horizontal: 20),
+                  margin: const EdgeInsets.only(top: 40, bottom: 20),
+                  padding: const EdgeInsets.symmetric(horizontal: 20),
                   alignment: Alignment.centerLeft,
                   child: Text('MONTBLANC MOTORCYCLE',
                       style: GoogleFonts.montserrat(
@@ -101,11 +101,11 @@ class HomePage extends StatelessWidget {
                           fontWeight: FontWeight.w900,
                           fontSize: 18))),
               Container(
-                  padding: EdgeInsets.symmetric(horizontal: 20),
+                  padding: const EdgeInsets.symmetric(horizontal: 20),
                   margin: EdgeInsets.only(bottom: statusBarHeight + 20),
                   alignment: Alignment.centerLeft,
                   child: Text(
-                      'The Montblanc Motorcycle comes with the same, uber-luxurious design language seen in the company’s pens. I’m talking clean surfaces, gloss black paint-job with the judicious use of metallic accents. My favorite detail, however, has to be the bike’s headlamp, which directly borrows its design from Montblanc’s pen-caps and watch crowns. The lamp comes with a rounded conical glass cover under which sits Montblanc’s famous star-shaped logo. The edge of the headlamp sports a metallic rim too, with protrusions on the side that make way for the bike’s indicators features that directly resemble the crown seen on Montblanc’s watches.',
+                      '''The Montblanc Motorcycle comes with the same, uber-luxurious design language seen in the company’s pens. I’m talking clean surfaces, gloss black paint-job with the judicious use of metallic accents. My favorite detail, however, has to be the bike’s headlamp, which directly borrows its design from Montblanc’s pen-caps and watch crowns. The lamp comes with a rounded conical glass cover under which sits Montblanc’s famous star-shaped logo. The edge of the headlamp sports a metallic rim too, with protrusions on the side that make way for the bike’s indicators features that directly resemble the crown seen on Montblanc’s watches.''',
                       style: GoogleFonts.montserrat(
                           fontSize: 12,
                           height: 2,

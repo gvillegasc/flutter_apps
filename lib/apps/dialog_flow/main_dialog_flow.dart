@@ -13,15 +13,16 @@ class MainDialogFlow extends StatefulWidget {
 }
 
 class _MainDialogFlowState extends State<MainDialogFlow> {
-  final _focusNode = new FocusNode();
-  final TextEditingController _textController = new TextEditingController();
-  ScrollController _scrollController = new ScrollController();
+  final _focusNode = FocusNode();
+  final TextEditingController _textController = TextEditingController();
+  final ScrollController _scrollController = ScrollController();
   List<MessageBubble> messageList = [];
+  Dialogflow dialogflow;
 
   @override
   void initState() {
     super.initState();
-    responseDialog("Hola");
+    responseDialog('Hola');
   }
 
   @override
@@ -36,18 +37,17 @@ class _MainDialogFlowState extends State<MainDialogFlow> {
     final message = query.trim().replaceAll(' ', '_');
     setState(() {
       messageList.insert(
-          0, MessageBubble(message: Message(typeUser: "user", message: query)));
+          0, MessageBubble(message: Message(typeUser: 'user', message: query)));
     });
 
-    Dialogflow dialogflow =
-        Dialogflow(token: "d3d91773ebc24be5811a919c4047c527");
-    AIResponse response = await dialogflow.sendQuery(message);
+    dialogflow = const Dialogflow(token: 'd3d91773ebc24be5811a919c4047c527');
+    final response = await dialogflow.sendQuery(message);
     setState(() {
       messageList.insert(
           0,
           MessageBubble(
               message: Message(
-                  typeUser: "dialog", message: response.getMessageResponse())));
+                  typeUser: 'dialog', message: response.getMessageResponse())));
     });
   }
 
@@ -55,7 +55,7 @@ class _MainDialogFlowState extends State<MainDialogFlow> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Dialog Flow'),
+        title: const Text('Dialog Flow'),
       ),
       body: Container(
         color: Colors.white,
@@ -65,10 +65,10 @@ class _MainDialogFlowState extends State<MainDialogFlow> {
                 child: ListView.builder(
                     reverse: true,
                     controller: _scrollController,
-                    padding: EdgeInsets.only(top: 10),
+                    padding: const EdgeInsets.only(top: 10),
                     itemCount: messageList.length,
                     itemBuilder: (_, i) => messageList[i])),
-            Divider(
+            const Divider(
               height: 1,
             ),
             Container(
@@ -81,8 +81,8 @@ class _MainDialogFlowState extends State<MainDialogFlow> {
     );
   }
 
-  _sendMessage() {
-    if (_textController.text.trim().length > 0) {
+  void _sendMessage() {
+    if (_textController.text.isNotEmpty) {
       responseDialog(_textController.text);
       _textController.clear();
       _focusNode.requestFocus();
@@ -92,7 +92,7 @@ class _MainDialogFlowState extends State<MainDialogFlow> {
   Widget _inputChat() {
     return SafeArea(
       child: Container(
-        margin: EdgeInsets.symmetric(horizontal: 8),
+        margin: const EdgeInsets.symmetric(horizontal: 8),
         child: Row(
           children: [
             Flexible(
@@ -100,22 +100,22 @@ class _MainDialogFlowState extends State<MainDialogFlow> {
                 controller: _textController,
                 textInputAction: TextInputAction.send,
                 onEditingComplete: _sendMessage,
-                decoration:
-                    InputDecoration.collapsed(hintText: "Escribe un mensaje!"),
+                decoration: const InputDecoration.collapsed(
+                    hintText: 'Escribe un mensaje!'),
                 focusNode: _focusNode,
               ),
             ),
             Container(
-              margin: EdgeInsets.symmetric(horizontal: 4),
+              margin: const EdgeInsets.symmetric(horizontal: 4),
               child: Platform.isIOS
                   ? CupertinoButton(
-                      child: Text("Send"), onPressed: _sendMessage)
+                      child: const Text('Send'), onPressed: _sendMessage)
                   : Container(
-                      margin: EdgeInsets.symmetric(horizontal: 4),
+                      margin: const EdgeInsets.symmetric(horizontal: 4),
                       child: IconButton(
                           highlightColor: Colors.transparent,
                           splashColor: Colors.transparent,
-                          icon: Icon(
+                          icon: const Icon(
                             Icons.send,
                             color: Colors.blue,
                           ),
@@ -130,24 +130,25 @@ class _MainDialogFlowState extends State<MainDialogFlow> {
 }
 
 class MessageBubble extends StatelessWidget {
+  const MessageBubble({Key key, @required this.message}) : super(key: key);
+
   final Message message;
 
-  const MessageBubble({Key key, @required this.message}) : super(key: key);
   @override
   Widget build(BuildContext context) {
-    final Responsive responsive = Responsive.of(context);
+    final responsive = Responsive.of(context);
     return Container(
-      margin: EdgeInsets.symmetric(vertical: 5),
+      margin: const EdgeInsets.symmetric(vertical: 5),
       width: responsive.width,
-      child: message.typeUser == "dialog"
+      child: message.typeUser == 'dialog'
           ? Row(
               mainAxisAlignment: MainAxisAlignment.start,
               crossAxisAlignment: CrossAxisAlignment.start,
               children: <Widget>[
                 SizedBox(width: responsive.inchR(1)),
-                CircleAvatar(
+                const CircleAvatar(
                   backgroundColor: Colors.redAccent,
-                  child: Text("DF", style: TextStyle(color: Colors.white)),
+                  child: Text('DF', style: TextStyle(color: Colors.white)),
                 ),
                 SizedBox(width: responsive.inchR(1)),
                 Container(
@@ -161,7 +162,7 @@ class MessageBubble extends StatelessWidget {
                         vertical: responsive.inchR(1.2)),
                     child: Text(
                       message.message,
-                      style: TextStyle(color: Colors.black),
+                      style: const TextStyle(color: Colors.black),
                     )),
               ],
             )
@@ -180,11 +181,11 @@ class MessageBubble extends StatelessWidget {
                         vertical: responsive.inchR(1.2)),
                     child: Text(
                       message.message,
-                      style: TextStyle(color: Colors.white),
+                      style: const TextStyle(color: Colors.white),
                     )),
                 SizedBox(width: responsive.inchR(1)),
-                CircleAvatar(
-                  child: Text("US"),
+                const CircleAvatar(
+                  child: Text('US'),
                 ),
                 SizedBox(width: responsive.inchR(1)),
               ],

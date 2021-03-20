@@ -7,17 +7,16 @@ import 'package:provider/provider.dart';
 class PageNavigator extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    final ToDoNavigationProvider toDoNavigationProvider =
-        Provider.of<ToDoNavigationProvider>(context);
-    final Responsive responsive = Responsive.of(context);
+    final toDoNavigationProvider = Provider.of<ToDoNavigationProvider>(context);
+    final responsive = Responsive.of(context);
     return Container(
       // height: double.infinity,
       width: responsive.widthR(82),
-      color: Color(0xffFFFFFFF),
+      color: const Color(0xffFFFFFFF),
       child: PageView(
         scrollDirection: Axis.vertical,
         controller: toDoNavigationProvider.pageController,
-        physics: NeverScrollableScrollPhysics(),
+        physics: const NeverScrollableScrollPhysics(),
         children: <Widget>[ToDoList(), DoingList(), DoneList()],
       ),
     );

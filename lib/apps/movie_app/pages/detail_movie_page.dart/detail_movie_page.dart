@@ -5,9 +5,9 @@ import 'package:flutter_ui_app/global/responsive.dart';
 class DetailMoviePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    final Responsive responsive = Responsive.of(context);
+    final responsive = Responsive.of(context);
     return Scaffold(
-      body: Container(
+      body: SizedBox(
         height: responsive.height,
         width: responsive.width,
         child: Stack(

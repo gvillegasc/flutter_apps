@@ -3,10 +3,6 @@ import 'package:flutter_ui_app/global/responsive.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class Cast extends StatelessWidget {
-  final String asset;
-  final String name;
-  final String position;
-
   const Cast(
       {Key key,
       @required this.asset,
@@ -15,10 +11,14 @@ class Cast extends StatelessWidget {
       : assert(asset != null, name != null),
         super(key: key);
 
+  final String asset;
+  final String name;
+  final String position;
+
   @override
   Widget build(BuildContext context) {
-    final Responsive responsive = Responsive.of(context);
-    return Container(
+    final responsive = Responsive.of(context);
+    return SizedBox(
       width: responsive.inchR(7.5),
       child: Column(
         children: <Widget>[
@@ -26,29 +26,29 @@ class Cast extends StatelessWidget {
             height: responsive.heightR(0.6),
           ),
           Image(
-            image: AssetImage(this.asset),
+            image: AssetImage(asset),
             height: responsive.heightR(8),
           ),
           SizedBox(
             height: responsive.heightR(1),
           ),
           Text(
-            this.name,
+            name,
             textAlign: TextAlign.center,
             style: GoogleFonts.openSans(
                 fontSize: responsive.inchR(1.4),
-                color: Color(0xff12153D),
+                color: const Color(0xff12153D),
                 fontWeight: FontWeight.w600),
           ),
           SizedBox(
             height: responsive.heightR(0.5),
           ),
           Text(
-            this.position,
+            position,
             textAlign: TextAlign.center,
             style: GoogleFonts.openSans(
                 fontSize: responsive.inchR(1.4),
-                color: Color(0xff9A9BB2),
+                color: const Color(0xff9A9BB2),
                 fontWeight: FontWeight.w600),
           ),
         ],

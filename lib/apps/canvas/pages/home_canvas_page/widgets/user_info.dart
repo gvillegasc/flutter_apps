@@ -5,7 +5,7 @@ import 'package:flutter_ui_app/global/responsive.dart';
 class UserInfo extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    final Responsive responsive = Responsive.of(context);
+    final responsive = Responsive.of(context);
     return SliverToBoxAdapter(
       child: Container(
         width: double.infinity,
@@ -23,8 +23,8 @@ class UserInfo extends StatelessWidget {
 class UserName extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    final Responsive responsive = Responsive.of(context);
-    return Container(
+    final responsive = Responsive.of(context);
+    return SizedBox(
         width: responsive.widthR(50),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
@@ -33,22 +33,22 @@ class UserName extends StatelessWidget {
             Row(
               children: <Widget>[
                 Text(
-                  "Hola,",
+                  'Hola,',
                   style: TextStyle(
-                      color: Color(0xff223E6D),
+                      color: const Color(0xff223E6D),
                       fontSize: responsive.inchR(1.8),
                       fontWeight: FontWeight.w700),
                 ),
-                Text(" Diana Lucia",
+                Text(' Diana Lucia',
                     style: TextStyle(
-                        color: Color(0xff223E6D),
+                        color: const Color(0xff223E6D),
                         fontSize: responsive.inchR(1.8),
                         fontWeight: FontWeight.w400)),
               ],
             ),
-            Text("Sigue cumpliendo tus metas",
+            Text('Sigue cumpliendo tus metas',
                 style: TextStyle(
-                    color: Color(0xff92A5C6),
+                    color: const Color(0xff92A5C6),
                     fontSize: responsive.inchR(1.6),
                     fontWeight: FontWeight.w400)),
           ],
@@ -59,19 +59,19 @@ class UserName extends StatelessWidget {
 class UserPhoto extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    final Responsive responsive = Responsive.of(context);
+    final responsive = Responsive.of(context);
     return CircleAvatar(
       radius: responsive.inchR(4.0),
-      backgroundColor: Color(0xffADE6FE),
+      backgroundColor: const Color(0xffADE6FE),
       child: CircleAvatar(
         radius: responsive.inchR(3.7),
-        backgroundColor: Color(0xffFFFFFF),
+        backgroundColor: const Color(0xffFFFFFF),
         child: ClipRRect(
           borderRadius: BorderRadius.circular(responsive.inchR(10)),
           child: CircleAvatar(
             radius: responsive.inchR(3.3),
-            child: Image(
-              image: AssetImage("assets/canvas/images/img_person_1.jpg"),
+            child: const Image(
+              image: AssetImage('assets/canvas/images/img_person_1.jpg'),
             ),
           ),
         ),
@@ -83,14 +83,13 @@ class UserPhoto extends StatelessWidget {
 class Search extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    final Responsive responsive = Responsive.of(context);
-    return Container(
-        child: IconButton(
+    final responsive = Responsive.of(context);
+    return IconButton(
       icon: SvgPicture.asset(
-        "assets/canvas/icons/ic_search.svg",
+        'assets/canvas/icons/ic_search.svg',
         height: responsive.inchR(2),
       ),
       onPressed: () {},
-    ));
+    );
   }
 }

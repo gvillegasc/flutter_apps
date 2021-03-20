@@ -41,7 +41,7 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
     // Date
     dateAnimation = AnimationController(
       vsync: this,
-      duration: Duration(milliseconds: 1000),
+      duration: const Duration(milliseconds: 1000),
     );
     dateAnimationDouble = Tween<double>(begin: 500.0 * 1, end: 0.0).animate(
         CurvedAnimation(parent: dateAnimation, curve: Curves.elasticIn));
@@ -49,17 +49,17 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
     // Button options
     iconAnimation = AnimationController(
       vsync: this,
-      duration: Duration(milliseconds: 100),
+      duration: const Duration(milliseconds: 100),
     );
     optionAnimation = AnimationController(
         vsync: this,
-        duration: Duration(milliseconds: 50),
-        reverseDuration: Duration(milliseconds: 10));
+        duration: const Duration(milliseconds: 50),
+        reverseDuration: const Duration(milliseconds: 10));
 
     optionAnimationTween = AnimationController(
         vsync: this,
-        duration: Duration(milliseconds: 600),
-        reverseDuration: Duration(milliseconds: 10));
+        duration: const Duration(milliseconds: 600),
+        reverseDuration: const Duration(milliseconds: 10));
 
     animation = Tween<double>(begin: 50.0 * 1, end: 0.0).animate(
         CurvedAnimation(
@@ -68,18 +68,18 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
     // Activity
     activityAnimation = AnimationController(
       vsync: this,
-      duration: Duration(milliseconds: 700),
-      reverseDuration: Duration(milliseconds: 1000),
+      duration: const Duration(milliseconds: 700),
+      reverseDuration: const Duration(milliseconds: 1000),
     );
     activityAnimation2 = AnimationController(
       vsync: this,
-      duration: Duration(milliseconds: 700),
-      reverseDuration: Duration(milliseconds: 1000),
+      duration: const Duration(milliseconds: 700),
+      reverseDuration: const Duration(milliseconds: 1000),
     );
     activityAnimation3 = AnimationController(
       vsync: this,
-      duration: Duration(milliseconds: 700),
-      reverseDuration: Duration(milliseconds: 1000),
+      duration: const Duration(milliseconds: 700),
+      reverseDuration: const Duration(milliseconds: 1000),
     );
 
     callActivitiesAnimation();
@@ -101,32 +101,32 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
   void callActivitiesAnimation() {
     dateAnimation.forward();
 
-    Future.delayed(Duration(milliseconds: 700), () {
+    Future.delayed(const Duration(milliseconds: 700), () {
       activityAnimation.forward();
     });
-    Future.delayed(Duration(milliseconds: 900), () {
+    Future.delayed(const Duration(milliseconds: 900), () {
       activityAnimation2.forward();
     });
-    Future.delayed(Duration(milliseconds: 1100), () {
+    Future.delayed(const Duration(milliseconds: 1100), () {
       activityAnimation3.forward();
     });
   }
 
   @override
   Widget build(BuildContext context) {
-    final Responsive responsive = Responsive.of(context);
+    final responsive = Responsive.of(context);
     return Scaffold(
       body: Container(
-        decoration: BoxDecoration(
+        decoration: const BoxDecoration(
             image: DecorationImage(
-                image: AssetImage("assets/button_options/bg.jpg"),
+                image: AssetImage('assets/button_options/bg.jpg'),
                 fit: BoxFit.cover)),
         width: responsive.width,
         child: Stack(children: <Widget>[
           Container(
               height: responsive.height,
               width: responsive.width,
-              color: Color(0xff270B81).withOpacity(.3)),
+              color: const Color(0xff270B81).withOpacity(.3)),
           SafeArea(
             child: Column(children: <Widget>[
               _appBar(responsive),
@@ -179,16 +179,15 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          Container(
-                              child: Text(
-                            "Monday",
+                          const Text(
+                            'Monday',
                             style: TextStyle(
                                 color: Colors.white,
                                 fontSize: 35,
                                 fontWeight: FontWeight.w300),
-                          )),
+                          ),
                           Text(
-                            "February 8, 2021",
+                            'February 8, 2021',
                             style: TextStyle(
                                 color: Colors.white.withOpacity(.5),
                                 fontSize: 12,
@@ -205,27 +204,26 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
                       offset: Offset(dateAnimationDouble.value, 0),
                       child: Column(
                         children: [
-                          Container(
-                              child: Row(
+                          Row(
                             children: [
                               Icon(
                                 CupertinoIcons.sun_max,
                                 color: Colors.white.withOpacity(.5),
                               ),
-                              SizedBox(
+                              const SizedBox(
                                 width: 10,
                               ),
-                              Text(
-                                "58°",
+                              const Text(
+                                '58°',
                                 style: TextStyle(
                                     color: Colors.white,
                                     fontSize: 35,
                                     fontWeight: FontWeight.w300),
                               ),
                             ],
-                          )),
+                          ),
                           Text(
-                            "San Francisco",
+                            'San Francisco',
                             style: TextStyle(
                                 color: Colors.white.withOpacity(.5),
                                 fontSize: 12,
@@ -244,34 +242,34 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
 
   Widget _activities(Responsive responsive) {
     return Container(
-      margin: EdgeInsets.only(top: 40),
+      margin: const EdgeInsets.only(top: 40),
       child: Column(
         children: <Widget>[
           _activity(
-            "8",
-            "AM",
-            "Finish Home Screen",
-            "Web App",
+            '8',
+            'AM',
+            'Finish Home Screen',
+            'Web App',
             responsive,
             activityAnimation,
           ),
           _activity(
-            "11",
-            "AM",
-            "Lunc Breack",
-            "Jummp!",
+            '11',
+            'AM',
+            'Lunc Breack',
+            'Jummp!',
             responsive,
             activityAnimation2,
-            delay: Duration(milliseconds: 900),
+            delay: const Duration(milliseconds: 900),
           ),
           _activity(
-            "2",
-            "PM",
-            "Design Stand Up",
-            "Hangout",
+            '2',
+            'PM',
+            'Design Stand Up',
+            'Hangout',
             responsive,
             activityAnimation3,
-            delay: Duration(milliseconds: 1100),
+            delay: const Duration(milliseconds: 1100),
           )
         ],
       ),
@@ -287,8 +285,8 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
     AnimationController animationController, {
     Duration delay = const Duration(milliseconds: 700),
   }) {
-    final Animation<double> animations =
-        Tween<double>(begin: 500.0 * 1, end: 0.0).animate(CurvedAnimation(
+    final animations = Tween<double>(begin: 500.0 * 1, end: 0.0).animate(
+        CurvedAnimation(
             parent: animationController,
             curve: Curves.elasticInOut,
             reverseCurve: Curves.elasticIn));
@@ -299,7 +297,7 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
           return Transform.translate(
             offset: Offset(animations.value, 0),
             child: Container(
-              margin: EdgeInsets.only(top: 5),
+              margin: const EdgeInsets.only(top: 5),
               child: Row(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: <Widget>[
@@ -310,7 +308,7 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
                       children: <Widget>[
                         Text(
                           hour,
-                          style: TextStyle(
+                          style: const TextStyle(
                               color: Colors.white,
                               fontSize: 20,
                               fontWeight: FontWeight.w400),
@@ -328,7 +326,7 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: <Widget>[
                         Text(title,
-                            style: TextStyle(
+                            style: const TextStyle(
                                 color: Colors.white,
                                 fontSize: 14,
                                 fontWeight: FontWeight.w400)),
@@ -337,7 +335,7 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
                                 color: Colors.white.withOpacity(.5),
                                 fontSize: 12,
                                 fontWeight: FontWeight.w400)),
-                        SizedBox(
+                        const SizedBox(
                           height: 5,
                         ),
                         Divider(
@@ -357,7 +355,7 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
     return Positioned(
       bottom: -90,
       right: -90,
-      child: Container(
+      child: SizedBox(
         height: 270,
         width: 270,
         child: Column(
@@ -368,8 +366,8 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
                 AnimatedContainer(
                   height: pressed ? finalSize : initialSize,
                   width: pressed ? finalSize : initialSize,
-                  duration: Duration(milliseconds: 100),
-                  decoration: BoxDecoration(
+                  duration: const Duration(milliseconds: 100),
+                  decoration: const BoxDecoration(
                     color: Color(0xffF23363),
                     shape: BoxShape.circle,
                   ),
@@ -382,7 +380,8 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
                             pressed = !pressed;
                             if (pressed) {
                               iconAnimation.forward();
-                              Future.delayed(Duration(milliseconds: 130), () {
+                              Future.delayed(const Duration(milliseconds: 130),
+                                  () {
                                 optionAnimation.forward();
                                 optionAnimationTween.forward();
                               });
@@ -397,10 +396,9 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
                           height: 60,
                           width: 60,
                           alignment: Alignment.center,
-                          duration: Duration(milliseconds: 250),
+                          duration: const Duration(milliseconds: 250),
                           decoration: BoxDecoration(
-                            color:
-                                pressed ? Color(0xffB7395D) : Color(0xffF23363),
+                            color: Color(pressed ? 0xffB7395D : 0xffF23363),
                             shape: BoxShape.circle,
                           ),
                           child: RotationTransition(
@@ -410,7 +408,7 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
                                   pressed
                                       ? CupertinoIcons.xmark
                                       : CupertinoIcons.plus,
-                                  color: Color(0xffFFFFFF))),
+                                  color: const Color(0xffFFFFFF))),
                         ),
                       ),
                     ],
@@ -433,10 +431,8 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
                                         (BuildContext context, Widget child) {
                                       return Transform.translate(
                                         offset: Offset(0, animation.value),
-                                        child: Container(
-                                          child: Icon(Icons.edit_outlined,
-                                              color: Color(0xffFFFFFF)),
-                                        ),
+                                        child: const Icon(Icons.edit_outlined,
+                                            color: Color(0xffFFFFFF)),
                                       );
                                     }));
                           }),
@@ -459,10 +455,8 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
                                     return Transform.translate(
                                       offset: Offset(
                                           animation.value, animation.value),
-                                      child: Container(
-                                        child: Icon(Icons.message_outlined,
-                                            color: Color(0xffFFFFFF)),
-                                      ),
+                                      child: const Icon(Icons.message_outlined,
+                                          color: Color(0xffFFFFFF)),
                                     );
                                   }));
                         }),
@@ -485,10 +479,8 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
                                       (BuildContext context, Widget child) {
                                     return Transform.translate(
                                       offset: Offset(animation.value, 0.0),
-                                      child: Container(
-                                        child: Icon(CupertinoIcons.clock,
-                                            color: Color(0xffFFFFFF)),
-                                      ),
+                                      child: const Icon(CupertinoIcons.clock,
+                                          color: Color(0xffFFFFFF)),
                                     );
                                   }));
                         }),
@@ -514,7 +506,7 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
     setState(() {
       pressed = false;
     });
-    Future.delayed(Duration(milliseconds: 1500), () {
+    Future.delayed(const Duration(milliseconds: 1500), () async {
       callActivitiesAnimation();
     });
   }

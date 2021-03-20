@@ -6,16 +6,16 @@ import 'package:flutter_ui_app/global/responsive.dart';
 class Introduction extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    final Responsive responsive = Responsive.of(context);
+    final responsive = Responsive.of(context);
     return SliverToBoxAdapter(
         child: Container(
       height: responsive.inchR(50),
-      decoration: BoxDecoration(
+      decoration: const BoxDecoration(
           image: DecorationImage(
               fit: BoxFit.cover,
-              image: AssetImage("assets/workout_app/images/img_home_bg.png"))),
+              image: AssetImage('assets/workout_app/images/img_home_bg.png'))),
       child: Container(
-        decoration: BoxDecoration(
+        decoration: const BoxDecoration(
             gradient: LinearGradient(
                 begin: Alignment.bottomCenter,
                 end: Alignment.topCenter,
@@ -27,7 +27,7 @@ class Introduction extends StatelessWidget {
               children: <Widget>[UserInfo(), Searcher()],
             ),
             Center(
-              child: SvgPicture.asset("assets/workout_app/icons/ic_play.svg"),
+              child: SvgPicture.asset('assets/workout_app/icons/ic_play.svg'),
             )
           ],
         ),

@@ -5,9 +5,9 @@ class NavigationProviderPp extends ChangeNotifier {
   int actualPage = 0;
 
   void changePage(int value) {
-    this.actualPage = value;
-    this.pageController.animateToPage(value,
-        duration: Duration(milliseconds: 250), curve: Curves.easeOut);
+    actualPage = value;
+    pageController.animateToPage(value,
+        duration: const Duration(milliseconds: 250), curve: Curves.easeOut);
     notifyListeners();
   }
 }

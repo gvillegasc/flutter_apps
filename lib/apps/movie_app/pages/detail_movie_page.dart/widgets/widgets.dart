@@ -1,8 +1,8 @@
 export 'add_button.dart';
-export 'background_image.dart';
 export 'back.dart';
-export 'categories_movie.dart';
+export 'background_image.dart';
 export 'cast.dart';
+export 'categories_movie.dart';
 export 'description_movie.dart';
 export 'detail_movie.dart';
 export 'info_movie.dart';

@@ -29,164 +29,164 @@ class _HomePageState extends State<HomePage>
     _MenuItemModel(
         id: 1,
         iconData: Icons.add_box_outlined,
-        name: "Box",
+        name: 'Box',
         cards: [
-          _CardItem(
+          const _CardItem(
               color: Color(0xffFFC300),
               icon: Icons.add_to_photos_rounded,
-              text: "Add"),
-          _CardItem(
+              text: 'Add'),
+          const _CardItem(
               color: Color(0xff900C3F),
               icon: Icons.local_hospital_outlined,
-              text: "Hospital"),
-          _CardItem(
+              text: 'Hospital'),
+          const _CardItem(
               color: Color(0xff52BE80),
               icon: Icons.food_bank_outlined,
-              text: "Food"),
-          _CardItem(
+              text: 'Food'),
+          const _CardItem(
               color: Color(0xff566573),
               icon: Icons.book_online_outlined,
-              text: "Book"),
-          _CardItem(
+              text: 'Book'),
+          const _CardItem(
               color: Color(0xff633974),
               icon: Icons.directions_walk_outlined,
-              text: "Direction"),
-          _CardItem(
+              text: 'Direction'),
+          const _CardItem(
               color: Color(0xff274261),
               icon: Icons.account_balance_outlined,
-              text: "Balance"),
-          _CardItem(
+              text: 'Balance'),
+          const _CardItem(
               color: Color(0xffDD6401),
               icon: Icons.wallet_giftcard_sharp,
-              text: "Wallet")
+              text: 'Wallet')
         ]),
-    _MenuItemModel(id: 2, iconData: Icons.tour_outlined, name: "Tour", cards: [
-      _CardItem(
+    _MenuItemModel(id: 2, iconData: Icons.tour_outlined, name: 'Tour', cards: [
+      const _CardItem(
           color: Color(0xff900C3F),
           icon: Icons.local_hospital_outlined,
-          text: "Hospital"),
-      _CardItem(
+          text: 'Hospital'),
+      const _CardItem(
           color: Color(0xff633974),
           icon: Icons.directions_walk_outlined,
-          text: "Direction"),
-      _CardItem(
+          text: 'Direction'),
+      const _CardItem(
           color: Color(0xff274261),
           icon: Icons.account_balance_outlined,
-          text: "Balance"),
-      _CardItem(
+          text: 'Balance'),
+      const _CardItem(
           color: Color(0xff566573),
           icon: Icons.book_online_outlined,
-          text: "Book"),
-      _CardItem(
+          text: 'Book'),
+      const _CardItem(
           color: Color(0xff52BE80),
           icon: Icons.food_bank_outlined,
-          text: "Food"),
-      _CardItem(
+          text: 'Food'),
+      const _CardItem(
           color: Color(0xffDD6401),
           icon: Icons.wallet_giftcard_sharp,
-          text: "Wallet"),
-      _CardItem(
+          text: 'Wallet'),
+      const _CardItem(
           color: Color(0xffFFC300),
           icon: Icons.add_to_photos_rounded,
-          text: "Add"),
+          text: 'Add'),
     ]),
     _MenuItemModel(
         id: 3,
         iconData: Icons.blur_off_outlined,
-        name: "Blur",
+        name: 'Blur',
         cards: [
-          _CardItem(
+          const _CardItem(
               color: Color(0xffDD6401),
               icon: Icons.wallet_giftcard_sharp,
-              text: "Wallet"),
-          _CardItem(
+              text: 'Wallet'),
+          const _CardItem(
               color: Color(0xff274261),
               icon: Icons.account_balance_outlined,
-              text: "Balance"),
-          _CardItem(
+              text: 'Balance'),
+          const _CardItem(
               color: Color(0xff633974),
               icon: Icons.directions_walk_outlined,
-              text: "Direction"),
-          _CardItem(
+              text: 'Direction'),
+          const _CardItem(
               color: Color(0xff566573),
               icon: Icons.book_online_outlined,
-              text: "Book"),
-          _CardItem(
+              text: 'Book'),
+          const _CardItem(
               color: Color(0xff52BE80),
               icon: Icons.food_bank_outlined,
-              text: "Food"),
-          _CardItem(
+              text: 'Food'),
+          const _CardItem(
               color: Color(0xff900C3F),
               icon: Icons.local_hospital_outlined,
-              text: "Hospital"),
-          _CardItem(
+              text: 'Hospital'),
+          const _CardItem(
               color: Color(0xffFFC300),
               icon: Icons.add_to_photos_rounded,
-              text: "Add"),
+              text: 'Add'),
         ]),
-    _MenuItemModel(id: 4, iconData: Icons.shop_outlined, name: "Shop", cards: [
-      _CardItem(
+    _MenuItemModel(id: 4, iconData: Icons.shop_outlined, name: 'Shop', cards: [
+      const _CardItem(
           color: Color(0xFF4B9420),
           icon: Icons.security_outlined,
-          text: "Security"),
-      _CardItem(
+          text: 'Security'),
+      const _CardItem(
           color: Color(0xFF973131),
           icon: Icons.food_bank_outlined,
-          text: "Food"),
-      _CardItem(
+          text: 'Food'),
+      const _CardItem(
           color: Color(0xFF6C3CAC),
           icon: Icons.description_outlined,
-          text: "Descriptions"),
-      _CardItem(
+          text: 'Descriptions'),
+      const _CardItem(
           color: Color(0xff633974),
           icon: Icons.directions_walk_outlined,
-          text: "Direction"),
-      _CardItem(
+          text: 'Direction'),
+      const _CardItem(
           color: Color(0xff566573),
           icon: Icons.book_online_outlined,
-          text: "Book"),
-      _CardItem(
+          text: 'Book'),
+      const _CardItem(
           color: Color(0xff900C3F),
           icon: Icons.local_hospital_outlined,
-          text: "Hospital"),
-      _CardItem(
+          text: 'Hospital'),
+      const _CardItem(
           color: Color(0xffFFC300),
           icon: Icons.add_to_photos_rounded,
-          text: "Add"),
+          text: 'Add'),
     ]),
     _MenuItemModel(
         id: 5,
         iconData: Icons.food_bank_outlined,
-        name: "Food Bank",
+        name: 'Food Bank',
         cards: [
-          _CardItem(
+          const _CardItem(
               color: Color(0xFF58DA99),
               icon: Icons.get_app_outlined,
-              text: "Downloads"),
-          _CardItem(
+              text: 'Downloads'),
+          const _CardItem(
               color: Color(0xff274261),
               icon: Icons.receipt_long,
-              text: "Receipt"),
-          _CardItem(
+              text: 'Receipt'),
+          const _CardItem(
               color: Color(0xffFFC300),
               icon: Icons.add_to_photos_rounded,
-              text: "Add"),
-          _CardItem(
+              text: 'Add'),
+          const _CardItem(
               color: Color(0xff633974),
               icon: Icons.directions_walk_outlined,
-              text: "Direction"),
-          _CardItem(
+              text: 'Direction'),
+          const _CardItem(
               color: Color(0xff52BE80),
               icon: Icons.food_bank_outlined,
-              text: "Food"),
-          _CardItem(
+              text: 'Food'),
+          const _CardItem(
               color: Color(0xff900C3F),
               icon: Icons.local_hospital_outlined,
-              text: "Hospital"),
-          _CardItem(
+              text: 'Hospital'),
+          const _CardItem(
               color: Color(0xff566573),
               icon: Icons.book_online_outlined,
-              text: "Book"),
+              text: 'Book'),
         ]),
   ];
 
@@ -198,7 +198,7 @@ class _HomePageState extends State<HomePage>
     _animationController = AnimationController(
       vsync: this,
       upperBound: 2.5,
-      duration: Duration(milliseconds: 2000),
+      duration: const Duration(milliseconds: 2000),
     );
     _controller.addListener(() {
       if (_controller.position.pixels >= 120) {
@@ -228,81 +228,81 @@ class _HomePageState extends State<HomePage>
         centerTitle: true,
         title: Text(
           _menuSelected,
-          style: TextStyle(color: Colors.black),
+          style: const TextStyle(color: Colors.black),
         ),
         elevation: 0,
-        backgroundColor: Colors.white,
+        backgroundColor: const Color(0xffFFFFFF),
         leading: IconButton(
-            icon: Icon(
+            icon: const Icon(
               Icons.menu,
               color: Colors.black,
             ),
             onPressed: () {}),
         actions: [
           IconButton(
-              icon: Icon(Icons.search, color: Colors.black), onPressed: () {})
+              icon: const Icon(Icons.search, color: Colors.black),
+              onPressed: () {})
         ],
       ),
-      body: Container(
-        child: NotificationListener<OverscrollIndicatorNotification>(
-          onNotification: (_) {
-            if (_.paintOffset == 0.0 &&
-                _controller.offset <= _controller.position.minScrollExtent) {
-              _.disallowGlow();
-              setState(() {
-                showMenu = true;
-              });
-            } else {
-              setState(() {
-                showMenu = false;
-              });
-            }
-            return true;
-          },
-          child: ListView(
-            controller: _controller,
-            children: <Widget>[
-              AnimatedContainer(
-                color: Color(0xFF262638),
-                duration: Duration(milliseconds: 250),
-                height: showMenu ? finalSize : initialSize,
-                child: ListView(
-                    padding: EdgeInsets.symmetric(horizontal: 10, vertical: 20),
-                    scrollDirection: Axis.horizontal,
-                    children: List.generate(
-                      menuItems.length,
-                      (i) => _MenuItem(
-                          id: menuItems[i].id,
-                          icon: menuItems[i].iconData,
-                          idSelected: _idSelected,
-                          showMenu: showMenu,
-                          onPressed: () {
+      body: NotificationListener<OverscrollIndicatorNotification>(
+        onNotification: (_) {
+          if (_.paintOffset == 0.0 &&
+              _controller.offset <= _controller.position.minScrollExtent) {
+            _.disallowGlow();
+            setState(() {
+              showMenu = true;
+            });
+          } else {
+            setState(() {
+              showMenu = false;
+            });
+          }
+          return true;
+        },
+        child: ListView(
+          controller: _controller,
+          children: <Widget>[
+            AnimatedContainer(
+              color: const Color(0xFF262638),
+              duration: const Duration(milliseconds: 250),
+              height: showMenu ? finalSize : initialSize,
+              child: ListView(
+                  padding:
+                      const EdgeInsets.symmetric(horizontal: 10, vertical: 20),
+                  scrollDirection: Axis.horizontal,
+                  children: List.generate(
+                    menuItems.length,
+                    (i) => _MenuItem(
+                        id: menuItems[i].id,
+                        icon: menuItems[i].iconData,
+                        idSelected: _idSelected,
+                        showMenu: showMenu,
+                        onPressed: () {
+                          setState(() {
+                            _idSelected = menuItems[i].id;
+                            _menuSelected = menuItems[i].name;
+                            _animationController.forward(from: 0.0);
+                            _cardsSelected = menuItems[i].cards;
+                          });
+                          Future.delayed(const Duration(milliseconds: 150), () {
                             setState(() {
-                              _idSelected = menuItems[i].id;
-                              _menuSelected = menuItems[i].name;
-                              _animationController.forward(from: 0.0);
-                              _cardsSelected = menuItems[i].cards;
+                              showMenu = false;
                             });
-                            Future.delayed(Duration(milliseconds: 150), () {
-                              setState(() {
-                                showMenu = false;
-                              });
-                            });
-                          }),
-                    )),
-              ),
-              AnimatedBuilder(
-                  animation: _animationController,
-                  builder: (_, __) {
-                    return ClipPath(
-                      clipper: _MenuClipperSelected(_animationController.value),
-                      child: Column(
-                        children: <Widget>[..._cardsSelected],
-                      ),
-                    );
-                  })
-            ],
-          ),
+                          });
+                        }),
+                  )),
+            ),
+            AnimatedBuilder(
+                animation: _animationController,
+                builder: (_, __) {
+                  return ClipPath(
+                    clipper: _MenuClipperSelected(_animationController.value),
+                    child: Column(
+                      children: <Widget>[..._cardsSelected],
+                    ),
+                  );
+                })
+          ],
         ),
       ),
     );
@@ -310,27 +310,27 @@ class _HomePageState extends State<HomePage>
 }
 
 class _CardItem extends StatelessWidget {
-  final Color color;
-  final IconData icon;
-  final String text;
-
   const _CardItem(
       {Key key, @required this.color, @required this.icon, @required this.text})
       : super(key: key);
+
+  final Color color;
+  final IconData icon;
+  final String text;
 
   @override
   Widget build(BuildContext context) {
     return Container(
       height: 220,
       width: double.infinity,
-      color: this.color,
+      color: color,
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: <Widget>[
-          Icon(this.icon, size: 150, color: Colors.white),
+          Icon(icon, size: 150, color: const Color(0xffFFFFFF)),
           Text(
-            this.text,
-            style: TextStyle(color: Colors.white, fontSize: 25),
+            text,
+            style: const TextStyle(color: Color(0xffFFFFFF), fontSize: 25),
           )
         ],
       ),
@@ -339,12 +339,6 @@ class _CardItem extends StatelessWidget {
 }
 
 class _MenuItem extends StatefulWidget {
-  final int id;
-  final IconData icon;
-  final int idSelected;
-  final bool showMenu;
-  final VoidCallback onPressed;
-
   const _MenuItem(
       {Key key,
       @required this.id,
@@ -353,6 +347,12 @@ class _MenuItem extends StatefulWidget {
       @required this.showMenu,
       @required this.onPressed})
       : super(key: key);
+
+  final int id;
+  final IconData icon;
+  final int idSelected;
+  final bool showMenu;
+  final VoidCallback onPressed;
 
   @override
   __MenuItemState createState() => __MenuItemState();
@@ -368,7 +368,7 @@ class __MenuItemState extends State<_MenuItem> with TickerProviderStateMixin {
     super.initState();
     itemAnimation = AnimationController(
       vsync: this,
-      duration: Duration(milliseconds: 150),
+      duration: const Duration(milliseconds: 150),
     );
     itemAnimationDouble = Tween<double>(begin: 1, end: 0)
         .animate(CurvedAnimation(parent: itemAnimation, curve: Curves.easeIn));
@@ -383,7 +383,7 @@ class __MenuItemState extends State<_MenuItem> with TickerProviderStateMixin {
   @override
   Widget build(BuildContext context) {
     if (widget.showMenu) {
-      Future.delayed(Duration(milliseconds: 50), () {
+      Future.delayed(const Duration(milliseconds: 50), () {
         itemAnimation.forward();
       });
     } else {
@@ -398,22 +398,21 @@ class __MenuItemState extends State<_MenuItem> with TickerProviderStateMixin {
               ..rotateX(-itemAnimationDouble.value),
             alignment: Alignment.bottomCenter,
             child: GestureDetector(
-              onTap: this.widget.onPressed,
+              onTap: widget.onPressed,
               child: AnimatedContainer(
-                duration: Duration(milliseconds: 150),
-                margin: EdgeInsets.symmetric(horizontal: 5),
+                duration: const Duration(milliseconds: 150),
+                margin: const EdgeInsets.symmetric(horizontal: 5),
                 width: 80,
-                color: this.widget.id == this.widget.idSelected
-                    ? Color(0xFFF84082)
-                    : Color(0xFF1D1D2C),
+                color: Color(
+                    widget.id == widget.idSelected ? 0xFFF84082 : 0xFF1D1D2C),
                 child: Transform(
                   transform: Matrix4.identity()
                     ..setEntry(3, 2, 0.006)
                     ..rotateX(-itemAnimationDouble.value),
                   alignment: Alignment.bottomCenter,
                   child: Icon(
-                    this.widget.icon,
-                    color: Colors.white,
+                    widget.icon,
+                    color: const Color(0xffFFFFFF),
                     size: 50,
                   ),
                 ),
@@ -425,34 +424,32 @@ class __MenuItemState extends State<_MenuItem> with TickerProviderStateMixin {
 }
 
 class _MenuItemModel {
-  final int id;
-  final IconData iconData;
-  final String name;
-  final List<_CardItem> cards;
-
   _MenuItemModel(
       {@required this.id,
       @required this.iconData,
       @required this.name,
       @required this.cards});
+
+  final int id;
+  final IconData iconData;
+  final String name;
+  final List<_CardItem> cards;
 }
 
 class _MenuClipperSelected extends CustomClipper<Path> {
-  final double percent;
-
   _MenuClipperSelected(this.percent);
+  final double percent;
 
   @override
   Path getClip(Size size) {
-    final path = Path();
-    path.addOval(
-      Rect.fromCenter(
-        center: Offset(size.width / 2, 0.0),
-        width: size.height * percent,
-        height: size.height * percent,
-      ),
-    );
-    return path;
+    return Path()
+      ..addOval(
+        Rect.fromCenter(
+          center: Offset(size.width / 2, 0.0),
+          width: size.height * percent,
+          height: size.height * percent,
+        ),
+      );
   }
 
   @override

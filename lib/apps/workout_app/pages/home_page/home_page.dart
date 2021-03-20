@@ -6,12 +6,11 @@ import 'package:flutter_ui_app/global/responsive.dart';
 class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    final Responsive responsive = Responsive.of(context);
-    final double safeAreaBottom = MediaQuery.of(context).padding.bottom;
-
+    final responsive = Responsive.of(context);
+    final safeAreaBottom = MediaQuery.of(context).padding.bottom;
     return Scaffold(
-      backgroundColor: Color(0xff131429),
-      body: Container(
+      backgroundColor: const Color(0xff131429),
+      body: SizedBox(
         height: responsive.height,
         width: responsive.width,
         child: Stack(

@@ -4,7 +4,7 @@ import 'package:flutter_ui_app/global/responsive.dart';
 class InfoDescription extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    final Responsive responsive = Responsive.of(context);
+    final responsive = Responsive.of(context);
     return Positioned(
       bottom: 0,
       left: responsive.widthR(6),
@@ -15,7 +15,7 @@ class InfoDescription extends StatelessWidget {
         decoration: BoxDecoration(
             color: Colors.transparent,
             border: Border.all(
-              color: Color(0xff808080),
+              color: const Color(0xff808080),
               style: BorderStyle.solid,
               width: 1.0,
             ),
@@ -23,17 +23,17 @@ class InfoDescription extends StatelessWidget {
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: <Widget>[
-            InfoItem(
+            const InfoItem(
               count: 26,
-              name: "moves",
+              name: 'moves',
             ),
-            InfoItem(
+            const InfoItem(
               count: 12,
-              name: "Sets",
+              name: 'Sets',
             ),
-            InfoItem(
+            const InfoItem(
               count: 30,
-              name: "min",
+              name: 'min',
             )
           ],
         ),
@@ -43,20 +43,21 @@ class InfoDescription extends StatelessWidget {
 }
 
 class InfoItem extends StatelessWidget {
+  const InfoItem({Key key, @required this.count, @required this.name})
+      : super(key: key);
+
   final int count;
   final String name;
 
-  const InfoItem({Key key, @required this.count, @required this.name})
-      : super(key: key);
   @override
   Widget build(BuildContext context) {
-    final Responsive responsive = Responsive.of(context);
+    final responsive = Responsive.of(context);
     return Row(
       children: <Widget>[
         Text(
-          this.count.toString(),
+          count.toString(),
           style: TextStyle(
-              color: Color(0xff40D876),
+              color: const Color(0xff40D876),
               fontWeight: FontWeight.w700,
               fontSize: responsive.heightR(1.85)),
         ),
@@ -64,9 +65,9 @@ class InfoItem extends StatelessWidget {
           width: responsive.widthR(1),
         ),
         Text(
-          this.name,
+          name,
           style: TextStyle(
-              color: Color(0xffFFFFFF),
+              color: const Color(0xffFFFFFF),
               fontWeight: FontWeight.w400,
               fontSize: responsive.heightR(1.85)),
         )

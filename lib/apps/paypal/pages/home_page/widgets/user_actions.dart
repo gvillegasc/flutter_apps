@@ -6,7 +6,7 @@ import 'package:google_fonts/google_fonts.dart';
 class UserActions extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    final Responsive responsive = Responsive.of(context);
+    final responsive = Responsive.of(context);
     return SliverToBoxAdapter(
       child: Container(
         padding: EdgeInsets.symmetric(
@@ -18,7 +18,7 @@ class UserActions extends StatelessWidget {
             padding: EdgeInsets.only(left: responsive.inchR(2.5)),
             decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(responsive.inchR(3)),
-                gradient: LinearGradient(
+                gradient: const LinearGradient(
                   colors: [Color(0xff0070BA), Color(0xff1546A0)],
                   begin: Alignment.topLeft,
                   end: Alignment.bottomRight,
@@ -28,10 +28,10 @@ class UserActions extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: <Widget>[
                 SvgPicture.asset(
-                  "assets/paypal/icons/ic_upload.svg",
+                  'assets/paypal/icons/ic_upload.svg',
                   height: responsive.inchR(3.75),
                 ),
-                Text("Send\nMoney",
+                Text('Send\nMoney',
                     style: GoogleFonts.manrope(
                         color: Colors.white,
                         fontWeight: FontWeight.w600,
@@ -52,12 +52,12 @@ class UserActions extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: <Widget>[
                 SvgPicture.asset(
-                  "assets/paypal/icons/ic_download.svg",
+                  'assets/paypal/icons/ic_download.svg',
                   height: responsive.inchR(3.75),
                 ),
-                Text("Request\nPayment",
+                Text('Request\nPayment',
                     style: GoogleFonts.manrope(
-                        color: Color(0xff1546A0),
+                        color: const Color(0xff1546A0),
                         fontWeight: FontWeight.w600,
                         fontSize: responsive.inchR(2)))
               ],

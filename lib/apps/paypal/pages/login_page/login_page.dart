@@ -5,12 +5,10 @@ class LoginPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(0xffFFFFFF),
+      backgroundColor: const Color(0xffFFFFFF),
       body: SingleChildScrollView(
-        child: Container(
-          child: Column(
-            children: <Widget>[PaypalLogo(), FormBody(), OtherActions()],
-          ),
+        child: Column(
+          children: <Widget>[PaypalLogo(), FormBody(), OtherActions()],
         ),
       ),
     );

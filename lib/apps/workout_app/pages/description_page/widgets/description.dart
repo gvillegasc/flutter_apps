@@ -5,7 +5,7 @@ import 'package:flutter_ui_app/global/responsive.dart';
 class Description extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    final Responsive responsive = Responsive.of(context);
+    final responsive = Responsive.of(context);
     return Positioned(
       bottom: 0,
       child: Container(
@@ -22,9 +22,9 @@ class Description extends StatelessWidget {
               margin: EdgeInsets.only(bottom: responsive.heightR(0.5)),
               width: double.infinity,
               child: Text(
-                "Advance Workout",
+                'Advance Workout',
                 style: TextStyle(
-                    color: Color(0xffFFFFFF),
+                    color: const Color(0xffFFFFFF),
                     fontSize: responsive.heightR(3.5),
                     fontWeight: FontWeight.w900),
               ),

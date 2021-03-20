@@ -9,30 +9,29 @@ import 'package:google_fonts/google_fonts.dart';
 class ListMovies extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    final Responsive responsive = Responsive.of(context);
-
+    final responsive = Responsive.of(context);
     return CarouselSlider(
         options: CarouselOptions(
           viewportFraction: 0.75,
           height: responsive.inchR(55),
         ),
         items: [
-          Movie(
+          const Movie(
             url:
-                "https://image.tmdb.org/t/p/w500/6OeGqp18oZucUGziMIRNhLouZ75.jpg",
-            name: "The Dalton Gang",
+                'https://image.tmdb.org/t/p/w500/6OeGqp18oZucUGziMIRNhLouZ75.jpg',
+            name: 'The Dalton Gang',
             points: 9.5,
           ),
-          Movie(
+          const Movie(
             url:
-                "https://image.tmdb.org/t/p/w500/w85cLr1btxfTExmch6L1vKMH0ti.jpg",
-            name: "Matar a Santa",
+                'https://image.tmdb.org/t/p/w500/w85cLr1btxfTExmch6L1vKMH0ti.jpg',
+            name: 'Matar a Santa',
             points: 7.5,
           ),
-          Movie(
+          const Movie(
             url:
-                "https://image.tmdb.org/t/p/w500/x7Dc6FTBYOfwMDEHSGW6EOitidk.jpg",
-            name: "Mercenarios de Élite",
+                'https://image.tmdb.org/t/p/w500/x7Dc6FTBYOfwMDEHSGW6EOitidk.jpg',
+            name: 'Mercenarios de Élite',
             points: 9.0,
           )
         ]);
@@ -40,17 +39,17 @@ class ListMovies extends StatelessWidget {
 }
 
 class Movie extends StatelessWidget {
-  final String url;
-  final String name;
-  final double points;
-
   const Movie(
       {Key key, @required this.url, @required this.name, @required this.points})
       : assert(url != null, name != null),
         super(key: key);
+  final String url;
+  final String name;
+  final double points;
+
   @override
   Widget build(BuildContext context) {
-    final Responsive responsive = Responsive.of(context);
+    final responsive = Responsive.of(context);
     return Column(
       children: [
         GestureDetector(
@@ -65,7 +64,7 @@ class Movie extends StatelessWidget {
                   color: Colors.blueGrey.withOpacity(0.35),
                   spreadRadius: 1,
                   blurRadius: 10,
-                  offset: Offset(0, 9), // changes position of shadow
+                  offset: const Offset(0, 9), // changes position of shadow
                 ),
               ],
             ),
@@ -74,7 +73,7 @@ class Movie extends StatelessWidget {
               child: CachedNetworkImage(
                 height: responsive.inchR(45),
                 width: responsive.inchR(30),
-                imageUrl: this.url,
+                imageUrl: url,
               ),
             ),
           ),
@@ -83,9 +82,9 @@ class Movie extends StatelessWidget {
         Column(
           children: <Widget>[
             Text(
-              this.name,
+              name,
               style: GoogleFonts.openSans(
-                  color: Color(0xff12153D),
+                  color: const Color(0xff12153D),
                   fontSize: responsive.inchR(2.6),
                   fontWeight: FontWeight.w600),
             ),
@@ -93,14 +92,14 @@ class Movie extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget>[
                 SvgPicture.asset(
-                  "assets/movie_app/icons/ic_star.svg",
+                  'assets/movie_app/icons/ic_star.svg',
                   height: responsive.inchR(2),
                 ),
                 SizedBox(width: responsive.inchR(0.5)),
                 Text(
-                  "${this.points}",
+                  '$points',
                   style: GoogleFonts.openSans(
-                      color: Color(0xff12153D),
+                      color: const Color(0xff12153D),
                       fontSize: responsive.inchR(1.8),
                       fontWeight: FontWeight.w600),
                 )

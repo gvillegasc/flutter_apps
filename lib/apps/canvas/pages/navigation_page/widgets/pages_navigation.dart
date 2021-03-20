@@ -13,7 +13,7 @@ class PagesNavigation extends StatelessWidget {
 
     return PageView(
       controller: navigationProvider.pageController,
-      physics: NeverScrollableScrollPhysics(),
+      physics: const NeverScrollableScrollPhysics(),
       children: <Widget>[
         HomeCanvasPage(),
         CanvasPage(),

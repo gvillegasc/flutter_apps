@@ -7,14 +7,14 @@ import 'package:provider/provider.dart';
 class NavigationPagePayPal extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    final Responsive responsive = Responsive.of(context);
+    final responsive = Responsive.of(context);
 
     return ChangeNotifierProvider(
-      create: (_) => new NavigationProviderPp(),
+      create: (_) => NavigationProviderPp(),
       child: Scaffold(
         extendBody: true,
         resizeToAvoidBottomInset: false,
-        body: Container(
+        body: SizedBox(
           height: responsive.height,
           width: responsive.width,
           child: Stack(

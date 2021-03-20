@@ -1,14 +1,15 @@
 import 'package:flutter/material.dart';
 
 class Separation extends StatelessWidget {
+  const Separation({Key key, @required this.height}) : super(key: key);
+
   final double height;
 
-  const Separation({Key key, @required this.height}) : super(key: key);
   @override
   Widget build(BuildContext context) {
     return SliverToBoxAdapter(
       child: SizedBox(
-        height: this.height,
+        height: height,
       ),
     );
   }

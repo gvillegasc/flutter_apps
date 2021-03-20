@@ -6,9 +6,9 @@ import 'package:flutter_ui_app/global/responsive.dart';
 class CanvasPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    final Responsive responsive = Responsive.of(context);
+    final responsive = Responsive.of(context);
     return Scaffold(
-      body: Container(
+      body: SizedBox(
         width: responsive.width,
         height: responsive.height,
         child: CustomScrollView(

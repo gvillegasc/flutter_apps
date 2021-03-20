@@ -7,18 +7,18 @@ import 'package:google_fonts/google_fonts.dart';
 class WelcomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    final Responsive responsive = Responsive.of(context);
+    final responsive = Responsive.of(context);
     return Scaffold(
       body: Container(
         height: responsive.height,
         width: responsive.width,
-        decoration: BoxDecoration(
+        decoration: const BoxDecoration(
             image: DecorationImage(
-          image: AssetImage("assets/workout_app/images/img_welcome_bg.png"),
+          image: AssetImage('assets/workout_app/images/img_welcome_bg.png'),
           fit: BoxFit.cover,
         )),
         child: Container(
-          color: Color(0xB40E1B3F),
+          color: const Color(0xB40E1B3F),
           child: Stack(
             children: <Widget>[
               Positioned(
@@ -38,7 +38,7 @@ class WelcomePage extends StatelessWidget {
 class Welcome extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    final Responsive responsive = Responsive.of(context);
+    final responsive = Responsive.of(context);
     return Positioned(
       top: responsive.heightR(45),
       child: Container(
@@ -47,16 +47,16 @@ class Welcome extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: <Widget>[
             Text(
-              "Welcome",
+              'Welcome',
               style: GoogleFonts.roboto(
-                  color: Color(0xffFFFFFF),
+                  color: const Color(0xffFFFFFF),
                   fontSize: responsive.inchR(5),
                   fontWeight: FontWeight.w700),
             ),
             Text(
-              "train and live the new experience of \nexercising at home",
+              'train and live the new experience of \nexercising at home',
               style: TextStyle(
-                  color: Color(0xffFFFFFF),
+                  color: const Color(0xffFFFFFF),
                   fontSize: responsive.inchR(1.6),
                   fontWeight: FontWeight.w300),
             ),
@@ -70,26 +70,27 @@ class Welcome extends StatelessWidget {
 class Buttons extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    final Responsive responsive = Responsive.of(context);
+    final responsive = Responsive.of(context);
     return Positioned(
       bottom: 0,
-      child: Container(
+      child: SizedBox(
         width: responsive.width,
         child: Column(
           children: <Widget>[
             FlatButton(
               onPressed: () => Navigator.push(
                   context, MaterialPageRoute(builder: (_) => AboutPage())),
-              color: Color(0xff40D876),
+              color: const Color(0xff40D876),
               child: Text(
-                "Try Now",
+                'Try Now',
                 style: GoogleFonts.roboto(
-                    color: Color(0xffFFFFFF), fontSize: responsive.inchR(2.1)),
+                    color: const Color(0xffFFFFFF),
+                    fontSize: responsive.inchR(2.1)),
               ),
               height: responsive.inchR(6),
               minWidth: responsive.inchR(38),
               shape: RoundedRectangleBorder(
-                  borderRadius: new BorderRadius.circular(30.0)),
+                  borderRadius: BorderRadius.circular(30.0)),
             ),
             SizedBox(
               height: responsive.inchR(2),
@@ -98,15 +99,15 @@ class Buttons extends StatelessWidget {
               height: responsive.inchR(6),
               minWidth: responsive.inchR(38),
               child: OutlineButton(
-                  highlightedBorderColor: Color(0xffFFFFFF),
+                  highlightedBorderColor: const Color(0xffFFFFFF),
                   child: Text(
-                    "Login",
+                    'Login',
                     style: GoogleFonts.roboto(
-                        color: Color(0xffFFFFFF),
+                        color: const Color(0xffFFFFFF),
                         fontSize: responsive.inchR(2.1)),
                   ),
                   onPressed: () {},
-                  borderSide: BorderSide(
+                  borderSide: const BorderSide(
                     color: Colors.white,
                     style: BorderStyle.solid,
                     width: 1.8,
@@ -117,9 +118,10 @@ class Buttons extends StatelessWidget {
             SizedBox(
               height: responsive.inchR(6),
             ),
-            Text("Change language",
+            Text('Change language',
                 style: GoogleFonts.roboto(
-                    color: Color(0xff40D876), fontSize: responsive.inchR(1.5))),
+                    color: const Color(0xff40D876),
+                    fontSize: responsive.inchR(1.5))),
             SizedBox(
               height: responsive.inchR(3),
             ),

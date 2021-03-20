@@ -4,12 +4,12 @@ import 'package:flutter_ui_app/apps/canvas/models/activity.dart';
 import 'package:flutter_ui_app/global/responsive.dart';
 
 class ActivityTile extends StatelessWidget {
-  final Activity activity;
-
   const ActivityTile({Key key, @required this.activity}) : super(key: key);
+
+  final Activity activity;
   @override
   Widget build(BuildContext context) {
-    final Responsive responsive = Responsive.of(context);
+    final responsive = Responsive.of(context);
     return Container(
       margin: EdgeInsets.only(bottom: responsive.inchR(2)),
       decoration: BoxDecoration(
@@ -20,7 +20,7 @@ class ActivityTile extends StatelessWidget {
             color: Colors.grey.withOpacity(0.1),
             spreadRadius: 1,
             blurRadius: 1,
-            offset: Offset(0, 0.5), // changes position of shadow
+            offset: const Offset(0, 0.5), // changes position of shadow
           ),
         ],
       ),
@@ -39,8 +39,8 @@ class ActivityTile extends StatelessWidget {
 class Users extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    final Responsive responsive = Responsive.of(context);
-    return Container(
+    final responsive = Responsive.of(context);
+    return SizedBox(
       height: responsive.inchR(3.4),
       width: double.infinity,
       child: Stack(
@@ -49,14 +49,14 @@ class Users extends StatelessWidget {
             left: 0,
             top: responsive.inchR(0.5),
             child: CircleAvatar(
-              backgroundColor: Color(0xffFFFFFF),
+              backgroundColor: const Color(0xffFFFFFF),
               radius: responsive.inchR(1.3),
               child: ClipRRect(
                 borderRadius: BorderRadius.circular(20),
                 child: CircleAvatar(
                   radius: responsive.inchR(1.1),
-                  child: Image(
-                    image: AssetImage("assets/canvas/images/img_person_1.jpg"),
+                  child: const Image(
+                    image: AssetImage('assets/canvas/images/img_person_1.jpg'),
                   ),
                 ),
               ),
@@ -66,14 +66,14 @@ class Users extends StatelessWidget {
             left: responsive.inchR(1.5),
             top: responsive.inchR(0.5),
             child: CircleAvatar(
-              backgroundColor: Color(0xffFFFFFF),
+              backgroundColor: const Color(0xffFFFFFF),
               radius: responsive.inchR(1.3),
               child: ClipRRect(
                 borderRadius: BorderRadius.circular(20),
                 child: CircleAvatar(
                   radius: responsive.inchR(1.1),
-                  child: Image(
-                    image: AssetImage("assets/canvas/images/img_person_2.jpg"),
+                  child: const Image(
+                    image: AssetImage('assets/canvas/images/img_person_2.jpg'),
                   ),
                 ),
               ),
@@ -86,12 +86,13 @@ class Users extends StatelessWidget {
 }
 
 class ActivityInfo extends StatelessWidget {
+  const ActivityInfo({Key key, @required this.activity}) : super(key: key);
+
   final Activity activity;
 
-  const ActivityInfo({Key key, @required this.activity}) : super(key: key);
   @override
   Widget build(BuildContext context) {
-    final Responsive responsive = Responsive.of(context);
+    final responsive = Responsive.of(context);
     return Container(
       padding: EdgeInsets.all(responsive.inchR(1.7)),
       width: responsive.widthR(39),
@@ -100,19 +101,20 @@ class ActivityInfo extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: <Widget>[
           Text(
-            this.activity.name,
+            activity.name,
             maxLines: 2,
             overflow: TextOverflow.ellipsis,
             style: TextStyle(
-                color: Color(0xff223E6D), fontSize: responsive.inchR(1.5)),
+                color: const Color(0xff223E6D),
+                fontSize: responsive.inchR(1.5)),
           ),
           Text(
-            this.activity.date,
+            activity.date,
             maxLines: 1,
             overflow: TextOverflow.ellipsis,
             style: TextStyle(
                 fontWeight: FontWeight.w400,
-                color: Color(0xff367BE2),
+                color: const Color(0xff367BE2),
                 fontSize: responsive.inchR(1.4)),
           )
         ],
@@ -122,30 +124,31 @@ class ActivityInfo extends StatelessWidget {
 }
 
 class ActivityDetail extends StatelessWidget {
+  const ActivityDetail({Key key, @required this.activity}) : super(key: key);
+
   final Activity activity;
 
-  const ActivityDetail({Key key, @required this.activity}) : super(key: key);
   @override
   Widget build(BuildContext context) {
-    final Responsive responsive = Responsive.of(context);
+    final responsive = Responsive.of(context);
     return Expanded(
         child: Column(
       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
       children: <Widget>[
-        (this.activity.completed == null)
+        (activity.completed == null)
             ? Container(
                 height: responsive.inchR(4),
               )
-            : (this.activity.completed)
+            : (activity.completed)
                 ? Container(
                     width: double.infinity,
                     alignment: Alignment.centerRight,
                     padding: EdgeInsets.only(
                         right: responsive.widthR(11), top: responsive.inchR(1)),
                     child: SvgPicture.asset(
-                      "assets/canvas/icons/ic_check.svg",
+                      'assets/canvas/icons/ic_check.svg',
                       height: responsive.inchR(3),
-                      color: Color(0xff36E26F),
+                      color: const Color(0xff36E26F),
                     ),
                   )
                 : Row(
@@ -157,15 +160,15 @@ class ActivityDetail extends StatelessWidget {
                           padding: EdgeInsets.symmetric(
                               vertical: responsive.inchR(0.5)),
                           decoration: BoxDecoration(
-                              color: this.activity.color,
+                              color: activity.color,
                               borderRadius: BorderRadius.circular(
                                   responsive.inchR(0.85))),
                           child: Text(
-                            this.activity.course,
+                            activity.course,
                             maxLines: 1,
                             overflow: TextOverflow.ellipsis,
                             style: TextStyle(
-                                color: Color(0xffFFFFFF),
+                                color: const Color(0xffFFFFFF),
                                 fontSize: responsive.inchR(1.2)),
                           )),
                       Container(
@@ -178,7 +181,7 @@ class ActivityDetail extends StatelessWidget {
                       ),
                       Icon(
                         Icons.more_vert,
-                        color: Color(0xff92A5C6),
+                        color: const Color(0xff92A5C6),
                         size: responsive.inchR(2.5),
                       ),
                       SizedBox(
@@ -192,9 +195,10 @@ class ActivityDetail extends StatelessWidget {
           padding: EdgeInsets.only(
               right: responsive.widthR(7), bottom: responsive.inchR(1)),
           child: Text(
-            this.activity.hour,
+            activity.hour,
             style: TextStyle(
-                color: Color(0xff92A5C6), fontSize: responsive.inchR(1.5)),
+                color: const Color(0xff92A5C6),
+                fontSize: responsive.inchR(1.5)),
           ),
         )
       ],

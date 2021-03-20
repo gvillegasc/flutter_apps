@@ -9,9 +9,10 @@ class TopFilters extends StatefulWidget {
 
 class _TopFiltersState extends State<TopFilters> {
   int filterValue = 1;
+
   @override
   Widget build(BuildContext context) {
-    final Responsive responsive = Responsive.of(context);
+    final responsive = Responsive.of(context);
     return SliverToBoxAdapter(
       child: Container(
         height: responsive.inchR(9),
@@ -24,9 +25,9 @@ class _TopFiltersState extends State<TopFilters> {
             Container(
               height: responsive.inchR(6),
               width: responsive.widthR(80),
-              padding: EdgeInsets.all(2),
+              padding: const EdgeInsets.all(2),
               decoration: BoxDecoration(
-                  color: Color(0xffF5F7FA),
+                  color: const Color(0xffF5F7FA),
                   borderRadius: BorderRadius.circular(responsive.inchR(1.5))),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -34,17 +35,17 @@ class _TopFiltersState extends State<TopFilters> {
                   _filter(
                     1,
                     (responsive.widthR(80) - 8) / 4.5,
-                    "All",
+                    'All',
                   ),
                   _filter(
                     2,
                     (responsive.widthR(80) - 8) / 2.8,
-                    "Income",
+                    'Income',
                   ),
                   _filter(
                     3,
                     (responsive.widthR(80) - 8) / 2.5,
-                    "Outcome",
+                    'Outcome',
                   ),
                 ],
               ),
@@ -56,7 +57,7 @@ class _TopFiltersState extends State<TopFilters> {
   }
 
   Widget _filter(int value, double width, String text) {
-    final Responsive responsive = Responsive.of(context);
+    final responsive = Responsive.of(context);
 
     return GestureDetector(
       onTap: () {
@@ -67,15 +68,13 @@ class _TopFiltersState extends State<TopFilters> {
       child: Container(
         alignment: Alignment.center,
         decoration: BoxDecoration(
-            color:
-                (value == filterValue) ? Color(0xff005EA6) : Colors.transparent,
+            color: Color(value == filterValue ? 0xff005EA6 : 0x00FFFFFF),
             borderRadius: BorderRadius.circular(responsive.inchR(1.5))),
         height: responsive.inchR(5.5),
         width: width,
         child: Text(text,
             style: GoogleFonts.manrope(
-                color:
-                    (value == filterValue) ? Colors.white : Color(0xff8D97A8),
+                color: Color(value == filterValue ? 0xffFFFFFF : 0xff8D97A8),
                 fontWeight: FontWeight.w500,
                 fontSize: responsive.inchR(1.8))),
       ),

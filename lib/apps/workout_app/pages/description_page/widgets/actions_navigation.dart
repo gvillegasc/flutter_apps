@@ -5,7 +5,7 @@ import 'package:flutter_ui_app/global/responsive.dart';
 class ActionsNavigation extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    final Responsive responsive = Responsive.of(context);
+    final responsive = Responsive.of(context);
     return Positioned(
       top: responsive.heightR(5),
       child: Container(
@@ -19,18 +19,18 @@ class ActionsNavigation extends StatelessWidget {
                   vertical: responsive.inchR(0.6),
                   horizontal: responsive.inchR(2)),
               decoration: BoxDecoration(
-                  color: Color(0xff40D976),
+                  color: const Color(0xff40D976),
                   borderRadius: BorderRadius.circular(responsive.inchR(3))),
               child: Row(
                 children: <Widget>[
-                  SvgPicture.asset("assets/workout_app/icons/ic_clock.svg"),
+                  SvgPicture.asset('assets/workout_app/icons/ic_clock.svg'),
                   SizedBox(
                     width: responsive.inchR(1.5),
                   ),
                   Text(
-                    "3 Hours",
+                    '3 Hours',
                     style: TextStyle(
-                        color: Color(0xffFFFFFF),
+                        color: const Color(0xffFFFFFF),
                         fontSize: responsive.inchR(1.5)),
                   )
                 ],
@@ -41,10 +41,10 @@ class ActionsNavigation extends StatelessWidget {
                 Navigator.pop(context);
               },
               child: CircleAvatar(
-                backgroundColor: Color(0xffFFFFFF),
+                backgroundColor: const Color(0xffFFFFFF),
                 radius: responsive.inchR(1.5),
                 child: SvgPicture.asset(
-                  "assets/workout_app/icons/ic_close.svg",
+                  'assets/workout_app/icons/ic_close.svg',
                   height: responsive.inchR(1.5),
                 ),
               ),

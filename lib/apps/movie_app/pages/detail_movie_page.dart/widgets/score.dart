@@ -5,7 +5,7 @@ import 'package:google_fonts/google_fonts.dart';
 class Score extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    final Responsive responsive = Responsive.of(context);
+    final responsive = Responsive.of(context);
     return Column(
       mainAxisAlignment: MainAxisAlignment.start,
       children: <Widget>[
@@ -17,12 +17,12 @@ class Score extends StatelessWidget {
             child: Container(
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(2),
-                color: Color(0xff51CF66),
+                color: const Color(0xff51CF66),
               ),
               alignment: Alignment.center,
-              child: Text("86",
+              child: Text('86',
                   style: GoogleFonts.openSans(
-                      color: Color(0xffFFFFFF),
+                      color: const Color(0xffFFFFFF),
                       fontSize: responsive.inchR(1.5))),
             ),
           ),
@@ -31,19 +31,19 @@ class Score extends StatelessWidget {
           height: responsive.inchR(0.2),
         ),
         Text(
-          "Metascore",
+          'Metascore',
           style: GoogleFonts.openSans(
               fontWeight: FontWeight.w600,
-              color: Color(0xff12153D),
+              color: const Color(0xff12153D),
               fontSize: responsive.inchR(1.8)),
         ),
         SizedBox(
           height: responsive.inchR(0.01),
         ),
-        Text("62 critic reviews",
+        Text('62 critic reviews',
             style: GoogleFonts.openSans(
                 fontWeight: FontWeight.w400,
-                color: Color(0xff9A9BB2),
+                color: const Color(0xff9A9BB2),
                 fontSize: responsive.inchR(1.4)))
       ],
     );

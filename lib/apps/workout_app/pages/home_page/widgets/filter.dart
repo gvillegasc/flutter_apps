@@ -10,7 +10,7 @@ class _FilterState extends State<Filter> {
   int filterSelected = 1;
   @override
   Widget build(BuildContext context) {
-    final Responsive responsive = Responsive.of(context);
+    final responsive = Responsive.of(context);
     return SliverToBoxAdapter(
       child: Container(
         margin: EdgeInsets.only(
@@ -23,22 +23,22 @@ class _FilterState extends State<Filter> {
           padding: EdgeInsets.symmetric(horizontal: responsive.inchR(2)),
           children: <Widget>[
             FilterItem(
-                name: "Popular",
+                name: 'Popular',
                 filterSelected: filterSelected,
                 value: 1,
                 onTap: () => selectFilter(1)),
             FilterItem(
-                name: "Hard workout",
+                name: 'Hard workout',
                 filterSelected: filterSelected,
                 value: 2,
                 onTap: () => selectFilter(2)),
             FilterItem(
-                name: "Full body",
+                name: 'Full body',
                 filterSelected: filterSelected,
                 value: 3,
                 onTap: () => selectFilter(3)),
             FilterItem(
-                name: "Crossfit",
+                name: 'Crossfit',
                 filterSelected: filterSelected,
                 value: 4,
                 onTap: () => selectFilter(4)),
@@ -56,11 +56,6 @@ class _FilterState extends State<Filter> {
 }
 
 class FilterItem extends StatelessWidget {
-  final String name;
-  final int filterSelected;
-  final int value;
-  final VoidCallback onTap;
-
   const FilterItem(
       {Key key,
       @required this.name,
@@ -68,15 +63,21 @@ class FilterItem extends StatelessWidget {
       @required this.value,
       @required this.onTap})
       : super(key: key);
+
+  final String name;
+  final int filterSelected;
+  final int value;
+  final VoidCallback onTap;
+
   @override
   Widget build(BuildContext context) {
-    final Responsive responsive = Responsive.of(context);
+    final responsive = Responsive.of(context);
     return Container(
       alignment: Alignment.center,
       child: SizedBox(
           height: responsive.inchR(3.2),
           child: GestureDetector(
-            onTap: this.onTap,
+            onTap: onTap,
             child: Container(
                 padding:
                     EdgeInsets.symmetric(horizontal: responsive.inchR(2.5)),
@@ -84,17 +85,17 @@ class FilterItem extends StatelessWidget {
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(responsive.inchR(2.5)),
                   border: Border.all(
-                    color: (this.filterSelected == this.value)
-                        ? Color(0xff40D876)
+                    color: (filterSelected == value)
+                        ? const Color(0xff40D876)
                         : Colors.transparent,
                     style: BorderStyle.solid,
                     width: 1.0,
                   ),
                 ),
                 child: Text(
-                  this.name,
+                  name,
                   style: TextStyle(
-                      color: Color(0xffFFFFFF),
+                      color: const Color(0xffFFFFFF),
                       fontWeight: FontWeight.w400,
                       fontSize: responsive.inchR(1.6)),
                 )),

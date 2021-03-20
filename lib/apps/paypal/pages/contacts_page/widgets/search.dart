@@ -6,9 +6,9 @@ import 'package:google_fonts/google_fonts.dart';
 class Search extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    final Responsive responsive = Responsive.of(context);
+    final responsive = Responsive.of(context);
     return SliverToBoxAdapter(
-      child: Container(
+      child: SizedBox(
         height: responsive.inchR(8),
         width: responsive.width,
         child: Column(
@@ -19,7 +19,7 @@ class Search extends StatelessWidget {
               height: responsive.inchR(6.5),
               decoration: BoxDecoration(
                 border: Border.all(
-                  color: Color(0xffF5F7FA),
+                  color: const Color(0xffF5F7FA),
                   width: 1.5,
                 ),
                 borderRadius: BorderRadius.circular(responsive.inchR(2)),
@@ -31,8 +31,8 @@ class Search extends StatelessWidget {
                     padding: EdgeInsets.all(responsive.inchR(1.75)),
                     height: double.infinity,
                     child: SvgPicture.asset(
-                      "assets/paypal/icons/ic_search.svg",
-                      color: Color(0xff919CAA),
+                      'assets/paypal/icons/ic_search.svg',
+                      color: const Color(0xff919CAA),
                     ),
                   ),
                   Expanded(
@@ -40,9 +40,9 @@ class Search extends StatelessWidget {
                         decoration: InputDecoration(
                             contentPadding: EdgeInsets.zero,
                             border: InputBorder.none,
-                            hintText: "Enter a name or e-mail",
+                            hintText: 'Enter a name or e-mail',
                             hintStyle: GoogleFonts.manrope(
-                                color: Color(0xff919CAA),
+                                color: const Color(0xff919CAA),
                                 fontWeight: FontWeight.w500,
                                 fontSize: responsive.inchR(1.7)))),
                   ),

@@ -3,12 +3,12 @@ import 'package:flutter_ui_app/apps/movie_app/pages/movies_page/widgets/widgets.
 import 'package:flutter_ui_app/global/responsive.dart';
 
 class MoviesPage extends StatelessWidget {
-  static final String routeName = "movies";
+  static const String routeName = 'movies';
   @override
   Widget build(BuildContext context) {
-    final Responsive responsive = Responsive.of(context);
+    final responsive = Responsive.of(context);
     return Scaffold(
-      backgroundColor: Color(0xffFFFFFF),
+      backgroundColor: const Color(0xffFFFFFF),
       body: Column(
         children: <Widget>[
           ToolsBar(),

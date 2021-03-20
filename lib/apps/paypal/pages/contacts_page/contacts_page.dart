@@ -6,17 +6,15 @@ class ContactsPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Container(
-        child: CustomScrollView(
-          slivers: [
-            ActionsAppBar(
-              title: "Contacts",
-              actionIcon: "ic_more.svg",
-            ),
-            Search(),
-            ContactList()
-          ],
-        ),
+      body: CustomScrollView(
+        slivers: [
+          const ActionsAppBar(
+            title: 'Contacts',
+            actionIcon: 'ic_more.svg',
+          ),
+          Search(),
+          ContactList()
+        ],
       ),
     );
   }

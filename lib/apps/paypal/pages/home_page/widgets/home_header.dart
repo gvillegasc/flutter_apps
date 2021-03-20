@@ -8,7 +8,7 @@ import 'package:provider/provider.dart';
 class HomeHeader extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    final Responsive responsive = Responsive.of(context);
+    final responsive = Responsive.of(context);
     return SliverToBoxAdapter(
         child: Container(
       height: responsive.heightR(35),
@@ -16,15 +16,15 @@ class HomeHeader extends StatelessWidget {
       decoration: BoxDecoration(
         boxShadow: [
           BoxShadow(
-            color: Color(0xff0070BA).withOpacity(0.12),
+            color: const Color(0xff0070BA).withOpacity(0.12),
             spreadRadius: 3,
             blurRadius: 10,
-            offset: Offset(3, 7), // changes position of shadow
+            offset: const Offset(3, 7),
           ),
         ],
         borderRadius: BorderRadius.only(
             bottomRight: Radius.circular(responsive.inchR(5))),
-        gradient: LinearGradient(
+        gradient: const LinearGradient(
             begin: Alignment.topLeft,
             end: Alignment.bottomRight,
             colors: [Color(0xff0070BA), Color(0xff1546A0)]),
@@ -34,12 +34,12 @@ class HomeHeader extends StatelessWidget {
           Positioned(
             top: 0,
             left: 0,
-            child: Container(
+            child: SizedBox(
               height: responsive.heightR(42),
               width: responsive.heightR(42),
-              child: Image(
+              child: const Image(
                 image: AssetImage(
-                  "assets/paypal/images/img_logo_transparent.png",
+                  'assets/paypal/images/img_logo_transparent.png',
                 ),
                 fit: BoxFit.cover,
               ),
@@ -49,27 +49,24 @@ class HomeHeader extends StatelessWidget {
             right: 30,
             top: 10,
             child: GestureDetector(
-              onTap: () {
-                final HomeProvider homeProvider =
-                    Provider.of<HomeProvider>(context, listen: false);
-                homeProvider.changePage();
-              },
+              onTap: () => Provider.of<HomeProvider>(context, listen: false)
+                ..changePage(),
               child: SafeArea(
                 bottom: false,
                 child: Container(
-                  padding: EdgeInsets.all(2),
+                  padding: const EdgeInsets.all(2),
                   height: responsive.heightR(7),
                   width: responsive.heightR(7),
                   decoration: BoxDecoration(
-                      color: Color(0xff0070BA),
+                      color: const Color(0xff0070BA),
                       borderRadius:
                           BorderRadius.circular(responsive.heightR(2.2))),
                   child: ClipRRect(
                     borderRadius:
                         BorderRadius.circular(responsive.heightR(2.2) - 2),
-                    child: Image(
+                    child: const Image(
                         image:
-                            AssetImage("assets/paypal/images/img_person.jpg")),
+                            AssetImage('assets/paypal/images/img_person.jpg')),
                   ),
                 ),
               ),
@@ -86,11 +83,11 @@ class HomeHeader extends StatelessWidget {
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: <Widget>[
                           SvgPicture.asset(
-                              "assets/paypal/icons/ic_logo_white.svg"),
+                              'assets/paypal/icons/ic_logo_white.svg'),
                           SizedBox(
                             height: responsive.heightR(3),
                           ),
-                          Text("Hello, John!",
+                          Text('Hello, John!',
                               style: GoogleFonts.manrope(
                                   color: Colors.white.withOpacity(.5),
                                   fontWeight: FontWeight.w400,
@@ -98,12 +95,12 @@ class HomeHeader extends StatelessWidget {
                           SizedBox(
                             height: responsive.heightR(3.5),
                           ),
-                          Text("\$ 272.30",
+                          Text('\$ 272.30',
                               style: GoogleFonts.manrope(
                                   color: Colors.white,
                                   fontWeight: FontWeight.w700,
                                   fontSize: responsive.inchR(5))),
-                          Text("Your Balance",
+                          Text('Your Balance',
                               style: GoogleFonts.manrope(
                                   color: Colors.white,
                                   fontWeight: FontWeight.w500,

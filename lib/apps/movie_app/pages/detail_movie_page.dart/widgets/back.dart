@@ -4,7 +4,7 @@ import 'package:flutter_ui_app/global/responsive.dart';
 class Back extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    final Responsive responsive = Responsive.of(context);
+    final responsive = Responsive.of(context);
     return Positioned(
         top: responsive.inchR(3),
         left: responsive.inchR(2),

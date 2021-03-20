@@ -4,17 +4,17 @@ import 'package:flutter_ui_app/global/responsive.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class ActionsAppBar extends StatelessWidget {
-  final String actionIcon;
-  final VoidCallback onPressed;
-  final String title;
-
   const ActionsAppBar(
       {Key key, this.actionIcon, this.onPressed, @required this.title})
       : super(key: key);
 
+  final String actionIcon;
+  final VoidCallback onPressed;
+  final String title;
+
   @override
   Widget build(BuildContext context) {
-    final Responsive responsive = Responsive.of(context);
+    final responsive = Responsive.of(context);
     return SliverToBoxAdapter(
       child: SafeArea(
         bottom: false,
@@ -27,17 +27,17 @@ class ActionsAppBar extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: <Widget>[
                 GestureDetector(
-                    onTap: this.onPressed == null ? () {} : this.onPressed,
+                    onTap: onPressed ?? () {},
                     child: SvgPicture.asset(
-                        "assets/paypal/icons/ic_arrow_back.svg")),
-                Text(this.title,
+                        'assets/paypal/icons/ic_arrow_back.svg')),
+                Text(title,
                     style: GoogleFonts.manrope(
-                        color: Color(0xff243656),
+                        color: const Color(0xff243656),
                         fontWeight: FontWeight.w700,
                         fontSize: responsive.inchR(2))),
-                this.actionIcon == null
+                actionIcon == null
                     ? Container(width: responsive.widthR(5))
-                    : SvgPicture.asset("assets/paypal/icons/${this.actionIcon}")
+                    : SvgPicture.asset('assets/paypal/icons/$actionIcon')
               ]),
         ),
       ),

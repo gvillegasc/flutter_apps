@@ -5,7 +5,7 @@ import 'package:flutter_ui_app/global/responsive.dart';
 class CategoriesMovie extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    final Responsive responsive = Responsive.of(context);
+    final responsive = Responsive.of(context);
     return Container(
       padding: EdgeInsets.symmetric(horizontal: responsive.heightR(2)),
       height: responsive.heightR(3.7),
@@ -13,9 +13,9 @@ class CategoriesMovie extends StatelessWidget {
       child: ListView(
         scrollDirection: Axis.horizontal,
         children: <Widget>[
-          ItemCategory(name: "Action"),
-          ItemCategory(name: "Comedy"),
-          ItemCategory(name: "Drama")
+          const ItemCategory(name: 'Action'),
+          const ItemCategory(name: 'Comedy'),
+          const ItemCategory(name: 'Drama')
         ],
       ),
     );

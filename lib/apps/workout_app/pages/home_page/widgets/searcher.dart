@@ -5,7 +5,7 @@ import 'package:flutter_ui_app/global/responsive.dart';
 class Searcher extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    final Responsive responsive = Responsive.of(context);
+    final responsive = Responsive.of(context);
     return Container(
       height: responsive.inchR(13),
       width: double.infinity,
@@ -19,19 +19,19 @@ class Searcher extends StatelessWidget {
               Row(
                 children: <Widget>[
                   Text(
-                    "Find ",
+                    'Find ',
                     style: TextStyle(
                         fontWeight: FontWeight.w900,
-                        color: Color(
+                        color: const Color(
                           0xff40D876,
                         ),
                         fontSize: responsive.inchR(3)),
                   ),
                   Text(
-                    "your Workout",
+                    'your Workout',
                     style: TextStyle(
                         fontWeight: FontWeight.w900,
-                        color: Color(
+                        color: const Color(
                           0xffFFFFFF,
                         ),
                         fontSize: responsive.inchR(3)),
@@ -41,7 +41,7 @@ class Searcher extends StatelessWidget {
               Padding(
                 padding: EdgeInsets.only(right: responsive.inchR(2.5)),
                 child: SvgPicture.asset(
-                  "assets/workout_app/icons/ic_filter.svg",
+                  'assets/workout_app/icons/ic_filter.svg',
                   height: responsive.inchR(2.2),
                 ),
               )
@@ -56,7 +56,7 @@ class Searcher extends StatelessWidget {
             alignment: Alignment.center,
             height: responsive.inchR(6),
             decoration: BoxDecoration(
-                color: Color(0xff232441),
+                color: const Color(0xff232441),
                 borderRadius: BorderRadius.circular(responsive.inchR(5))),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -67,16 +67,16 @@ class Searcher extends StatelessWidget {
                   padding: EdgeInsets.only(left: responsive.inchR(3)),
                   alignment: Alignment.centerLeft,
                   child: Text(
-                    "SEARCH WORKOUT",
+                    'SEARCH WORKOUT',
                     style: TextStyle(
-                        color: Color(0xffFFFFFF),
+                        color: const Color(0xffFFFFFF),
                         letterSpacing: 1.3,
                         fontSize: responsive.inchR(1.4)),
                   ),
                 ),
                 IconButton(
                     icon: SvgPicture.asset(
-                      "assets/workout_app/icons/ic_search.svg",
+                      'assets/workout_app/icons/ic_search.svg',
                       height: responsive.inchR(2),
                     ),
                     onPressed: null)

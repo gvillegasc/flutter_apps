@@ -5,7 +5,7 @@ import 'package:flutter_ui_app/global/responsive.dart';
 class BackgroundImage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    final Responsive responsive = Responsive.of(context);
+    final responsive = Responsive.of(context);
     return Positioned(
       top: 0,
       child: Container(
@@ -17,7 +17,7 @@ class BackgroundImage extends StatelessWidget {
               color: Colors.grey.withOpacity(0.35),
               spreadRadius: 1,
               blurRadius: 40,
-              offset: Offset(0, 9), // changes position of shadow
+              offset: const Offset(0, 9), // changes position of shadow
             ),
           ],
         ),
@@ -32,7 +32,7 @@ class BackgroundImage extends StatelessWidget {
             child: CachedNetworkImage(
               fit: BoxFit.cover,
               imageUrl:
-                  "https://image.tmdb.org/t/p/w500/ckfwfLkl0CkafTasoRw5FILhZAS.jpg",
+                  'https://image.tmdb.org/t/p/w500/ckfwfLkl0CkafTasoRw5FILhZAS.jpg',
             ),
             height: responsive.heightR(33),
           ),

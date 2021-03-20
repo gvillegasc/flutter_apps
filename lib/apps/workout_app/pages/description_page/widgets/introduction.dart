@@ -5,20 +5,20 @@ import 'package:flutter_ui_app/global/responsive.dart';
 class Introduction extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    final Responsive responsive = Responsive.of(context);
+    final responsive = Responsive.of(context);
     return Container(
       height: responsive.heightR(50),
       width: double.infinity,
-      decoration: BoxDecoration(
+      decoration: const BoxDecoration(
           image: DecorationImage(
-              image: AssetImage("assets/workout_app/images/img_advance_bg.png"),
+              image: AssetImage('assets/workout_app/images/img_advance_bg.png'),
               fit: BoxFit.cover)),
       child: Stack(
         children: <Widget>[
           Container(
             height: double.infinity,
             width: double.infinity,
-            decoration: BoxDecoration(
+            decoration: const BoxDecoration(
                 gradient: LinearGradient(
                     begin: Alignment.bottomCenter,
                     end: Alignment.topCenter,

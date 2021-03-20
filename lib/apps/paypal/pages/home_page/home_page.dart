@@ -10,9 +10,9 @@ class HomePagePaypal extends StatelessWidget {
       create: (_) => HomeProvider(),
       child: Scaffold(
           body: Container(
-        decoration: BoxDecoration(
+        decoration: const BoxDecoration(
             gradient: LinearGradient(
-          colors: [Colors.white, Color(0xffF5F7FA)],
+          colors: [Color(0xffFFFFFF), Color(0xffF5F7FA)],
           begin: Alignment.topCenter,
           end: Alignment.bottomCenter,
         )),
@@ -25,7 +25,7 @@ class HomePagePaypal extends StatelessWidget {
 class _CreatePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    final HomeProvider homeProvider = Provider.of<HomeProvider>(context);
+    final homeProvider = Provider.of<HomeProvider>(context);
     return homeProvider.firstPage ? _FirstPage() : _SecondPage();
   }
 }
@@ -50,13 +50,10 @@ class _SecondPage extends StatelessWidget {
     return CustomScrollView(
       slivers: <Widget>[
         ActionsAppBar(
-          actionIcon: "ic_search.svg",
-          onPressed: () {
-            final HomeProvider homeProvider =
-                Provider.of<HomeProvider>(context, listen: false);
-            homeProvider.changePage();
-          },
-          title: "Activity",
+          actionIcon: 'ic_search.svg',
+          onPressed: () =>
+              Provider.of<HomeProvider>(context, listen: false)..changePage(),
+          title: 'Activity',
         ),
         TopFilters(),
         ActivitiesList()
@@ -69,7 +66,7 @@ class HomeProvider extends ChangeNotifier {
   bool firstPage = true;
 
   void changePage() {
-    this.firstPage = !this.firstPage;
+    firstPage = !firstPage;
     notifyListeners();
   }
 }

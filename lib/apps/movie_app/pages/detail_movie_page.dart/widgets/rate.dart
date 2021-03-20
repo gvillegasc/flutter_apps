@@ -6,22 +6,22 @@ import 'package:google_fonts/google_fonts.dart';
 class Rate extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    final Responsive responsive = Responsive.of(context);
+    final responsive = Responsive.of(context);
     return Column(
       mainAxisAlignment: MainAxisAlignment.start,
       children: <Widget>[
         SvgPicture.asset(
-          "assets/movie_app/icons/ic_star_outline.svg",
+          'assets/movie_app/icons/ic_star_outline.svg',
           height: responsive.inchR(3.5),
         ),
         SizedBox(
           height: responsive.inchR(0.2),
         ),
         Text(
-          "Rate This",
+          'Rate This',
           style: GoogleFonts.openSans(
               fontWeight: FontWeight.w600,
-              color: Color(0xff12153D),
+              color: const Color(0xff12153D),
               fontSize: responsive.inchR(1.8)),
         ),
         SizedBox(

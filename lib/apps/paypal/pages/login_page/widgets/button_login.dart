@@ -6,7 +6,7 @@ import 'package:google_fonts/google_fonts.dart';
 class ButtonLogin extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    final Responsive responsive = Responsive.of(context);
+    final responsive = Responsive.of(context);
     return GestureDetector(
       onTap: () => Navigator.push(
           context, MaterialPageRoute(builder: (_) => NavigationPagePayPal())),
@@ -17,22 +17,22 @@ class ButtonLogin extends StatelessWidget {
         width: responsive.widthR(75),
         alignment: Alignment.center,
         decoration: BoxDecoration(
-            gradient: LinearGradient(
+            gradient: const LinearGradient(
                 begin: Alignment.topLeft,
                 end: Alignment.bottomRight,
                 colors: [Color(0xff0070BA), Color(0xff1546A0)]),
             boxShadow: [
               BoxShadow(
-                color: Color(0xff0070BA).withOpacity(0.12),
+                color: const Color(0xff0070BA).withOpacity(0.12),
                 spreadRadius: 3,
                 blurRadius: 10,
-                offset: Offset(3, 7), // changes position of shadow
+                offset: const Offset(3, 7),
               ),
             ],
-            color: Color(0xff0070BA),
+            color:const Color(0xff0070BA),
             borderRadius: BorderRadius.circular(responsive.inchR(2.5))),
         child: Text(
-          "Login",
+          'Login',
           style: GoogleFonts.manrope(
               color: Colors.white,
               fontWeight: FontWeight.w600,

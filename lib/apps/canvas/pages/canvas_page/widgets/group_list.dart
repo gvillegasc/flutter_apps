@@ -5,20 +5,20 @@ import 'package:flutter_ui_app/global/responsive.dart';
 class GroupList extends StatelessWidget {
   final List<UserGroup> groups = [
     UserGroup(
-        group: "Grupo 72 - Equipo 1",
-        color: Color(0xffFE5BC2),
-        course: "Arquitectura de software",
-        period: "Periodo determinado"),
+        group: 'Grupo 72 - Equipo 1',
+        color: const Color(0xffFE5BC2),
+        course: 'Arquitectura de software',
+        period: 'Periodo determinado'),
     UserGroup(
-        group: "Grupo 72 - Equipo 3",
-        color: Color(0xff367BE2),
-        course: "Arquitectura de computadoras",
-        period: "Periodo determinado"),
+        group: 'Grupo 72 - Equipo 3',
+        color: const Color(0xff367BE2),
+        course: 'Arquitectura de computadoras',
+        period: 'Periodo determinado'),
     UserGroup(
-        group: "Grupo 73 - Equipo 1",
-        color: Color(0xff196F3D),
-        course: "Ingenieria de requerimientos",
-        period: "Periodo determinado"),
+        group: 'Grupo 73 - Equipo 1',
+        color: const Color(0xff196F3D),
+        course: 'Ingenieria de requerimientos',
+        period: 'Periodo determinado'),
   ];
   @override
   Widget build(BuildContext context) {
@@ -30,12 +30,13 @@ class GroupList extends StatelessWidget {
 }
 
 class Group extends StatelessWidget {
+  const Group({Key key, @required this.group}) : super(key: key);
+
   final UserGroup group;
 
-  const Group({Key key, @required this.group}) : super(key: key);
   @override
   Widget build(BuildContext context) {
-    final Responsive responsive = Responsive.of(context);
+    final responsive = Responsive.of(context);
     return Container(
       padding: EdgeInsets.symmetric(horizontal: responsive.widthR(5)),
       child: Container(
@@ -50,7 +51,7 @@ class Group extends StatelessWidget {
               color: Colors.grey.withOpacity(0.1),
               spreadRadius: 1,
               blurRadius: 1,
-              offset: Offset(0, 0.5), // changes position of shadow
+              offset: const Offset(0, 0.5), // changes position of shadow
             ),
           ],
         ),
@@ -61,7 +62,7 @@ class Group extends StatelessWidget {
               Container(
                 width: responsive.widthR(1.5),
                 height: double.infinity,
-                color: this.group.color,
+                color: group.color,
               ),
               Expanded(
                   child: Container(
@@ -72,23 +73,23 @@ class Group extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: <Widget>[
                     Text(
-                      this.group.group,
+                      group.group,
                       style: TextStyle(
-                          color: Color(0xff223E6D),
+                          color: const Color(0xff223E6D),
                           fontSize: responsive.inchR(1.7),
                           fontWeight: FontWeight.w700),
                     ),
                     Text(
-                      this.group.course,
+                      group.course,
                       style: TextStyle(
-                          color: Color(0xff367BE2),
+                          color: const Color(0xff367BE2),
                           fontSize: responsive.inchR(1.6),
                           fontWeight: FontWeight.w400),
                     ),
                     Text(
-                      this.group.period,
+                      group.period,
                       style: TextStyle(
-                          color: Color(0xff92A5C6),
+                          color: const Color(0xff92A5C6),
                           fontSize: responsive.inchR(1.4),
                           fontWeight: FontWeight.w400),
                     ),

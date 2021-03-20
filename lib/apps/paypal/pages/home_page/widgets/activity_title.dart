@@ -8,7 +8,7 @@ import 'package:provider/provider.dart';
 class ActivityTitle extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    final Responsive responsive = Responsive.of(context);
+    final responsive = Responsive.of(context);
     return SliverToBoxAdapter(
       child: Container(
         padding: EdgeInsets.symmetric(horizontal: responsive.widthR(7)),
@@ -19,23 +19,20 @@ class ActivityTitle extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: <Widget>[
             Text(
-              "Activity",
+              'Activity',
               style: GoogleFonts.manrope(
-                  color: Color(0xff243656),
+                  color: const Color(0xff243656),
                   fontWeight: FontWeight.w700,
                   fontSize: responsive.inchR(2.3)),
             ),
             GestureDetector(
-              onTap: () {
-                final HomeProvider homeProvider =
-                    Provider.of<HomeProvider>(context, listen: false);
-                homeProvider.changePage();
-              },
+              onTap: () => Provider.of<HomeProvider>(context, listen: false)
+                ..changePage(),
               behavior: HitTestBehavior.translucent,
               child: Text(
-                "View all",
+                'View all',
                 style: GoogleFonts.manrope(
-                    color: Color(0xff919BAA),
+                    color: const Color(0xff919BAA),
                     fontWeight: FontWeight.w400,
                     fontSize: responsive.inchR(1.6)),
               ),

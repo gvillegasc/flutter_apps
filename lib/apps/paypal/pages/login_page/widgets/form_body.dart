@@ -7,12 +7,12 @@ class FormBody extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: <Widget>[
-        CustomTextField(
-          hintText: "Enter your name or e-mail",
+        const CustomTextField(
+          hintText: 'Enter your name or e-mail',
           keyboardType: TextInputType.emailAddress,
         ),
-        CustomTextField(
-          hintText: "Password",
+        const CustomTextField(
+          hintText: 'Password',
           isPassword: true,
         ),
         ButtonLogin()

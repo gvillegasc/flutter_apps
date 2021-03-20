@@ -4,12 +4,12 @@ import 'package:flutter_ui_app/apps/canvas/pages/to_do_page/widgets/widgets.dart
 import 'package:flutter_ui_app/global/responsive.dart';
 
 class ActivityList extends StatelessWidget {
-  final List<Activity> activities;
-
   const ActivityList({Key key, @required this.activities}) : super(key: key);
+
+  final List<Activity> activities;
   @override
   Widget build(BuildContext context) {
-    final Responsive responsive = Responsive.of(context);
+    final responsive = Responsive.of(context);
     return Expanded(
         child: ListView.builder(
       padding: EdgeInsets.symmetric(

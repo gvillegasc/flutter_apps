@@ -4,9 +4,10 @@ import 'package:flutter_ui_app/apps/paypal/pages/send_money_page/widgets/widgets
 import 'package:flutter_ui_app/apps/paypal/widgets/actions_app_bar.dart';
 
 class SendMoneyPage extends StatelessWidget {
+  const SendMoneyPage({Key key, @required this.contact}) : super(key: key);
+
   final ContactItem contact;
 
-  const SendMoneyPage({Key key, @required this.contact}) : super(key: key);
   @override
   Widget build(BuildContext context) {
     return WillPopScope(
@@ -17,10 +18,10 @@ class SendMoneyPage extends StatelessWidget {
       child: Scaffold(
         backgroundColor: Colors.white,
         body: CustomScrollView(
-          physics: NeverScrollableScrollPhysics(),
+          physics: const NeverScrollableScrollPhysics(),
           slivers: [
             ActionsAppBar(
-              title: "SendMoney",
+              title: 'SendMoney',
               onPressed: () => Navigator.pop(context),
             ),
             Receiver(contact: contact),

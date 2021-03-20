@@ -5,7 +5,7 @@ import 'package:google_fonts/google_fonts.dart';
 class TitleHardElement extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    final Responsive responsive = Responsive.of(context);
+    final responsive = Responsive.of(context);
     return Container(
       width: responsive.width,
       height: responsive.inchR(4),
@@ -15,20 +15,20 @@ class TitleHardElement extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.center,
         children: <Widget>[
           Text(
-            "HARD",
+            'HARD',
             style: GoogleFonts.bebasNeue(
                 letterSpacing: 3,
-                color: Color(0xffFFFFFFF),
+                color: const Color(0xffFFFFFFF),
                 fontSize: responsive.inchR(4)),
           ),
           SizedBox(
             width: responsive.inchR(1.5),
           ),
           Text(
-            "ELEMENT",
+            'ELEMENT',
             style: GoogleFonts.bebasNeue(
                 letterSpacing: 3,
-                color: Color(0xff40D876),
+                color: const Color(0xff40D876),
                 fontSize: responsive.inchR(4)),
           )
         ],

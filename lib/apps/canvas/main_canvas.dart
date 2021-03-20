@@ -9,7 +9,7 @@ class MainCanvas extends StatelessWidget {
     return MultiProvider(
       providers: [
         ChangeNotifierProvider(
-          create: (_) => new NavigationProvider(),
+          create: (_) => NavigationProvider(),
         ),
       ],
       child: NavigationPage(),

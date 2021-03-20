@@ -5,9 +5,9 @@ import 'package:google_fonts/google_fonts.dart';
 class DescriptionActions extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    final Responsive responsive = Responsive.of(context);
+    final responsive = Responsive.of(context);
     return Expanded(
-        child: Container(
+        child: SizedBox(
       width: double.infinity,
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.center,
@@ -15,11 +15,12 @@ class DescriptionActions extends StatelessWidget {
         children: <Widget>[
           FlatButton(
             onPressed: () {},
-            color: Color(0xff40D876),
+            color: const Color(0xff40D876),
             child: Text(
-              "Begin Train for \$5.00",
+              'Begin Train for \$5.00',
               style: GoogleFonts.roboto(
-                  color: Color(0xffFFFFFF), fontSize: responsive.heightR(2.4)),
+                  color: const Color(0xffFFFFFF),
+                  fontSize: responsive.heightR(2.4)),
             ),
             height: responsive.heightR(6.5),
             minWidth: responsive.inchR(38),
@@ -33,15 +34,15 @@ class DescriptionActions extends StatelessWidget {
             height: responsive.heightR(6.5),
             minWidth: responsive.inchR(38),
             child: OutlineButton(
-                highlightedBorderColor: Color(0xff40D876),
+                highlightedBorderColor: const Color(0xff40D876),
                 child: Text(
-                  "Begin Train Demo",
+                  'Begin Train Demo',
                   style: GoogleFonts.roboto(
-                      color: Color(0xffFFFFFF),
+                      color: const Color(0xffFFFFFF),
                       fontSize: responsive.heightR(2.4)),
                 ),
                 onPressed: () {},
-                borderSide: BorderSide(
+                borderSide: const BorderSide(
                   color: Color(0xff40D876),
                   style: BorderStyle.solid,
                   width: 1,

@@ -5,9 +5,9 @@ import 'package:flutter_ui_app/global/responsive.dart';
 class Projects extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    final Responsive responsive = Responsive.of(context);
+    final responsive = Responsive.of(context);
     return SliverToBoxAdapter(
-        child: Container(
+        child: SizedBox(
       width: double.infinity,
       height: responsive.inchR(34),
       child: Column(
@@ -20,7 +20,7 @@ class Projects extends StatelessWidget {
 class ProjectsTitle extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    final Responsive responsive = Responsive.of(context);
+    final responsive = Responsive.of(context);
     return Container(
       padding: EdgeInsets.symmetric(
           horizontal: responsive.inchR(2.2), vertical: responsive.inchR(1.6)),
@@ -33,16 +33,16 @@ class ProjectsTitle extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: <Widget>[
                 Text(
-                  "Proyectos",
+                  'Proyectos',
                   style: TextStyle(
-                      color: Color(0xff223E6D),
+                      color: const Color(0xff223E6D),
                       fontWeight: FontWeight.w700,
                       fontSize: responsive.inchR(2.5)),
                 ),
                 Text(
-                  "Ver todos",
+                  'Ver todos',
                   style: TextStyle(
-                      color: Color(0xff92A5C6),
+                      color: const Color(0xff92A5C6),
                       fontWeight: FontWeight.w400,
                       fontSize: responsive.inchR(1.7)),
                 ),
@@ -55,7 +55,7 @@ class ProjectsTitle extends StatelessWidget {
               height: responsive.inchR(1),
               width: responsive.inchR(1),
               child: Container(
-                color: Color(0xff367BE2),
+                color: const Color(0xff367BE2),
               ),
             ),
           )
@@ -68,25 +68,25 @@ class ProjectsTitle extends StatelessWidget {
 class ProjectList extends StatelessWidget {
   final List<UserProject> userProjects = [
     UserProject(
-        date: "01/dec/2020",
-        activity: ["Hacer Login", "Crear Homepage", "Crear Landing page"],
-        team: "Equipo \nMaravilla",
-        color: Color(0xffE86AA7)),
+        date: '01/dec/2020',
+        activity: ['Hacer Login', 'Crear Homepage', 'Crear Landing page'],
+        team: 'Equipo \nMaravilla',
+        color: const Color(0xffE86AA7)),
     UserProject(
-        date: "03/dec/2020",
-        activity: ["Hacer Login", "Crear Homepage"],
-        team: "Equipo \nBuena honda",
-        color: Color(0xffF7BF12)),
+        date: '03/dec/2020',
+        activity: ['Hacer Login', 'Crear Homepage'],
+        team: 'Equipo \nBuena honda',
+        color: const Color(0xffF7BF12)),
     UserProject(
-        date: "01/dec/2020",
-        activity: ["Hacer Login", "Crear Homepage", "Crear Landing page"],
-        team: "Equipo \nFantastico",
-        color: Color(0xff54B39B)),
+        date: '01/dec/2020',
+        activity: ['Hacer Login', 'Crear Homepage', 'Crear Landing page'],
+        team: 'Equipo \nFantastico',
+        color: const Color(0xff54B39B)),
   ];
 
   @override
   Widget build(BuildContext context) {
-    final Responsive responsive = Responsive.of(context);
+    final responsive = Responsive.of(context);
     return Expanded(
       child: Container(
           padding: EdgeInsets.symmetric(vertical: responsive.inchR(2)),
@@ -94,13 +94,13 @@ class ProjectList extends StatelessWidget {
     );
   }
 
-  Widget drawList(responsive) {
-    final children = <Widget>[];
-    children.add(
-      SizedBox(
-        width: responsive.inchR(1.5),
-      ),
-    );
+  Widget drawList(Responsive responsive) {
+    final children = <Widget>[]..add(
+        SizedBox(
+          width: responsive.inchR(1.5),
+        ),
+      );
+
     for (var i = 0; i < userProjects.length; i++) {
       children.add(Project(userProject: userProjects[i]));
     }
@@ -113,12 +113,13 @@ class ProjectList extends StatelessWidget {
 }
 
 class Project extends StatelessWidget {
+  const Project({Key key, @required this.userProject}) : super(key: key);
+
   final UserProject userProject;
 
-  const Project({Key key, @required this.userProject}) : super(key: key);
   @override
   Widget build(BuildContext context) {
-    final Responsive responsive = Responsive.of(context);
+    final responsive = Responsive.of(context);
     return Container(
       height: double.infinity,
       margin: EdgeInsets.symmetric(horizontal: responsive.inchR(1)),
@@ -126,38 +127,36 @@ class Project extends StatelessWidget {
           vertical: responsive.inchR(1.5), horizontal: responsive.inchR(1.5)),
       width: responsive.inchR(17),
       decoration: BoxDecoration(
-          color: this.userProject.color,
+          color: userProject.color,
           borderRadius: BorderRadius.circular(responsive.inchR(2))),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: <Widget>[
           Text(
-            this.userProject.date,
+            userProject.date,
             style: TextStyle(
-                color: Color(0xffFFFFFF),
+                color: const Color(0xffFFFFFF),
                 fontWeight: FontWeight.w400,
                 fontSize: responsive.inchR(1.5)),
           ),
           UserList(),
           Text(
-            "Actividades",
+            'Actividades',
             style: TextStyle(
-                color: Color(0xff2B3F5F),
+                color: const Color(0xff2B3F5F),
                 fontWeight: FontWeight.w700,
                 fontSize: responsive.inchR(1.7)),
           ),
-          drawWorks(this.userProject.activity),
+          drawWorks(userProject.activity),
           SizedBox(
             height: responsive.inchR(1.5),
           ),
-          Container(
-            child: Text(this.userProject.team,
-                style: TextStyle(
-                    color: Color(0xffFFFFFF),
-                    fontWeight: FontWeight.w500,
-                    fontSize: responsive.inchR(1.8))),
-          )
+          Text(userProject.team,
+              style: TextStyle(
+                  color: const Color(0xffFFFFFF),
+                  fontWeight: FontWeight.w500,
+                  fontSize: responsive.inchR(1.8))),
         ],
       ),
     );
@@ -165,7 +164,7 @@ class Project extends StatelessWidget {
 
   Widget drawWorks(List<String> activities) {
     final children = <Widget>[];
-    for (int i = 0; i < activities.length; i++) {
+    for (var i = 0; i < activities.length; i++) {
       children.add(Work(
         work: activities[i],
       ));
@@ -178,27 +177,28 @@ class Project extends StatelessWidget {
 }
 
 class Work extends StatelessWidget {
-  final String work;
-
   const Work({Key key, @required this.work})
       : assert(work != null),
         super(key: key);
+
+  final String work;
+
   @override
   Widget build(BuildContext context) {
-    final Responsive responsive = Responsive.of(context);
+    final responsive = Responsive.of(context);
     return Row(
       children: <Widget>[
         CircleAvatar(
           radius: responsive.inchR(0.25),
-          backgroundColor: Color(0xffFFFFFF),
+          backgroundColor: const Color(0xffFFFFFF),
         ),
         SizedBox(
           width: responsive.inchR(0.3),
         ),
         Text(
-          this.work,
+          work,
           style: TextStyle(
-              color: Color(0xffFFFFFF),
+              color: const Color(0xffFFFFFF),
               fontWeight: FontWeight.w400,
               fontSize: responsive.inchR(1.35)),
         ),
@@ -208,25 +208,25 @@ class Work extends StatelessWidget {
 }
 
 class User extends StatelessWidget {
-  final double distance;
-  final String image;
-
   const User({Key key, @required this.distance, @required this.image})
       : super(key: key);
+
+  final double distance;
+  final String image;
   @override
   Widget build(BuildContext context) {
-    final Responsive responsive = Responsive.of(context);
+    final responsive = Responsive.of(context);
     return Positioned(
-      left: this.distance,
+      left: distance,
       child: CircleAvatar(
-        backgroundColor: Color(0xffFFFFFF),
+        backgroundColor: const Color(0xffFFFFFF),
         radius: responsive.inchR(1.7),
         child: ClipRRect(
           borderRadius: BorderRadius.circular(20),
           child: CircleAvatar(
             radius: responsive.inchR(1.5),
             child: Image(
-              image: AssetImage(this.image),
+              image: AssetImage(image),
             ),
           ),
         ),
@@ -238,27 +238,27 @@ class User extends StatelessWidget {
 class UserList extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    final Responsive responsive = Responsive.of(context);
-    return Container(
+    final responsive = Responsive.of(context);
+    return SizedBox(
       height: responsive.inchR(3.4),
       width: double.infinity,
       child: Stack(
         children: <Widget>[
           User(
             distance: responsive.inchR(0),
-            image: "assets/canvas/images/img_person_1.jpg",
+            image: 'assets/canvas/images/img_person_1.jpg',
           ),
           User(
             distance: responsive.inchR(2),
-            image: "assets/canvas/images/img_person_2.jpg",
+            image: 'assets/canvas/images/img_person_2.jpg',
           ),
           User(
             distance: responsive.inchR(4),
-            image: "assets/canvas/images/img_person_3.jpg",
+            image: 'assets/canvas/images/img_person_3.jpg',
           ),
           User(
             distance: responsive.inchR(6),
-            image: "assets/canvas/images/img_person_4.jpg",
+            image: 'assets/canvas/images/img_person_4.jpg',
           ),
         ],
       ),

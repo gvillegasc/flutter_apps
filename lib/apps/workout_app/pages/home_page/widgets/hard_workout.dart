@@ -5,9 +5,9 @@ import 'package:flutter_ui_app/global/responsive.dart';
 class HardSection extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    final Responsive responsive = Responsive.of(context);
+    final responsive = Responsive.of(context);
     return SliverToBoxAdapter(
-      child: Container(
+      child: SizedBox(
         width: double.infinity,
         height: responsive.inchR(28),
         child: Column(
@@ -17,9 +17,9 @@ class HardSection extends StatelessWidget {
               padding: EdgeInsets.symmetric(horizontal: responsive.inchR(2)),
               height: responsive.inchR(6),
               child: Text(
-                "Hard Workout",
+                'Hard Workout',
                 style: TextStyle(
-                    color: Color(0xffFFFFFF),
+                    color: const Color(0xffFFFFFF),
                     fontSize: responsive.inchR(2.8),
                     fontWeight: FontWeight.w800),
               ),
@@ -30,11 +30,12 @@ class HardSection extends StatelessWidget {
                 padding:
                     EdgeInsets.symmetric(horizontal: responsive.inchR(1.25)),
                 children: <Widget>[
-                  HardItem(image: "img_popular_1.png", name: "Yoga exercises"),
-                  HardItem(
-                      image: "img_popular_2.png", name: "Example exercises"),
-                  HardItem(
-                      image: "img_popular_3.png", name: "Example exercises"),
+                  const HardItem(
+                      image: 'img_popular_1.png', name: 'Yoga exercises'),
+                  const HardItem(
+                      image: 'img_popular_2.png', name: 'Example exercises'),
+                  const HardItem(
+                      image: 'img_popular_3.png', name: 'Example exercises'),
                 ],
               ),
             )
@@ -46,14 +47,15 @@ class HardSection extends StatelessWidget {
 }
 
 class HardItem extends StatelessWidget {
+  const HardItem({Key key, @required this.image, @required this.name})
+      : super(key: key);
+
   final String image;
   final String name;
 
-  const HardItem({Key key, @required this.image, @required this.name})
-      : super(key: key);
   @override
   Widget build(BuildContext context) {
-    final Responsive responsive = Responsive.of(context);
+    final responsive = Responsive.of(context);
     return Padding(
       padding: EdgeInsets.symmetric(horizontal: responsive.inchR(0.75)),
       child: Column(
@@ -66,8 +68,7 @@ class HardItem extends StatelessWidget {
               width: responsive.inchR(16),
               decoration: BoxDecoration(
                   image: DecorationImage(
-                    image:
-                        AssetImage("assets/workout_app/images/${this.image}"),
+                    image: AssetImage('assets/workout_app/images/$image'),
                     fit: BoxFit.cover,
                   ),
                   borderRadius: BorderRadius.circular(responsive.inchR(2))),
@@ -77,11 +78,11 @@ class HardItem extends StatelessWidget {
               child: Container(
             alignment: Alignment.center,
             child: Text(
-              this.name,
+              name,
               maxLines: 1,
               overflow: TextOverflow.ellipsis,
               style: TextStyle(
-                  color: Color(0xffFFFFFFF),
+                  color: const Color(0xffFFFFFFF),
                   fontWeight: FontWeight.w400,
                   fontSize: responsive.inchR(1.37)),
             ),

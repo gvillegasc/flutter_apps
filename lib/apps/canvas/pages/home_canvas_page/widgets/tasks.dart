@@ -6,10 +6,10 @@ import 'package:flutter_ui_app/global/responsive.dart';
 class Tasks extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    final Responsive responsive = Responsive.of(context);
+    final responsive = Responsive.of(context);
 
     return SliverToBoxAdapter(
-      child: Container(
+      child: SizedBox(
         height: responsive.inchR(30),
         width: double.infinity,
         child: Column(
@@ -23,7 +23,7 @@ class Tasks extends StatelessWidget {
 class TasksTitle extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    final Responsive responsive = Responsive.of(context);
+    final responsive = Responsive.of(context);
     return Container(
       padding: EdgeInsets.symmetric(
           horizontal: responsive.inchR(2.2), vertical: responsive.inchR(1.6)),
@@ -36,25 +36,25 @@ class TasksTitle extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: <Widget>[
                 Text(
-                  "Tareas",
+                  'Tareas',
                   style: TextStyle(
-                      color: Color(0xff223E6D),
+                      color: const Color(0xff223E6D),
                       fontWeight: FontWeight.w700,
                       fontSize: responsive.inchR(2.5)),
                 ),
                 Row(
                   children: [
                     SvgPicture.asset(
-                      "assets/canvas/icons/ic_filter.svg",
+                      'assets/canvas/icons/ic_filter.svg',
                       height: responsive.inchR(1.3),
                     ),
                     SizedBox(
                       width: responsive.inchR(0.5),
                     ),
                     Text(
-                      "Filtrar",
+                      'Filtrar',
                       style: TextStyle(
-                          color: Color(0xff92A5C6),
+                          color: const Color(0xff92A5C6),
                           fontWeight: FontWeight.w400,
                           fontSize: responsive.inchR(1.7)),
                     ),
@@ -69,7 +69,7 @@ class TasksTitle extends StatelessWidget {
               height: responsive.inchR(1),
               width: responsive.inchR(1),
               child: Container(
-                color: Color(0xff367BE2),
+                color: const Color(0xff367BE2),
               ),
             ),
           )
@@ -83,30 +83,24 @@ class TaskList extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Expanded(
-        child: Container(
-            child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                children: <Widget>[
-          Task(
+        child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            children: <Widget>[
+          const Task(
               percent: 50,
-              taskName: "Investigar protocolos \nde internet",
-              taskTile: "Seguridad informatica",
-              userImage: "assets/canvas/images/img_person_1.jpg"),
-          Task(
+              taskName: 'Investigar protocolos \nde internet',
+              taskTile: 'Seguridad informatica',
+              userImage: 'assets/canvas/images/img_person_1.jpg'),
+          const Task(
               percent: 20,
-              taskName: "Investigar arquitectura \nde computadoras",
-              taskTile: "Partes de computadoras",
-              userImage: "assets/canvas/images/img_person_4.jpg"),
-        ])));
+              taskName: 'Investigar arquitectura \nde computadoras',
+              taskTile: 'Partes de computadoras',
+              userImage: 'assets/canvas/images/img_person_4.jpg'),
+        ]));
   }
 }
 
 class Task extends StatelessWidget {
-  final double percent;
-  final String taskName;
-  final String taskTile;
-  final String userImage;
-
   const Task(
       {Key key,
       @required this.percent,
@@ -114,10 +108,15 @@ class Task extends StatelessWidget {
       @required this.taskTile,
       @required this.userImage})
       : super(key: key);
+
+  final double percent;
+  final String taskName;
+  final String taskTile;
+  final String userImage;
+
   @override
   Widget build(BuildContext context) {
-    final Responsive responsive = Responsive.of(context);
-
+    final responsive = Responsive.of(context);
     return Container(
       height: responsive.inchR(20),
       width: responsive.inchR(20),
@@ -129,7 +128,7 @@ class Task extends StatelessWidget {
               color: Colors.grey.withOpacity(0.1),
               spreadRadius: 2,
               blurRadius: 7,
-              offset: Offset(0, 3), // changes position of shadow
+              offset: const Offset(0, 3), // changes position of shadow
             ),
           ]),
       child: Stack(
@@ -139,13 +138,13 @@ class Task extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: <Widget>[
               TaskChart(
-                percent: this.percent,
+                percent: percent,
               ),
               TaskName(
-                name: this.taskName,
+                name: taskName,
               ),
               TaskTile(
-                tile: this.taskTile,
+                tile: taskTile,
               ),
               SizedBox(
                 height: responsive.inchR(2),
@@ -153,7 +152,7 @@ class Task extends StatelessWidget {
             ],
           ),
           TaskUser(
-            userImage: this.userImage,
+            userImage: userImage,
           )
         ],
       ),
@@ -162,20 +161,21 @@ class Task extends StatelessWidget {
 }
 
 class TaskName extends StatelessWidget {
+  const TaskName({Key key, @required this.name}) : super(key: key);
+
   final String name;
 
-  const TaskName({Key key, @required this.name}) : super(key: key);
   @override
   Widget build(BuildContext context) {
-    final Responsive responsive = Responsive.of(context);
+    final responsive = Responsive.of(context);
     return Padding(
       padding: EdgeInsets.only(left: responsive.inchR(2)),
       child: Text(
-        this.name,
+        name,
         overflow: TextOverflow.ellipsis,
         maxLines: 2,
         style: TextStyle(
-            color: Color(0xff223E6D),
+            color: const Color(0xff223E6D),
             fontWeight: FontWeight.w700,
             fontSize: responsive.inchR(1.5)),
       ),
@@ -184,19 +184,18 @@ class TaskName extends StatelessWidget {
 }
 
 class TaskChart extends StatelessWidget {
-  final double percent;
-
   const TaskChart({Key key, @required this.percent}) : super(key: key);
+
+  final double percent;
 
   @override
   Widget build(BuildContext context) {
-    final GlobalKey<AnimatedCircularChartState> _chartKey =
-        new GlobalKey<AnimatedCircularChartState>();
+    final _chartKey = GlobalKey<AnimatedCircularChartState>();
 
-    final Responsive responsive = Responsive.of(context);
+    final responsive = Responsive.of(context);
 
     return Container(
-      padding: EdgeInsets.all(5),
+      padding: const EdgeInsets.all(5),
       width: responsive.inchR(10),
       height: responsive.inchR(10),
       child: AnimatedCircularChart(
@@ -207,21 +206,21 @@ class TaskChart extends StatelessWidget {
           CircularStackEntry(
             <CircularSegmentEntry>[
               CircularSegmentEntry(
-                this.percent,
-                Color(0xff367BE2),
+                percent,
+                const Color(0xff367BE2),
               ),
               CircularSegmentEntry(
-                100 - this.percent,
-                Color(0xffDCEBF5),
+                100 - percent,
+                const Color(0xffDCEBF5),
               ),
             ],
           ),
         ],
         chartType: CircularChartType.Radial,
         percentageValues: true,
-        holeLabel: '${this.percent}%',
-        labelStyle: new TextStyle(
-          color: Color(0xff367BE2),
+        holeLabel: '$percent%',
+        labelStyle: TextStyle(
+          color: const Color(0xff367BE2),
           fontWeight: FontWeight.bold,
           fontSize: responsive.inchR(1.6),
         ),
@@ -231,12 +230,13 @@ class TaskChart extends StatelessWidget {
 }
 
 class TaskTile extends StatelessWidget {
+  const TaskTile({Key key, @required this.tile}) : super(key: key);
+
   final String tile;
 
-  const TaskTile({Key key, @required this.tile}) : super(key: key);
   @override
   Widget build(BuildContext context) {
-    final Responsive responsive = Responsive.of(context);
+    final responsive = Responsive.of(context);
     return Padding(
       padding: EdgeInsets.only(left: responsive.inchR(2)),
       child: Row(
@@ -247,17 +247,17 @@ class TaskTile extends StatelessWidget {
             child: Container(
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(20.0),
-                color: Color(0xffFEB25B),
+                color: const Color(0xffFEB25B),
               ),
             ),
           ),
           SizedBox(width: responsive.inchR(0.7)),
           Text(
-            this.tile,
+            tile,
             overflow: TextOverflow.ellipsis,
             maxLines: 1,
             style: TextStyle(
-                color: Color(0xff223E6D),
+                color: const Color(0xff223E6D),
                 fontWeight: FontWeight.w300,
                 fontSize: responsive.inchR(1.4)),
           ),
@@ -268,13 +268,13 @@ class TaskTile extends StatelessWidget {
 }
 
 class TaskUser extends StatelessWidget {
-  final String userImage;
-
   const TaskUser({Key key, this.userImage}) : super(key: key);
+
+  final String userImage;
 
   @override
   Widget build(BuildContext context) {
-    final Responsive responsive = Responsive.of(context);
+    final responsive = Responsive.of(context);
     return Positioned(
       top: responsive.inchR(1.5),
       right: responsive.inchR(1.5),
@@ -283,7 +283,7 @@ class TaskUser extends StatelessWidget {
         child: CircleAvatar(
           radius: responsive.inchR(1.5),
           child: Image(
-            image: AssetImage(this.userImage),
+            image: AssetImage(userImage),
           ),
         ),
       ),

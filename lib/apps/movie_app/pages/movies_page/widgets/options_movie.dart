@@ -5,24 +5,24 @@ import 'package:flutter_ui_app/global/responsive.dart';
 class OptionMovie extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    final Responsive responsive = Responsive.of(context);
-    return Container(
+    final responsive = Responsive.of(context);
+    return SizedBox(
       height: responsive.inchR(7),
       width: responsive.width,
       child: ListView(
         scrollDirection: Axis.horizontal,
         children: [
           SizedBox(width: responsive.inchR(1.1)),
-          OptionSelected(
-            name: "In Theater",
+          const OptionSelected(
+            name: 'In Theater',
             selected: true,
           ),
-          OptionSelected(
-            name: "Box Office",
+          const OptionSelected(
+            name: 'Box Office',
             selected: false,
           ),
-          OptionSelected(
-            name: "Coming Soon",
+          const OptionSelected(
+            name: 'Coming Soon',
             selected: false,
           )
         ],
@@ -32,15 +32,16 @@ class OptionMovie extends StatelessWidget {
 }
 
 class OptionSelected extends StatelessWidget {
-  final String name;
-  final bool selected;
-
   const OptionSelected({Key key, @required this.name, @required this.selected})
       : assert(name != null, selected != null),
         super(key: key);
+
+  final String name;
+  final bool selected;
+
   @override
   Widget build(BuildContext context) {
-    final Responsive responsive = Responsive.of(context);
+    final responsive = Responsive.of(context);
 
     return Container(
       padding: EdgeInsets.symmetric(horizontal: responsive.inchR(1.7)),
@@ -49,11 +50,11 @@ class OptionSelected extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: <Widget>[
           Text(
-            this.name,
+            name,
             style: GoogleFonts.openSans(
                 fontWeight: FontWeight.w600,
                 fontSize: responsive.inchR(2.8),
-                color: (this.selected) ? Color(0xff12153D) : Color(0xffE5E5E5)),
+                color: Color(selected ? 0xff12153D : 0xffE5E5E5)),
           ),
           SizedBox(height: responsive.inchR(1)),
           SizedBox(
@@ -62,7 +63,7 @@ class OptionSelected extends StatelessWidget {
             child: Container(
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(5),
-                color: (this.selected) ? Color(0xffFE6D8E) : Color(0xffFFFFFF),
+                color: Color(selected ? 0xffFE6D8E : 0xffFFFFFF),
               ),
               alignment: Alignment.bottomLeft,
             ),

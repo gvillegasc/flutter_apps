@@ -31,40 +31,40 @@ class MyApp extends StatelessWidget {
 
 class MenuApps extends StatelessWidget {
   final List<_AppItem> apps = [
-    _AppItem(name: "Movie app", image: "movie_app.png", widget: MainMovieApp()),
-    _AppItem(name: "Canvas", image: "canvas_app.png", widget: MainCanvas()),
+    _AppItem(name: 'Movie app', image: 'movie_app.png', widget: MainMovieApp()),
+    _AppItem(name: 'Canvas', image: 'canvas_app.png', widget: MainCanvas()),
     _AppItem(
-        name: "Workout", image: "workout_app.png", widget: MainWorkoutApp()),
+        name: 'Workout', image: 'workout_app.png', widget: MainWorkoutApp()),
     _AppItem(
-        name: "Dialog Flow",
-        image: "dialog_flow_app.png",
+        name: 'Dialog Flow',
+        image: 'dialog_flow_app.png',
         widget: MainDialogFlow()),
-    _AppItem(name: "PayPal", image: "paypal_app.png", widget: MainPayPalApp()),
+    _AppItem(name: 'PayPal', image: 'paypal_app.png', widget: MainPayPalApp()),
     _AppItem(
-        name: "Button Options",
-        image: "button_options_app.png",
+        name: 'Button Options',
+        image: 'button_options_app.png',
         widget: MainButtonOptions()),
     _AppItem(
-        name: "Top Menu", image: "top_menu_app.png", widget: MainTopMenu()),
-    _AppItem(name: "Menu UI", image: "menu_ui_app.png", widget: MainMenuUi()),
+        name: 'Top Menu', image: 'top_menu_app.png', widget: MainTopMenu()),
+    _AppItem(name: 'Menu UI', image: 'menu_ui_app.png', widget: MainMenuUi()),
     _AppItem(
-        name: "Montblanc App",
-        image: "montblanc_motorcycle.png",
+        name: 'Montblanc App',
+        image: 'montblanc_motorcycle.png',
         widget: MainMontblancApp()),
   ];
   @override
   Widget build(BuildContext context) {
-    final Responsive responsive = Responsive.of(context);
+    final responsive = Responsive.of(context);
     return Scaffold(
         appBar: AppBar(
-          title: Text('Flutter UI'),
+          title: const Text('Flutter UI'),
         ),
         body: GridView.count(
           crossAxisCount: 2,
           childAspectRatio: 2 / 1.5,
           mainAxisSpacing: 7,
           crossAxisSpacing: 7,
-          padding: EdgeInsets.all(10),
+          padding: const EdgeInsets.all(10),
           shrinkWrap: true,
           children: List.generate(
               apps.length,
@@ -76,7 +76,7 @@ class MenuApps extends StatelessWidget {
                           image: DecorationImage(
                               fit: BoxFit.cover,
                               image:
-                                  AssetImage("assets/apps/${apps[i].image}")),
+                                  AssetImage('assets/apps/${apps[i].image}')),
                           borderRadius: BorderRadius.circular(10)),
                       child: Stack(
                         children: [
@@ -91,7 +91,7 @@ class MenuApps extends StatelessWidget {
                           Center(
                             child: Text(
                               apps[i].name,
-                              style: TextStyle(
+                              style: const TextStyle(
                                   color: Colors.white,
                                   fontWeight: FontWeight.w600,
                                   fontSize: 20),

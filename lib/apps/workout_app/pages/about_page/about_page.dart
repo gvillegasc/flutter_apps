@@ -8,18 +8,18 @@ import 'package:google_fonts/google_fonts.dart';
 class AboutPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    final Responsive responsive = Responsive.of(context);
+    final responsive = Responsive.of(context);
     return Scaffold(
       body: Container(
         height: responsive.height,
         width: responsive.width,
-        decoration: BoxDecoration(
+        decoration: const BoxDecoration(
             image: DecorationImage(
-          image: AssetImage("assets/workout_app/images/img_about_bg.png"),
+          image: AssetImage('assets/workout_app/images/img_about_bg.png'),
           fit: BoxFit.cover,
         )),
         child: Container(
-          color: Color(0xB40E1B3F),
+          color: const Color(0xB40E1B3F),
           child: Stack(
             children: <Widget>[
               Positioned(
@@ -39,7 +39,7 @@ class AboutPage extends StatelessWidget {
 class About extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    final Responsive responsive = Responsive.of(context);
+    final responsive = Responsive.of(context);
     return Positioned(
       top: responsive.heightR(40),
       child: Column(
@@ -51,16 +51,16 @@ class About extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: <Widget>[
                 Text(
-                  "About You",
+                  'About You',
                   style: GoogleFonts.roboto(
-                      color: Color(0xffFFFFFF),
+                      color: const Color(0xffFFFFFF),
                       fontSize: responsive.inchR(4.5),
                       fontWeight: FontWeight.w700),
                 ),
                 Text(
-                  "we want to know more about you, follow the next steps \nto complete the information",
+                  '''we want to know more about you, follow the next steps \nto complete the information''',
                   style: TextStyle(
-                      color: Color(0xffFFFFFF),
+                      color: const Color(0xffFFFFFF),
                       fontSize: responsive.inchR(1.4),
                       fontWeight: FontWeight.w300),
                 ),
@@ -70,7 +70,7 @@ class About extends StatelessWidget {
           SizedBox(
             height: responsive.inchR(2),
           ),
-          Container(
+          SizedBox(
               height: responsive.inchR(30),
               width: responsive.width,
               child: ListView(
@@ -79,15 +79,15 @@ class About extends StatelessWidget {
                     horizontal: responsive.inchR(2)),
                 scrollDirection: Axis.horizontal,
                 children: <Widget>[
-                  Option(
+                  const Option(
                     selected: true,
-                    option: "I am \nInactive",
-                    observation: "I have never trained",
+                    option: 'I am \nInactive',
+                    observation: 'I have never trained',
                   ),
-                  Option(
+                  const Option(
                     selected: false,
-                    option: "I am \nBeginner",
-                    observation: "I have trained few times",
+                    option: 'I am \nBeginner',
+                    observation: 'I have trained few times',
                   ),
                 ],
               ))
@@ -98,30 +98,31 @@ class About extends StatelessWidget {
 }
 
 class Option extends StatelessWidget {
-  final bool selected;
-  final String option;
-  final String observation;
-
   const Option(
       {Key key,
       @required this.selected,
       @required this.option,
       @required this.observation})
       : super(key: key);
+
+  final bool selected;
+  final String option;
+  final String observation;
+
   @override
   Widget build(BuildContext context) {
-    final Responsive responsive = Responsive.of(context);
+    final responsive = Responsive.of(context);
     return Container(
       padding: EdgeInsets.symmetric(horizontal: responsive.inchR(2.5)),
       width: responsive.inchR(22),
       decoration: BoxDecoration(
-          color: Color(0xff232441),
+          color: const Color(0xff232441),
           boxShadow: [
             BoxShadow(
               color: Colors.black.withOpacity(0.2),
               spreadRadius: 3,
               blurRadius: 5,
-              offset: Offset(2, 3), // changes position of shadow
+              offset: const Offset(2, 3),
             ),
           ],
           borderRadius: BorderRadius.circular(responsive.inchR(1.5))),
@@ -135,19 +136,19 @@ class Option extends StatelessWidget {
             width: double.infinity,
             child: CircleAvatar(
               radius: responsive.inchR(2),
-              backgroundColor: Color(0xff373850),
-              child: (this.selected)
+              backgroundColor: const Color(0xff373850),
+              child: (selected)
                   ? SvgPicture.asset(
-                      "assets/workout_app/icons/ic_check.svg",
+                      'assets/workout_app/icons/ic_check.svg',
                       height: responsive.inchR(1.3),
                     )
                   : null,
             ),
           ),
           Text(
-            this.option,
+            option,
             style: GoogleFonts.roboto(
-                color: Color(0xff40D876),
+                color: const Color(0xff40D876),
                 fontSize: responsive.inchR(3.7),
                 fontWeight: FontWeight.w700),
           ),
@@ -155,9 +156,9 @@ class Option extends StatelessWidget {
             height: responsive.inchR(1),
           ),
           Text(
-            this.observation,
+            observation,
             style: GoogleFonts.roboto(
-              color: Color(0xffFFFFFF),
+              color: const Color(0xffFFFFFF),
               fontSize: responsive.inchR(1.6),
             ),
           ),
@@ -173,7 +174,7 @@ class Option extends StatelessWidget {
 class Actions extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    final Responsive responsive = Responsive.of(context);
+    final responsive = Responsive.of(context);
     return Positioned(
       bottom: responsive.inchR(2.5),
       child: Container(
@@ -184,9 +185,9 @@ class Actions extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: <Widget>[
             Text(
-              "Skip Intro",
+              'Skip Intro',
               style: TextStyle(
-                  color: Color(0xFF776F6F),
+                  color: const Color(0xFF776F6F),
                   fontWeight: FontWeight.w400,
                   fontSize: responsive.inchR(1.8)),
             ),
@@ -196,13 +197,13 @@ class Actions extends StatelessWidget {
               onPressed: () => Navigator.push(
                   context, MaterialPageRoute(builder: (_) => HomePage())),
               child: Text(
-                "Next",
+                'Next',
                 style: TextStyle(
-                    color: Color(0xffFFFFFF),
+                    color: const Color(0xffFFFFFF),
                     fontWeight: FontWeight.w400,
                     fontSize: responsive.inchR(1.8)),
               ),
-              color: Color(0xff40D876),
+              color: const Color(0xff40D876),
               height: responsive.inchR(4.5),
               minWidth: responsive.inchR(15),
             )

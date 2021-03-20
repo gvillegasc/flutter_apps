@@ -5,10 +5,8 @@ class WalletPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Container(
-        child: CustomScrollView(
-          slivers: [Header(), PersonalInfo(), BankingCards()],
-        ),
+      body: CustomScrollView(
+        slivers: [Header(), PersonalInfo(), BankingCards()],
       ),
     );
   }

@@ -7,17 +7,17 @@ import 'package:provider/provider.dart';
 class ToDoPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    final Responsive responsive = Responsive.of(context);
+    final responsive = Responsive.of(context);
     return ChangeNotifierProvider(
       create: (_) => ToDoNavigationProvider(),
       child: Scaffold(
-        body: Container(
+        body: SizedBox(
           height: responsive.height,
           width: responsive.width,
           child: Row(
             children: <Widget>[
               Container(
-                color: Color(0xff223E6D),
+                color: const Color(0xff223E6D),
                 width: responsive.widthR(18),
                 height: double.infinity,
                 child: Column(

@@ -5,10 +5,10 @@ import 'widgets.dart';
 class DetailMovie extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    final Responsive responsive = Responsive.of(context);
+    final responsive = Responsive.of(context);
     return Positioned(
       bottom: 0,
-      child: Container(
+      child: SizedBox(
         width: responsive.width,
         height: responsive.heightR(55),
         child: Column(
@@ -23,11 +23,11 @@ class DetailMovie extends StatelessWidget {
             SizedBox(height: responsive.heightR(1)),
             CategoriesMovie(),
             SizedBox(height: responsive.heightR(2.5)),
-            SubtitleDetail(subtitle: "Plot Summary"),
+            const SubtitleDetail(subtitle: 'Plot Summary'),
             SizedBox(height: responsive.heightR(1)),
             DescriptionMovie(),
             SizedBox(height: responsive.heightR(2.5)),
-            SubtitleDetail(subtitle: "Cast & Crew"),
+            const SubtitleDetail(subtitle: 'Cast & Crew'),
             SizedBox(
               height: responsive.heightR(1),
             ),

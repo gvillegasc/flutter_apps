@@ -5,9 +5,9 @@ import 'package:flutter_ui_app/global/responsive.dart';
 class BottomNavbar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    final Responsive responsive = Responsive.of(context);
+    final responsive = Responsive.of(context);
     return ClipRRect(
-      borderRadius: BorderRadius.only(
+      borderRadius: const BorderRadius.only(
           topLeft: Radius.circular(20), topRight: Radius.circular(20)),
       child: BottomAppBar(
         notchMargin: 10,
@@ -20,19 +20,21 @@ class BottomNavbar extends StatelessWidget {
             mainAxisSize: MainAxisSize.max,
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: <Widget>[
-              ItemNavbar(value: 0, icon: 'ic_home.svg', name: "Inicio"),
-              ItemNavbar(value: 1, icon: 'ic_canvas.svg', name: "Canvas"),
+              const ItemNavbar(value: 0, icon: 'ic_home.svg', name: 'Inicio'),
+              const ItemNavbar(value: 1, icon: 'ic_canvas.svg', name: 'Canvas'),
               SizedBox(
                 width: responsive.widthR(30),
               ),
-              ItemNavbar(value: 2, icon: 'ic_courses.svg', name: "Cursos"),
-              ItemNavbar(value: 3, icon: "ic_profile.svg", name: "Perfil"),
+              const ItemNavbar(
+                  value: 2, icon: 'ic_courses.svg', name: 'Cursos'),
+              const ItemNavbar(
+                  value: 3, icon: 'ic_profile.svg', name: 'Perfil'),
             ],
           ),
         ),
         // clipBehavior: Clip.antiAlias,
-        shape: CircularNotchedRectangle(),
-        color: Color(0xffFFFFFF),
+        shape: const CircularNotchedRectangle(),
+        color: const Color(0xffFFFFFF),
       ),
     );
   }
