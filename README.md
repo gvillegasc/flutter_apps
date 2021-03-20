@@ -131,11 +131,11 @@
 
 ## NAVIGATION ANIMATION
 
-### [Design](https://dribbble.com/shots/14114443-PayPal-App-Redesign-Conept)
-<img src="./readme-images/button_options/animation.gif" alt="Paypal" width="400"/>
+### [Design](https://dribbble.com/shots/1928064-Secret-Project)
+<img src="./readme-images/button_options/animation.gif" alt="Navigation Animation" width="400"/>
 
 #### By Anton Aheichanka
-- [Dribble](https://dribbble.com/shots/1928064-Secret-Project)
+- [Dribble](https://dribbble.com/madebyanton)
 
 ### App
 <table>
@@ -150,8 +150,8 @@
 
 ## TOP MENU ANIMATION
 
-### [Design](https://dribbble.com/shots/14114443-PayPal-App-Redesign-Conept)
-<img src="./readme-images/top_menu/animation.gif" alt="Paypal" width="400"/>
+### [Design](https://dribbble.com/yalantis)
+<img src="./readme-images/top_menu/animation.gif" alt="Top Menu Animation" width="400"/>
 
 #### By Yalantis
 - [Dribble](https://dribbble.com/yalantis)
@@ -162,7 +162,7 @@
         <th>Top Menu Page</th>
     </tr>
 	<tr>
-		<td><img src="./readme-images/top_menu/animation_test.gif" alt="Paypal" width="300"/></td> 
+		<td><img src="./readme-images/top_menu/animation_test.gif" alt="Top Menu Animation" width="300"/></td> 
 	</tr>
 </table>
 
@@ -170,7 +170,7 @@
 ## TOP MENU ANIMATION
 
 ### [Design](https://dribbble.com/interfacemarket)
-<img src="./readme-images/menu_ui/animation.gif" alt="Paypal" width="400"/>
+<img src="./readme-images/menu_ui/animation.gif" alt="Top Menu Animation" width="400"/>
 
 #### By Interface Market
 
@@ -182,6 +182,28 @@
         <th>Menu UI Page</th>
     </tr>
 	<tr>
-		<td><img src="./readme-images/menu_ui/animation_test.gif" alt="Paypal" width="300"/></td> 
+		<td><img src="./readme-images/menu_ui/animation_test.gif" alt="Top Menu Animation" width="300"/></td> 
+	</tr>
+</table>
+
+
+## Montblanc Motorcycle
+
+### [Design](https://dribbble.com/interfacemarket)
+<img src="./readme-images/montblanc_motorcycle/montblanc_motorcycle.png" alt="Montblanc Motorcycle" width="400"/>
+
+#### By Montblanc
+
+- [Dribble](https://dribbble.com/shots/14669609-Montblanc-Motorcycle-mobile-concept-design)
+
+### App
+<table>
+    <tr>
+        <th>Home Page</th>
+        <th>Detail Page</th>
+    </tr>
+	<tr>
+		<td><img src="./readme-images/montblanc_motorcycle/page_1.png" alt="Montblanc Motorcycle" width="300"/></td> 
+        <td><img src="./readme-images/montblanc_motorcycle/page_2.png" alt="Montblanc Motorcycle" width="300"/></td> 
 	</tr>
 </table>

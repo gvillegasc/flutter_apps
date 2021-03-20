@@ -49,7 +49,7 @@ class MenuApps extends StatelessWidget {
     _AppItem(name: "Menu UI", image: "menu_ui_app.png", widget: MainMenuUi()),
     _AppItem(
         name: "Montblanc App",
-        image: "menu_ui_app.png",
+        image: "montblanc_motorcycle.png",
         widget: MainMontblancApp()),
   ];
   @override
