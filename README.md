@@ -207,3 +207,23 @@
         <td><img src="./readme-images/montblanc_motorcycle/page_2.png" alt="Montblanc Motorcycle" width="300"/></td> 
 	</tr>
 </table>
+
+
+## Crypto Wallet
+
+### [Design](https://dribbble.com/shots/9657147-BitCo-Cryptowallet-Redesign-App)
+<img src="./readme-images/crypto_wallet_app/crypto_wallet_app.png" alt="Montblanc Motorcycle" width="400"/>
+
+#### By Cuberto
+
+- [Dribble](https://dribbble.com/cuberto)
+
+### App
+<table>
+    <tr>
+        <th>Home Page</th>
+    </tr>
+	<tr>
+		<td><img src="./readme-images/crypto_wallet_app/page_1.jpeg" alt="Crypt Wallet" width="300"/></td> 
+	</tr>
+</table>

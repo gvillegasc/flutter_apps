@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_ui_app/apps/button_options/main_button_options.dart';
+import 'package:flutter_ui_app/apps/crypto_wallet/main_crypto_wallet.dart';
 import 'package:flutter_ui_app/apps/dialog_flow/main_dialog_flow.dart';
 import 'package:flutter_ui_app/apps/menu_ui/main_menu_ui.dart';
 import 'package:flutter_ui_app/apps/montblanc_app/main_montblanc_app.dart';
@@ -51,6 +52,10 @@ class MenuApps extends StatelessWidget {
         name: 'Montblanc App',
         image: 'montblanc_motorcycle.png',
         widget: MainMontblancApp()),
+    _AppItem(
+        name: 'Crypto Wallet',
+        image: 'crypto_wallet_app.png',
+        widget: MainCrysptoWallet()),
   ];
   @override
   Widget build(BuildContext context) {
