@@ -7,7 +7,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 
 class ActivityTile extends StatelessWidget {
-  const ActivityTile({Key key, @required this.person}) : super(key: key);
+  const ActivityTile({Key? key, required this.person}) : super(key: key);
 
   final Person person;
 

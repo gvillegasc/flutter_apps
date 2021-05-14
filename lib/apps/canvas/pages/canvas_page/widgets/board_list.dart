@@ -44,7 +44,7 @@ class BoardList extends StatelessWidget {
 }
 
 class BoardCard extends StatelessWidget {
-  const BoardCard({Key key, this.boardItem}) : super(key: key);
+  const BoardCard({Key? key, required this.boardItem}) : super(key: key);
 
   final BoardItem boardItem;
 

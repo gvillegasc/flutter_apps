@@ -14,8 +14,8 @@ class MenuUi extends StatefulWidget {
 }
 
 class _MenuUiState extends State<MenuUi> {
-  int itemSelected;
-  double itemSelectedSiza;
+  late int itemSelected;
+  late double itemSelectedSiza;
   @override
   void initState() {
     itemSelected = 0;
@@ -103,15 +103,15 @@ class _MenuUiState extends State<MenuUi> {
 
 class _MenuItem extends StatefulWidget {
   const _MenuItem(
-      {Key key,
-      @required this.itemSelected,
-      @required this.itemId,
-      @required this.title,
-      @required this.titleColor,
-      @required this.color,
-      @required this.options,
-      @required this.onTap,
-      @required this.itemSelectedSiza})
+      {Key? key,
+      required this.itemSelected,
+      required this.itemId,
+      required this.title,
+      required this.titleColor,
+      required this.color,
+      required this.options,
+      required this.onTap,
+      required this.itemSelectedSiza})
       : super(key: key);
   final int itemSelected;
   final int itemId;
@@ -128,8 +128,8 @@ class _MenuItem extends StatefulWidget {
 
 class __MenuItemState extends State<_MenuItem>
     with SingleTickerProviderStateMixin {
-  AnimationController controller;
-  Animation<double> animation;
+  late AnimationController controller;
+  late Animation<double> animation;
 
   @override
   void initState() {
@@ -219,11 +219,11 @@ class __MenuItemState extends State<_MenuItem>
 
 class _MenuItemModel {
   _MenuItemModel({
-    @required this.itemId,
-    @required this.title,
-    @required this.titleColor,
-    @required this.color,
-    @required this.options,
+    required this.itemId,
+    required this.title,
+    required this.titleColor,
+    required this.color,
+    required this.options,
   });
 
   final int itemId;

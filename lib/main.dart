@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_ui_app/apps/button_options/main_button_options.dart';
 import 'package:flutter_ui_app/apps/crypto_wallet/main_crypto_wallet.dart';
-import 'package:flutter_ui_app/apps/dialog_flow/main_dialog_flow.dart';
+// import 'package:flutter_ui_app/apps/dialog_flow/main_dialog_flow.dart';
 import 'package:flutter_ui_app/apps/menu_ui/main_menu_ui.dart';
 import 'package:flutter_ui_app/apps/montblanc_app/main_montblanc_app.dart';
 import 'package:flutter_ui_app/apps/movie_app/main_movie_app.dart';
@@ -36,10 +36,10 @@ class MenuApps extends StatelessWidget {
     _AppItem(name: 'Canvas', image: 'canvas_app.png', widget: MainCanvas()),
     _AppItem(
         name: 'Workout', image: 'workout_app.png', widget: MainWorkoutApp()),
-    _AppItem(
-        name: 'Dialog Flow',
-        image: 'dialog_flow_app.png',
-        widget: MainDialogFlow()),
+    // _AppItem(
+    //     name: 'Dialog Flow',
+    //     image: 'dialog_flow_app.png',
+    //     widget: MainDialogFlow()),
     _AppItem(name: 'PayPal', image: 'paypal_app.png', widget: MainPayPalApp()),
     _AppItem(
         name: 'Button Options',
@@ -118,9 +118,9 @@ void _onPressed(BuildContext context, Widget child) {
 
 class _AppItem {
   _AppItem({
-    @required this.name,
-    @required this.image,
-    @required this.widget,
+    required this.name,
+    required this.image,
+    required this.widget,
   });
 
   String name;

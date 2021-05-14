@@ -1,10 +1,12 @@
-import 'package:bubble_bottom_bar/bubble_bottom_bar.dart';
+// import 'package:bottom_navy_bar/bottom_navy_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:flutter_ui_app/apps/paypal/providers/navigation_provider.dart';
+// import 'package:flutter_ui_app/apps/paypal/providers/navigation_provider.dart';
 import 'package:flutter_ui_app/global/responsive.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
+// import 'package:provider/provider.dart';
 
 class BottomNavigator extends StatelessWidget {
   @override
@@ -14,43 +16,54 @@ class BottomNavigator extends StatelessWidget {
 
     return Positioned(
       bottom: 0,
-      child: Container(
-        decoration: BoxDecoration(
-            color: Colors.white,
-            borderRadius: BorderRadius.only(
-                topLeft: Radius.circular(responsive.inchR(3)),
-                topRight: Radius.circular(responsive.inchR(3)))),
-        width: responsive.width,
-        height: responsive.inchR(8),
-        child: BubbleBottomBar(
-          opacity: 1,
-          backgroundColor: Colors.transparent,
-          currentIndex: navigationBLoC.actualPage,
-          onTap: navigationBLoC.changePage,
-          elevation: 0,
-          hasNotch: true,
-          hasInk: true,
-          items: <BubbleBottomBarItem>[
-            navigationItem('ic_home.svg', 'Home', responsive),
-            navigationItem('ic_persons.svg', 'Contacts', responsive),
-            navigationItem('ic_billing.svg', 'Wallet', responsive),
-            navigationItem('ic_settings.svg', 'Settings', responsive),
-          ],
+      child: ClipRRect(
+        borderRadius: BorderRadius.only(
+            topLeft: Radius.circular(responsive.inchR(3)),
+            topRight: Radius.circular(responsive.inchR(3))),
+        child: Container(
+          padding: EdgeInsets.zero,
+          alignment: Alignment.center,
+          decoration: BoxDecoration(
+              color: Colors.white,
+              borderRadius: BorderRadius.only(
+                  topLeft: Radius.circular(responsive.inchR(3)),
+                  topRight: Radius.circular(responsive.inchR(3)))),
+          width: responsive.width,
+          height: responsive.inchR(8),
+          child: BottomNavyBar(
+            showElevation: false,
+            backgroundColor: Colors.white,
+            selectedIndex: navigationBLoC.actualPage,
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            items: <BottomNavyBarItem>[
+              navigationItem('ic_home.svg', 'Home', responsive,
+                  navigationBLoC.actualPage, 0),
+              navigationItem('ic_persons.svg', 'Contacts', responsive,
+                  navigationBLoC.actualPage, 1),
+              navigationItem('ic_billing.svg', 'Wallet', responsive,
+                  navigationBLoC.actualPage, 2),
+              navigationItem('ic_settings.svg', 'Settings', responsive,
+                  navigationBLoC.actualPage, 3),
+            ],
+            onItemSelected: navigationBLoC.changePage,
+          ),
         ),
       ),
     );
   }
 
-  BubbleBottomBarItem navigationItem(
-      String icon, String name, Responsive responsive) {
-    return BubbleBottomBarItem(
-        backgroundColor: Colors.white,
+  BottomNavyBarItem navigationItem(
+      String icon, String name, Responsive responsive, int actualPage, int id) {
+    return BottomNavyBarItem(
+        textAlign: TextAlign.center,
         icon: SvgPicture.asset(
           'assets/paypal/icons/$icon',
-          color: const Color(0xff243656),
+          color: actualPage == id
+              ? const Color(0xff0070BA)
+              : const Color(0xff243656),
         ),
-        activeIcon: SvgPicture.asset('assets/paypal/icons/$icon',
-            color: const Color(0xff0070BA)),
+        // activeColor: Colors.red,
+        activeColor: const Color(0xffFFFFFF),
         title: Text(
           name,
           style: GoogleFonts.manrope(
@@ -59,4 +72,213 @@ class BottomNavigator extends StatelessWidget {
               fontWeight: FontWeight.w400),
         ));
   }
+}
+
+class BottomNavyBar extends StatelessWidget {
+  BottomNavyBar({
+    Key? key,
+    this.selectedIndex = 0,
+    this.showElevation = true,
+    this.iconSize = 24,
+    this.backgroundColor,
+    this.itemCornerRadius = 50,
+    this.containerHeight = 56,
+    this.animationDuration = const Duration(milliseconds: 270),
+    this.mainAxisAlignment = MainAxisAlignment.spaceBetween,
+    required this.items,
+    required this.onItemSelected,
+    this.curve = Curves.linear,
+  })  : assert(items.length >= 2 && items.length <= 5),
+        super(key: key);
+
+  /// The selected item is index. Changing this property will change and animate
+  /// the item being selected. Defaults to zero.
+  final int selectedIndex;
+
+  /// The icon size of all items. Defaults to 24.
+  final double iconSize;
+
+  /// The background color of the navigation bar. It defaults to
+  /// [Theme.bottomAppBarColor] if not provided.
+  final Color? backgroundColor;
+
+  /// Whether this navigation bar should show a elevation. Defaults to true.
+  final bool showElevation;
+
+  /// Use this to change the item's animation duration. Defaults to 270ms.
+  final Duration animationDuration;
+
+  /// Defines the appearance of the buttons that are displayed in the bottom
+  /// navigation bar. This should have at least two items and five at most.
+  final List<BottomNavyBarItem> items;
+
+  /// A callback that will be called when a item is pressed.
+  final ValueChanged<int> onItemSelected;
+
+  /// Defines the alignment of the items.
+  /// Defaults to [MainAxisAlignment.spaceBetween].
+  final MainAxisAlignment mainAxisAlignment;
+
+  /// The [items] corner radius, if not set, it defaults to 50.
+  final double itemCornerRadius;
+
+  /// Defines the bottom navigation bar height. Defaults to 56.
+  final double containerHeight;
+
+  /// Used to configure the animation curve. Defaults to [Curves.linear].
+  final Curve curve;
+
+  @override
+  Widget build(BuildContext context) {
+    final bgColor = backgroundColor ?? Theme.of(context).bottomAppBarColor;
+
+    return Container(
+      decoration: BoxDecoration(
+        color: bgColor,
+        boxShadow: [
+          if (showElevation)
+            const BoxShadow(
+              color: Colors.black12,
+              blurRadius: 2,
+            ),
+        ],
+      ),
+      child: SafeArea(
+        top: false,
+        child: Container(
+          width: double.infinity,
+          height: containerHeight,
+          padding: const EdgeInsets.symmetric(vertical: 6, horizontal: 8),
+          child: Row(
+            mainAxisAlignment: mainAxisAlignment,
+            children: items.map((item) {
+              var index = items.indexOf(item);
+              return GestureDetector(
+                onTap: () => onItemSelected(index),
+                child: _ItemWidget(
+                  item: item,
+                  iconSize: iconSize,
+                  isSelected: index == selectedIndex,
+                  backgroundColor: bgColor,
+                  itemCornerRadius: itemCornerRadius,
+                  animationDuration: animationDuration,
+                  curve: curve,
+                ),
+              );
+            }).toList(),
+          ),
+        ),
+      ),
+    );
+  }
+}
+
+class _ItemWidget extends StatelessWidget {
+  final double iconSize;
+  final bool isSelected;
+  final BottomNavyBarItem item;
+  final Color backgroundColor;
+  final double itemCornerRadius;
+  final Duration animationDuration;
+  final Curve curve;
+
+  const _ItemWidget({
+    Key? key,
+    required this.item,
+    required this.isSelected,
+    required this.backgroundColor,
+    required this.animationDuration,
+    required this.itemCornerRadius,
+    required this.iconSize,
+    this.curve = Curves.linear,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Semantics(
+      container: true,
+      selected: isSelected,
+      child: AnimatedContainer(
+        width: isSelected ? 130 : 50,
+        height: double.maxFinite,
+        duration: animationDuration,
+        curve: curve,
+        decoration: BoxDecoration(
+          color:
+              isSelected ? item.activeColor.withOpacity(0.2) : backgroundColor,
+          borderRadius: BorderRadius.circular(itemCornerRadius),
+        ),
+        child: SingleChildScrollView(
+          scrollDirection: Axis.horizontal,
+          physics: NeverScrollableScrollPhysics(),
+          child: Container(
+            width: isSelected ? 130 : 50,
+            padding: EdgeInsets.symmetric(horizontal: 8),
+            child: Row(
+              mainAxisSize: MainAxisSize.max,
+              mainAxisAlignment: MainAxisAlignment.start,
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: <Widget>[
+                IconTheme(
+                  data: IconThemeData(
+                    size: iconSize,
+                    color: isSelected
+                        ? item.activeColor.withOpacity(1)
+                        : item.inactiveColor == null
+                            ? item.activeColor
+                            : item.inactiveColor,
+                  ),
+                  child: item.icon,
+                ),
+                if (isSelected)
+                  Expanded(
+                    child: Container(
+                      padding: EdgeInsets.symmetric(horizontal: 4),
+                      child: DefaultTextStyle.merge(
+                        style: TextStyle(
+                          color: item.activeColor,
+                          fontWeight: FontWeight.bold,
+                        ),
+                        maxLines: 1,
+                        textAlign: item.textAlign,
+                        child: item.title,
+                      ),
+                    ),
+                  ),
+              ],
+            ),
+          ),
+        ),
+      ),
+    );
+  }
+}
+
+/// The [BottomNavyBar.items] definition.
+class BottomNavyBarItem {
+  BottomNavyBarItem({
+    required this.icon,
+    required this.title,
+    this.activeColor = Colors.blue,
+    this.textAlign,
+    this.inactiveColor,
+  });
+
+  /// Defines this item's icon which is placed in the right side of the [title].
+  final Widget icon;
+
+  /// Defines this item's title which placed in the left side of the [icon].
+  final Widget title;
+
+  /// The [icon] and [title] color defined when this item is selected. Defaults
+  /// to [Colors.blue].
+  final Color activeColor;
+
+  /// The [icon] and [title] color defined when this item is not selected.
+  final Color? inactiveColor;
+
+  /// The alignment for the [title].
+  ///
+  /// This will take effect only if [title] it a [Text] widget.
+  final TextAlign? textAlign;
 }

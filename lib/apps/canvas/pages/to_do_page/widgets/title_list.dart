@@ -3,7 +3,7 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:flutter_ui_app/global/responsive.dart';
 
 class TitleList extends StatelessWidget {
-  const TitleList({Key key, @required this.title}) : super(key: key);
+  const TitleList({Key? key, required this.title}) : super(key: key);
 
   final String title;
 

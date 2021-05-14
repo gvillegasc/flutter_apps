@@ -57,11 +57,11 @@ class _FilterState extends State<Filter> {
 
 class FilterItem extends StatelessWidget {
   const FilterItem(
-      {Key key,
-      @required this.name,
-      @required this.filterSelected,
-      @required this.value,
-      @required this.onTap})
+      {Key? key,
+      required this.name,
+      required this.filterSelected,
+      required this.value,
+      required this.onTap})
       : super(key: key);
 
   final String name;

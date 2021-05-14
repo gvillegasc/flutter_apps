@@ -2,16 +2,16 @@ import 'package:flutter/material.dart';
 
 class Activity {
   Activity(
-      {this.name,
-      this.date,
+      {required this.name,
+      required this.date,
       this.completed,
-      this.hour,
-      this.course,
-      this.color});
+      required this.hour,
+      required this.course,
+      required this.color});
 
   String name;
   String date;
-  bool completed;
+  bool? completed;
   String hour;
   String course;
   Color color;

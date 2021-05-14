@@ -209,12 +209,12 @@ class _CalculatorState extends State<Calculator> {
 }
 
 class _CircleButton extends StatelessWidget {
-  const _CircleButton({Key key, this.value, @required this.onTap, this.icon})
+  const _CircleButton({Key? key, this.value, required this.onTap, this.icon})
       : super(key: key);
 
-  final String value;
+  final String? value;
   final VoidCallback onTap;
-  final String icon;
+  final String? icon;
 
   @override
   Widget build(BuildContext context) {
@@ -235,7 +235,7 @@ class _CircleButton extends StatelessWidget {
         ),
         child: CircleAvatar(
           child: (value != null)
-              ? Text(value,
+              ? Text(value!,
                   style: GoogleFonts.manrope(
                       color: const Color(0xff243656),
                       fontSize: responsive.heightR(3.5),

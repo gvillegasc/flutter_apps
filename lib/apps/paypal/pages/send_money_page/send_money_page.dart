@@ -4,7 +4,7 @@ import 'package:flutter_ui_app/apps/paypal/pages/send_money_page/widgets/widgets
 import 'package:flutter_ui_app/apps/paypal/widgets/actions_app_bar.dart';
 
 class SendMoneyPage extends StatelessWidget {
-  const SendMoneyPage({Key key, @required this.contact}) : super(key: key);
+  const SendMoneyPage({Key? key, required this.contact}) : super(key: key);
 
   final ContactItem contact;
 

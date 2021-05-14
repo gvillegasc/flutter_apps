@@ -2,10 +2,10 @@ import 'dart:ui';
 
 class UserGroup {
   UserGroup({
-    this.group,
-    this.color,
-    this.course,
-    this.period,
+    required this.group,
+    required this.color,
+    required this.course,
+    required this.period,
   });
 
   String group;

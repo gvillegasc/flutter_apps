@@ -4,12 +4,11 @@ import 'package:google_fonts/google_fonts.dart';
 
 class CustomTextField extends StatelessWidget {
   const CustomTextField(
-      {Key key,
-      @required this.hintText,
+      {Key? key,
+      required this.hintText,
       this.isPassword = false,
       this.keyboardType = TextInputType.text})
-      : assert(hintText != null),
-        super(key: key);
+      : super(key: key);
 
   final String hintText;
   final bool isPassword;

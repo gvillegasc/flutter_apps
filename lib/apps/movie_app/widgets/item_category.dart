@@ -3,9 +3,7 @@ import 'package:flutter_ui_app/global/responsive.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class ItemCategory extends StatelessWidget {
-  const ItemCategory({Key key, @required this.name})
-      : assert(name != null),
-        super(key: key);
+  const ItemCategory({Key? key, required this.name}) : super(key: key);
 
   final String name;
 

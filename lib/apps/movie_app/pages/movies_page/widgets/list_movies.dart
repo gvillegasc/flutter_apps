@@ -40,9 +40,8 @@ class ListMovies extends StatelessWidget {
 
 class Movie extends StatelessWidget {
   const Movie(
-      {Key key, @required this.url, @required this.name, @required this.points})
-      : assert(url != null, name != null),
-        super(key: key);
+      {Key? key, required this.url, required this.name, required this.points})
+      : super(key: key);
   final String url;
   final String name;
   final double points;

@@ -3,9 +3,7 @@ import 'package:flutter_ui_app/global/responsive.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class SubtitleDetail extends StatelessWidget {
-  const SubtitleDetail({Key key, @required this.subtitle})
-      : assert(subtitle != null),
-        super(key: key);
+  const SubtitleDetail({Key? key, required this.subtitle}) : super(key: key);
 
   final String subtitle;
 

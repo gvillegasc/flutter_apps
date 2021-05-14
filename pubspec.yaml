@@ -3,7 +3,7 @@ description: A new Flutter project.
 
 # The following line prevents the package from being accidentally published to
 # pub.dev using `pub publish`. This is preferred for private packages.
-publish_to: 'none' # Remove this line if you wish to publish to pub.dev
+publish_to: "none" # Remove this line if you wish to publish to pub.dev
 
 # The following defines the version and build number for your application.
 # A version number is three numbers separated by dots, like 1.2.43
@@ -18,22 +18,22 @@ publish_to: 'none' # Remove this line if you wish to publish to pub.dev
 version: 1.0.0+1
 
 environment:
-  sdk: ">=2.7.0 <3.0.0"
+  sdk: ">=2.12.0 <3.0.0"
 
 dependencies:
   flutter:
     sdk: flutter
-  animate_do: ^1.7.5
-  bubble_bottom_bar: ^1.2.0
-  cached_network_image: ^2.4.1
-  carousel_slider: ^2.3.1
-  cupertino_icons: ^1.0.0
-  flutter_circular_text: ^0.3.0
-  flutter_svg: ^0.19.1
-  google_fonts: ^1.1.1
-  provider: ^4.3.2+3
-  flutter_circular_chart: ^0.1.0
-  flutter_dialogflow: ^0.1.0
+  animate_do: ^2.0.0
+  bottom_navy_bar: ^6.0.0
+  cached_network_image: 3.1.0-alpha.1
+  carousel_slider: ^4.0.0-nullsafety.0
+  cupertino_icons: ^1.0.3
+  flutter_circular_text: ^0.3.1
+  flutter_svg: ^0.22.0
+  google_fonts: ^2.0.0
+  provider: ^5.0.0
+  syncfusion_flutter_charts: ^19.1.59
+  dialog_flowtter: ^0.3.1
 
 dev_dependencies:
   flutter_test:
@@ -43,7 +43,6 @@ dev_dependencies:
 # following page: https://dart.dev/tools/pub/pubspec
 # The following section is specific to Flutter.
 flutter:
-
   # The following line ensures that the Material Icons font is
   # included with your application, so that you can use the icons in
   # the material Icons class.
@@ -55,7 +54,7 @@ flutter:
 
     - assets/movie_app/images/
     - assets/movie_app/icons/
-    
+
     - assets/canvas/images/
     - assets/canvas/icons/
 
@@ -69,8 +68,6 @@ flutter:
 
     - assets/montblanc_app/images/
     - assets/montblanc_app/icons/
-
-
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.
   # For details regarding adding assets from package dependencies, see

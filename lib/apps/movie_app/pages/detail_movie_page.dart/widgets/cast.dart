@@ -4,12 +4,11 @@ import 'package:google_fonts/google_fonts.dart';
 
 class Cast extends StatelessWidget {
   const Cast(
-      {Key key,
-      @required this.asset,
-      @required this.name,
-      @required this.position})
-      : assert(asset != null, name != null),
-        super(key: key);
+      {Key? key,
+      required this.asset,
+      required this.name,
+      required this.position})
+      : super(key: key);
 
   final String asset;
   final String name;

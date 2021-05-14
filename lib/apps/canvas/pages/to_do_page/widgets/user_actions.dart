@@ -54,11 +54,11 @@ class UserActions extends StatelessWidget {
 
 class Option extends StatelessWidget {
   const Option(
-      {Key key,
-      @required this.icon,
-      @required this.color,
-      @required this.value,
-      @required this.onTap})
+      {Key? key,
+      required this.icon,
+      required this.color,
+      required this.value,
+      required this.onTap})
       : super(key: key);
 
   final String icon;

@@ -30,7 +30,7 @@ class GroupList extends StatelessWidget {
 }
 
 class Group extends StatelessWidget {
-  const Group({Key key, @required this.group}) : super(key: key);
+  const Group({Key? key, required this.group}) : super(key: key);
 
   final UserGroup group;
 

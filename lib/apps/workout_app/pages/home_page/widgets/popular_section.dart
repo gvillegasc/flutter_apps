@@ -50,7 +50,7 @@ class PopularSection extends StatelessWidget {
 }
 
 class PopularItem extends StatelessWidget {
-  const PopularItem({Key key, @required this.image, @required this.name})
+  const PopularItem({Key? key, required this.image, required this.name})
       : super(key: key);
 
   final String image;

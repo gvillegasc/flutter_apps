@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class Separation extends StatelessWidget {
-  const Separation({Key key, @required this.height}) : super(key: key);
+  const Separation({Key? key, required this.height}) : super(key: key);
 
   final double height;
 

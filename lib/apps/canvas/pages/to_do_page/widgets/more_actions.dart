@@ -74,7 +74,7 @@ class UserList extends StatelessWidget {
 }
 
 class User extends StatelessWidget {
-  const User({Key key, @required this.distance, @required this.image})
+  const User({Key? key, required this.distance, required this.image})
       : super(key: key);
 
   final double distance;

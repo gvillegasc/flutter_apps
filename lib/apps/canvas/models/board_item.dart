@@ -2,10 +2,10 @@ import 'dart:ui';
 
 class BoardItem {
   BoardItem({
-    this.percent,
-    this.color,
-    this.title,
-    this.area,
+    required this.percent,
+    required this.color,
+    required this.title,
+    required this.area,
   });
 
   int percent;

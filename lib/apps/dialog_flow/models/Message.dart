@@ -1,5 +1,5 @@
 class Message {
-  Message({this.typeUser, this.message});
+  Message({required this.typeUser, required this.message});
 
   String typeUser;
   String message;

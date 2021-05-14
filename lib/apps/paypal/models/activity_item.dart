@@ -1,9 +1,7 @@
-import 'package:flutter/widgets.dart';
-
 class ActivityItem {
   ActivityItem({
-    @required this.day,
-    @required this.persons,
+    required this.day,
+    required this.persons,
   });
 
   String day;
@@ -12,11 +10,11 @@ class ActivityItem {
 
 class Person {
   Person({
-    @required this.image,
-    @required this.name,
-    @required this.ago,
-    @required this.total,
-    @required this.more,
+    required this.image,
+    required this.name,
+    required this.ago,
+    required this.total,
+    required this.more,
   });
 
   String image;

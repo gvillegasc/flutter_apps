@@ -4,7 +4,7 @@ import 'package:flutter_ui_app/apps/canvas/models/activity.dart';
 import 'package:flutter_ui_app/global/responsive.dart';
 
 class ActivityTile extends StatelessWidget {
-  const ActivityTile({Key key, @required this.activity}) : super(key: key);
+  const ActivityTile({Key? key, required this.activity}) : super(key: key);
 
   final Activity activity;
   @override
@@ -86,7 +86,7 @@ class Users extends StatelessWidget {
 }
 
 class ActivityInfo extends StatelessWidget {
-  const ActivityInfo({Key key, @required this.activity}) : super(key: key);
+  const ActivityInfo({Key? key, required this.activity}) : super(key: key);
 
   final Activity activity;
 
@@ -124,7 +124,7 @@ class ActivityInfo extends StatelessWidget {
 }
 
 class ActivityDetail extends StatelessWidget {
-  const ActivityDetail({Key key, @required this.activity}) : super(key: key);
+  const ActivityDetail({Key? key, required this.activity}) : super(key: key);
 
   final Activity activity;
 
@@ -139,7 +139,7 @@ class ActivityDetail extends StatelessWidget {
             ? Container(
                 height: responsive.inchR(4),
               )
-            : (activity.completed)
+            : (activity.completed!)
                 ? Container(
                     width: double.infinity,
                     alignment: Alignment.centerRight,

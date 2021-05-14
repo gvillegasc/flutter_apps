@@ -33,7 +33,7 @@ class ContactList extends StatelessWidget {
 }
 
 class _Contact extends StatelessWidget {
-  const _Contact({Key key, @required this.contact}) : super(key: key);
+  const _Contact({Key? key, required this.contact}) : super(key: key);
 
   final ContactItem contact;
 

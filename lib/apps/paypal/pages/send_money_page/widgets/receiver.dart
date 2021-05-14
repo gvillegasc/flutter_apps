@@ -4,7 +4,7 @@ import 'package:flutter_ui_app/global/responsive.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class Receiver extends StatelessWidget {
-  const Receiver({Key key, @required this.contact}) : super(key: key);
+  const Receiver({Key? key, required this.contact}) : super(key: key);
 
   final ContactItem contact;
 

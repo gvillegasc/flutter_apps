@@ -177,15 +177,15 @@ class HomePage extends StatelessWidget {
 
 class _PortfolioCard extends StatelessWidget {
   const _PortfolioCard(
-      {Key key,
-      @required this.title,
-      @required this.percentage,
-      @required this.percentagePrimaryColor,
-      @required this.percentageSecondaryColor,
-      @required this.bgColor,
-      @required this.deposit,
-      @required this.rate,
-      @required this.bgWigets})
+      {Key? key,
+      required this.title,
+      required this.percentage,
+      required this.percentagePrimaryColor,
+      required this.percentageSecondaryColor,
+      required this.bgColor,
+      required this.deposit,
+      required this.rate,
+      required this.bgWigets})
       : super(key: key);
 
   final String title;
@@ -335,11 +335,11 @@ class _PortfolioCard extends StatelessWidget {
 
 class _TransactionCard extends StatelessWidget {
   const _TransactionCard(
-      {Key key,
-      @required this.title,
-      @required this.description,
-      @required this.total,
-      @required this.date,
+      {Key? key,
+      required this.title,
+      required this.description,
+      required this.total,
+      required this.date,
       this.plus = true})
       : super(key: key);
 

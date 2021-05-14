@@ -68,7 +68,7 @@ class ActivitiesList extends StatelessWidget {
 }
 
 class _Activity extends StatelessWidget {
-  const _Activity({Key key, @required this.activity}) : super(key: key);
+  const _Activity({Key? key, required this.activity}) : super(key: key);
 
   final ActivityItem activity;
 

@@ -72,7 +72,11 @@ class BankingCards extends StatelessWidget {
 }
 
 class _CardTile extends StatelessWidget {
-  const _CardTile({Key key, this.icon, this.cardName, this.cardNumber})
+  const _CardTile(
+      {Key? key,
+      required this.icon,
+      required this.cardName,
+      required this.cardNumber})
       : super(key: key);
 
   final String icon;

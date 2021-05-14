@@ -4,7 +4,7 @@ import 'package:flutter_ui_app/global/responsive.dart';
 
 class MainButtonOptions extends StatelessWidget {
   @override
-  Widget build(BuildContext context) {
+  Widget build(_) {
     return HomePage();
   }
 }
@@ -16,23 +16,23 @@ class HomePage extends StatefulWidget {
 
 class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
   // Date
-  AnimationController dateAnimation;
-  Animation<double> dateAnimationDouble;
+  late AnimationController dateAnimation;
+  late Animation<double> dateAnimationDouble;
 
   // Button options
   double initialSize = 60;
   double finalSize = 270;
   bool pressed = false;
-  AnimationController iconAnimation;
-  AnimationController optionAnimation;
-  AnimationController optionAnimationTween;
-  AnimationController optionAnimationTween2;
-  Animation<double> animation;
+  late AnimationController iconAnimation;
+  late AnimationController optionAnimation;
+  late AnimationController optionAnimationTween;
+  late AnimationController optionAnimationTween2;
+  late Animation<double> animation;
 
   // Activity
-  AnimationController activityAnimation;
-  AnimationController activityAnimation2;
-  AnimationController activityAnimation3;
+  late AnimationController activityAnimation;
+  late AnimationController activityAnimation2;
+  late AnimationController activityAnimation3;
 
   @override
   void initState() {
@@ -87,13 +87,13 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
 
   @override
   void dispose() {
-    iconAnimation?.dispose();
-    optionAnimation?.dispose();
-    optionAnimationTween?.dispose();
-    optionAnimationTween2?.dispose();
-    activityAnimation?.dispose();
-    activityAnimation2?.dispose();
-    activityAnimation3?.dispose();
+    iconAnimation.dispose();
+    optionAnimation.dispose();
+    optionAnimationTween.dispose();
+    optionAnimationTween2.dispose();
+    activityAnimation.dispose();
+    activityAnimation2.dispose();
+    activityAnimation3.dispose();
 
     super.dispose();
   }
@@ -113,7 +113,7 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
   }
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(_) {
     final responsive = Responsive.of(context);
     return Scaffold(
       body: Container(
@@ -173,7 +173,7 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
             children: [
               AnimatedBuilder(
                   animation: dateAnimation,
-                  builder: (BuildContext context, Widget child) {
+                  builder: (_, __) {
                     return Transform.translate(
                       offset: Offset(-dateAnimationDouble.value, 0),
                       child: Column(
@@ -199,7 +199,7 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
                   }),
               AnimatedBuilder(
                   animation: dateAnimation,
-                  builder: (BuildContext context, Widget child) {
+                  builder: (_, __) {
                     return Transform.translate(
                       offset: Offset(dateAnimationDouble.value, 0),
                       child: Column(
@@ -293,7 +293,7 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
 
     return AnimatedBuilder(
         animation: animationController,
-        builder: (BuildContext context, Widget child) {
+        builder: (_, __) {
           return Transform.translate(
             offset: Offset(animations.value, 0),
             child: Container(
@@ -422,13 +422,12 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
                       child: AnimatedBuilder(
                           animation: CurvedAnimation(
                               curve: Curves.easeOut, parent: optionAnimation),
-                          builder: (BuildContext context, Widget child) {
+                          builder: (_, __) {
                             return Opacity(
                                 opacity: optionAnimation.value,
                                 child: AnimatedBuilder(
                                     animation: optionAnimationTween,
-                                    builder:
-                                        (BuildContext context, Widget child) {
+                                    builder: (_, __) {
                                       return Transform.translate(
                                         offset: Offset(0, animation.value),
                                         child: const Icon(Icons.edit_outlined,
@@ -445,13 +444,12 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
                     child: AnimatedBuilder(
                         animation: CurvedAnimation(
                             curve: Curves.easeOut, parent: optionAnimation),
-                        builder: (BuildContext context, Widget child) {
+                        builder: (_, __) {
                           return Opacity(
                               opacity: optionAnimation.value,
                               child: AnimatedBuilder(
                                   animation: optionAnimationTween,
-                                  builder:
-                                      (BuildContext context, Widget child) {
+                                  builder: (_, __) {
                                     return Transform.translate(
                                       offset: Offset(
                                           animation.value, animation.value),
@@ -470,13 +468,12 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
                     child: AnimatedBuilder(
                         animation: CurvedAnimation(
                             curve: Curves.easeOut, parent: optionAnimation),
-                        builder: (BuildContext context, Widget child) {
+                        builder: (_, __) {
                           return Opacity(
                               opacity: optionAnimation.value,
                               child: AnimatedBuilder(
                                   animation: optionAnimationTween,
-                                  builder:
-                                      (BuildContext context, Widget child) {
+                                  builder: (_, __) {
                                     return Transform.translate(
                                       offset: Offset(animation.value, 0.0),
                                       child: const Icon(CupertinoIcons.clock,

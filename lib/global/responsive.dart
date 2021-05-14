@@ -1,10 +1,8 @@
 import 'dart:math' as math;
 import 'package:flutter/widgets.dart';
-import 'package:meta/meta.dart' show required;
 
 class Responsive {
-  Responsive(
-      {@required this.width, @required this.height, @required this.inch});
+  Responsive({required this.width, required this.height, required this.inch});
 
   factory Responsive.fromSize(Size size) {
     final inch = math.sqrt(math.pow(size.width, 2) + math.pow(size.height, 2));

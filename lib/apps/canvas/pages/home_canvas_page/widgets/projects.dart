@@ -113,7 +113,7 @@ class ProjectList extends StatelessWidget {
 }
 
 class Project extends StatelessWidget {
-  const Project({Key key, @required this.userProject}) : super(key: key);
+  const Project({Key? key, required this.userProject}) : super(key: key);
 
   final UserProject userProject;
 
@@ -177,9 +177,7 @@ class Project extends StatelessWidget {
 }
 
 class Work extends StatelessWidget {
-  const Work({Key key, @required this.work})
-      : assert(work != null),
-        super(key: key);
+  const Work({Key? key, required this.work}) : super(key: key);
 
   final String work;
 
@@ -208,7 +206,7 @@ class Work extends StatelessWidget {
 }
 
 class User extends StatelessWidget {
-  const User({Key key, @required this.distance, @required this.image})
+  const User({Key? key, required this.distance, required this.image})
       : super(key: key);
 
   final double distance;

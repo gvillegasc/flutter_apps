@@ -5,11 +5,11 @@ import 'package:google_fonts/google_fonts.dart';
 
 class ActionsAppBar extends StatelessWidget {
   const ActionsAppBar(
-      {Key key, this.actionIcon, this.onPressed, @required this.title})
+      {Key? key, this.actionIcon, this.onPressed, required this.title})
       : super(key: key);
 
-  final String actionIcon;
-  final VoidCallback onPressed;
+  final String? actionIcon;
+  final VoidCallback? onPressed;
   final String title;
 
   @override

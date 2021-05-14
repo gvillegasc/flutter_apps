@@ -32,9 +32,8 @@ class OptionMovie extends StatelessWidget {
 }
 
 class OptionSelected extends StatelessWidget {
-  const OptionSelected({Key key, @required this.name, @required this.selected})
-      : assert(name != null, selected != null),
-        super(key: key);
+  const OptionSelected({Key? key, required this.name, required this.selected})
+      : super(key: key);
 
   final String name;
   final bool selected;

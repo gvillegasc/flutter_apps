@@ -47,7 +47,7 @@ class HardSection extends StatelessWidget {
 }
 
 class HardItem extends StatelessWidget {
-  const HardItem({Key key, @required this.image, @required this.name})
+  const HardItem({Key? key, required this.image, required this.name})
       : super(key: key);
 
   final String image;

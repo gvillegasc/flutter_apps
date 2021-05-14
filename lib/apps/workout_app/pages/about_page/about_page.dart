@@ -99,10 +99,10 @@ class About extends StatelessWidget {
 
 class Option extends StatelessWidget {
   const Option(
-      {Key key,
-      @required this.selected,
-      @required this.option,
-      @required this.observation})
+      {Key? key,
+      required this.selected,
+      required this.option,
+      required this.observation})
       : super(key: key);
 
   final bool selected;

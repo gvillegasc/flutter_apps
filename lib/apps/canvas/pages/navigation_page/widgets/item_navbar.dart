@@ -6,12 +6,8 @@ import 'package:provider/provider.dart';
 
 class ItemNavbar extends StatelessWidget {
   const ItemNavbar(
-      {Key key, @required this.value, @required this.icon, @required this.name})
-      : assert(
-          value != null,
-          icon != null,
-        ),
-        super(key: key);
+      {Key? key, required this.value, required this.icon, required this.name})
+      : super(key: key);
 
   final int value;
   final String icon;

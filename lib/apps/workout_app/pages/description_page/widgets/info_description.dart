@@ -43,7 +43,7 @@ class InfoDescription extends StatelessWidget {
 }
 
 class InfoItem extends StatelessWidget {
-  const InfoItem({Key key, @required this.count, @required this.name})
+  const InfoItem({Key? key, required this.count, required this.name})
       : super(key: key);
 
   final int count;

@@ -15,15 +15,15 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage>
     with SingleTickerProviderStateMixin {
   final ScrollController _controller = ScrollController();
-  double position;
+  late double position;
 
-  AnimationController _animationController;
+  late AnimationController _animationController;
 
   final double initialSize = 0;
   final double finalSize = 120;
   bool showMenu = false;
   int _idSelected = 1;
-  List<_CardItem> _cardsSelected;
+  late List<_CardItem> _cardsSelected;
 
   final List<_MenuItemModel> menuItems = [
     _MenuItemModel(
@@ -190,7 +190,7 @@ class _HomePageState extends State<HomePage>
         ]),
   ];
 
-  String _menuSelected;
+  late String _menuSelected;
 
   @override
   void initState() {
@@ -216,7 +216,7 @@ class _HomePageState extends State<HomePage>
   @override
   void dispose() {
     _animationController.dispose();
-    _controller?.dispose();
+    _controller.dispose();
 
     super.dispose();
   }
@@ -311,7 +311,7 @@ class _HomePageState extends State<HomePage>
 
 class _CardItem extends StatelessWidget {
   const _CardItem(
-      {Key key, @required this.color, @required this.icon, @required this.text})
+      {Key? key, required this.color, required this.icon, required this.text})
       : super(key: key);
 
   final Color color;
@@ -340,12 +340,12 @@ class _CardItem extends StatelessWidget {
 
 class _MenuItem extends StatefulWidget {
   const _MenuItem(
-      {Key key,
-      @required this.id,
-      @required this.icon,
-      @required this.idSelected,
-      @required this.showMenu,
-      @required this.onPressed})
+      {Key? key,
+      required this.id,
+      required this.icon,
+      required this.idSelected,
+      required this.showMenu,
+      required this.onPressed})
       : super(key: key);
 
   final int id;
@@ -360,8 +360,8 @@ class _MenuItem extends StatefulWidget {
 
 class __MenuItemState extends State<_MenuItem> with TickerProviderStateMixin {
   // Date
-  AnimationController itemAnimation;
-  Animation<double> itemAnimationDouble;
+  late AnimationController itemAnimation;
+  late Animation<double> itemAnimationDouble;
 
   @override
   void initState() {
@@ -376,7 +376,7 @@ class __MenuItemState extends State<_MenuItem> with TickerProviderStateMixin {
 
   @override
   void dispose() {
-    itemAnimation?.dispose();
+    itemAnimation.dispose();
     super.dispose();
   }
 
@@ -425,10 +425,10 @@ class __MenuItemState extends State<_MenuItem> with TickerProviderStateMixin {
 
 class _MenuItemModel {
   _MenuItemModel(
-      {@required this.id,
-      @required this.iconData,
-      @required this.name,
-      @required this.cards});
+      {required this.id,
+      required this.iconData,
+      required this.name,
+      required this.cards});
 
   final int id;
   final IconData iconData;

@@ -2,10 +2,10 @@ import 'dart:ui';
 
 class UserProject {
   UserProject({
-    this.date,
-    this.activity,
-    this.team,
-    this.color,
+    required this.date,
+    required this.activity,
+    required this.team,
+    required this.color,
   });
 
   String date;
