@@ -3,7 +3,6 @@ import 'dart:math';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:flutter_ui_app/global/responsive.dart';
-import 'package:syncfusion_flutter_charts/charts.dart';
 
 class Tasks extends StatelessWidget {
   @override

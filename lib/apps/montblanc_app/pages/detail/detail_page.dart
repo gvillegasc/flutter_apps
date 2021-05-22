@@ -304,6 +304,7 @@ class _DetailPageState extends State<DetailPage> {
                       child: SizedBox(
                         height: 60,
                         width: 60,
+                        // ignore: deprecated_member_use
                         child: RaisedButton(
                           color: const Color(0xff060507),
                           elevation: 0,

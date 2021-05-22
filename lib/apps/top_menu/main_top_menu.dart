@@ -201,6 +201,7 @@ class _HomePageState extends State<HomePage>
       duration: const Duration(milliseconds: 2000),
     );
     _controller.addListener(() {
+      // print(_controller.position.pixels);
       if (_controller.position.pixels >= 120) {
         setState(() {
           showMenu = false;
@@ -219,6 +220,14 @@ class _HomePageState extends State<HomePage>
     _controller.dispose();
 
     super.dispose();
+  }
+
+  Future doRefresh() {
+    return Future(() {
+      setState(() {
+        showMenu = true;
+      });
+    });
   }
 
   @override
@@ -249,9 +258,11 @@ class _HomePageState extends State<HomePage>
           if (_.paintOffset == 0.0 &&
               _controller.offset <= _controller.position.minScrollExtent) {
             _.disallowGlow();
-            setState(() {
-              showMenu = true;
-            });
+            print(_controller.offset);
+            print(_controller.position.minScrollExtent);
+            // setState(() {
+            //   showMenu = true;
+            // });
           } else {
             setState(() {
               showMenu = false;
@@ -261,6 +272,7 @@ class _HomePageState extends State<HomePage>
         },
         child: ListView(
           controller: _controller,
+          // physics: AlwaysScrollableScrollPhysics(),
           children: <Widget>[
             AnimatedContainer(
               color: const Color(0xFF262638),

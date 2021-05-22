@@ -77,6 +77,7 @@ class Buttons extends StatelessWidget {
         width: responsive.width,
         child: Column(
           children: <Widget>[
+            // ignore: deprecated_member_use
             FlatButton(
               onPressed: () => Navigator.push(
                   context, MaterialPageRoute(builder: (_) => AboutPage())),
@@ -98,6 +99,7 @@ class Buttons extends StatelessWidget {
             ButtonTheme(
               height: responsive.inchR(6),
               minWidth: responsive.inchR(38),
+              // ignore: deprecated_member_use
               child: OutlineButton(
                   highlightedBorderColor: const Color(0xffFFFFFF),
                   child: Text(

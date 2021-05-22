@@ -191,6 +191,7 @@ class Actions extends StatelessWidget {
                   fontWeight: FontWeight.w400,
                   fontSize: responsive.inchR(1.8)),
             ),
+            // ignore: deprecated_member_use
             FlatButton(
               shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(responsive.inchR(0.5))),

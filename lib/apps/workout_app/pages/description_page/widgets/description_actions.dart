@@ -13,6 +13,7 @@ class DescriptionActions extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.center,
         mainAxisAlignment: MainAxisAlignment.center,
         children: <Widget>[
+          // ignore: deprecated_member_use
           FlatButton(
             onPressed: () {},
             color: const Color(0xff40D876),
@@ -33,6 +34,7 @@ class DescriptionActions extends StatelessWidget {
           ButtonTheme(
             height: responsive.heightR(6.5),
             minWidth: responsive.inchR(38),
+            // ignore: deprecated_member_use
             child: OutlineButton(
                 highlightedBorderColor: const Color(0xff40D876),
                 child: Text(
