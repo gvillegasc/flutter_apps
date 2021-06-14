@@ -254,15 +254,13 @@ class _HomePageState extends State<HomePage>
         ],
       ),
       body: NotificationListener<OverscrollIndicatorNotification>(
-        onNotification: (_) {
-          if (_.paintOffset == 0.0 &&
+        onNotification: (onNotification) {
+          if (onNotification.paintOffset == 0.0 &&
               _controller.offset <= _controller.position.minScrollExtent) {
-            _.disallowGlow();
-            print(_controller.offset);
-            print(_controller.position.minScrollExtent);
-            // setState(() {
-            //   showMenu = true;
-            // });
+            onNotification.disallowGlow();
+            setState(() {
+              showMenu = true;
+            });
           } else {
             setState(() {
               showMenu = false;

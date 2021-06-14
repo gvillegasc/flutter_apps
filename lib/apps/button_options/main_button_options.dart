@@ -26,7 +26,6 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
   late AnimationController iconAnimation;
   late AnimationController optionAnimation;
   late AnimationController optionAnimationTween;
-  late AnimationController optionAnimationTween2;
   late Animation<double> animation;
 
   // Activity
@@ -90,7 +89,6 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
     iconAnimation.dispose();
     optionAnimation.dispose();
     optionAnimationTween.dispose();
-    optionAnimationTween2.dispose();
     activityAnimation.dispose();
     activityAnimation2.dispose();
     activityAnimation3.dispose();
