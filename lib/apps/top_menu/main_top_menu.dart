@@ -1,3 +1,4 @@
+import 'package:custom_refresh_indicator/custom_refresh_indicator.dart';
 import 'package:flutter/material.dart';
 
 class MainTopMenu extends StatelessWidget {
@@ -253,24 +254,24 @@ class _HomePageState extends State<HomePage>
               onPressed: () {})
         ],
       ),
-      body: NotificationListener<OverscrollIndicatorNotification>(
-        onNotification: (onNotification) {
-          if (onNotification.paintOffset == 0.0 &&
-              _controller.offset <= _controller.position.minScrollExtent) {
-            onNotification.disallowGlow();
-            setState(() {
-              showMenu = true;
-            });
-          } else {
-            setState(() {
-              showMenu = false;
-            });
-          }
-          return true;
+      body: CustomRefreshIndicator(
+        onRefresh: () async {
+          setState(() {
+            showMenu = true;
+          });
+        },
+        armedToLoadingDuration: const Duration(milliseconds: 50),
+        builder: (
+          BuildContext context,
+          Widget child,
+          IndicatorController controller,
+        ) {
+          return Container(
+            child: child,
+          );
         },
         child: ListView(
           controller: _controller,
-          // physics: AlwaysScrollableScrollPhysics(),
           children: <Widget>[
             AnimatedContainer(
               color: const Color(0xFF262638),
@@ -315,6 +316,7 @@ class _HomePageState extends State<HomePage>
           ],
         ),
       ),
+      // ),
     );
   }
 }
