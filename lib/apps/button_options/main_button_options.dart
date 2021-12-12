@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_ui_app/apps/button_options/widgets/buttons_options.dart';
 import 'package:flutter_ui_app/global/responsive.dart';
 
 class MainButtonOptions extends StatelessWidget {
@@ -132,7 +133,23 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
               _activities(responsive)
             ]),
           ),
-          _buttonOptions(responsive)
+          // ButtonsOptions()
+          FloatingMenuOptions(
+            firstOptionIcon: Icons.cloud_circle,
+            firstOptionAction: () {
+              print('firstOptionAction');
+            },
+            secondOptionIcon: Icons.ac_unit,
+            secondOptionAction: () {
+              print('secondOptionAction');
+            },
+            thirdOptionIcon: Icons.person,
+            thirdOptionAction: () {
+              print('thirdOptionAction');
+            },
+          ),
+
+          // _buttonOptions(responsive)
         ]),
       ),
     );

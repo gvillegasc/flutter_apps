@@ -69,6 +69,8 @@ flutter:
 
     - assets/montblanc_app/images/
     - assets/montblanc_app/icons/
+
+    - assets/linkedin/images/
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.
   # For details regarding adding assets from package dependencies, see

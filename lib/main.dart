@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_ui_app/apps/button_options/main_button_options.dart';
 import 'package:flutter_ui_app/apps/crypto_wallet/main_crypto_wallet.dart';
+import 'package:flutter_ui_app/apps/linkedin/main_linkedin.dart';
 // import 'package:flutter_ui_app/apps/dialog_flow/main_dialog_flow.dart';
 import 'package:flutter_ui_app/apps/menu_ui/main_menu_ui.dart';
 import 'package:flutter_ui_app/apps/montblanc_app/main_montblanc_app.dart';
@@ -40,73 +41,98 @@ class MenuApps extends StatelessWidget {
     //     name: 'Dialog Flow',
     //     image: 'dialog_flow_app.png',
     //     widget: MainDialogFlow()),
-    _AppItem(name: 'PayPal', image: 'paypal_app.png', widget: MainPayPalApp()),
     _AppItem(
-        name: 'Button Options',
-        image: 'button_options_app.png',
-        widget: MainButtonOptions()),
+      name: 'PayPal',
+      image: 'paypal_app.png',
+      widget: MainPayPalApp(),
+    ),
     _AppItem(
-        name: 'Top Menu', image: 'top_menu_app.png', widget: MainTopMenu()),
-    _AppItem(name: 'Menu UI', image: 'menu_ui_app.png', widget: MainMenuUi()),
+      name: 'Button Options',
+      image: 'button_options_app.png',
+      widget: MainButtonOptions(),
+    ),
     _AppItem(
-        name: 'Montblanc App',
-        image: 'montblanc_motorcycle.png',
-        widget: MainMontblancApp()),
+      name: 'Top Menu',
+      image: 'top_menu_app.png',
+      widget: MainTopMenu(),
+    ),
     _AppItem(
-        name: 'Crypto Wallet',
-        image: 'crypto_wallet_app.png',
-        widget: MainCrysptoWallet()),
+      name: 'Menu UI',
+      image: 'menu_ui_app.png',
+      widget: MainMenuUi(),
+    ),
+    _AppItem(
+      name: 'Montblanc App',
+      image: 'montblanc_motorcycle.png',
+      widget: MainMontblancApp(),
+    ),
+    _AppItem(
+      name: 'Crypto Wallet',
+      image: 'crypto_wallet_app.png',
+      widget: MainCrysptoWallet(),
+    ),
+    _AppItem(
+      name: 'LinkedIn',
+      image: 'crypto_wallet_app.png',
+      widget: MainLinkedIn(),
+    ),
   ];
   @override
   Widget build(BuildContext context) {
     final responsive = Responsive.of(context);
     return Scaffold(
-        appBar: AppBar(
-          title: const Text('Flutter UI'),
-        ),
-        body: GridView.count(
-          crossAxisCount: 2,
-          childAspectRatio: 2 / 1.5,
-          mainAxisSpacing: 7,
-          crossAxisSpacing: 7,
-          padding: const EdgeInsets.all(10),
-          shrinkWrap: true,
-          children: List.generate(
-              apps.length,
-              (i) => GestureDetector(
-                    onTap: () => _onPressed(context, apps[i].widget),
-                    child: Container(
-                      height: responsive.inchR(10),
-                      decoration: BoxDecoration(
-                          image: DecorationImage(
-                              fit: BoxFit.cover,
-                              image:
-                                  AssetImage('assets/apps/${apps[i].image}')),
-                          borderRadius: BorderRadius.circular(10)),
-                      child: Stack(
-                        children: [
-                          Container(
-                            height: double.infinity,
-                            width: double.infinity,
-                            decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(10),
-                              color: Colors.black.withOpacity(.6),
-                            ),
-                          ),
-                          Center(
-                            child: Text(
-                              apps[i].name,
-                              style: const TextStyle(
-                                  color: Colors.white,
-                                  fontWeight: FontWeight.w600,
-                                  fontSize: 20),
-                            ),
-                          )
-                        ],
+      appBar: AppBar(
+        title: const Text('Flutter UI'),
+      ),
+      body: GridView.count(
+        crossAxisCount: 2,
+        childAspectRatio: 2 / 1.5,
+        mainAxisSpacing: 7,
+        crossAxisSpacing: 7,
+        padding: const EdgeInsets.all(10),
+        shrinkWrap: true,
+        children: List.generate(
+          apps.length,
+          (i) => GestureDetector(
+            onTap: () => _onPressed(context, apps[i].widget),
+            child: Container(
+              height: responsive.inchR(10),
+              decoration: BoxDecoration(
+                image: DecorationImage(
+                  fit: BoxFit.cover,
+                  image: AssetImage(
+                    'assets/apps/${apps[i].image}',
+                  ),
+                ),
+                borderRadius: BorderRadius.circular(10),
+              ),
+              child: Stack(
+                children: [
+                  Container(
+                    height: double.infinity,
+                    width: double.infinity,
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(10),
+                      color: Colors.black.withOpacity(.6),
+                    ),
+                  ),
+                  Center(
+                    child: Text(
+                      apps[i].name,
+                      style: const TextStyle(
+                        color: Colors.white,
+                        fontWeight: FontWeight.w600,
+                        fontSize: 20,
                       ),
                     ),
-                  )),
-        ));
+                  )
+                ],
+              ),
+            ),
+          ),
+        ),
+      ),
+    );
   }
 }
 

@@ -271,6 +271,7 @@ class _HomePageState extends State<HomePage>
           );
         },
         child: ListView(
+          physics: ClampingScrollPhysics(),
           controller: _controller,
           children: <Widget>[
             AnimatedContainer(
